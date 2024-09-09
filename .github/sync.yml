@@ -15,7 +15,7 @@ group:
         dest: poetry.toml
       - source: ruff.toml
         dest: ruff.toml
-      - source: common/LICENSE.md
+      - source: LICENSE.md
         dest: LICENSE.md
       - source: .github/pull_request_template.md
         dest: .github/pull_request_template.md
