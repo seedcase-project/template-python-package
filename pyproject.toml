@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "NAME"
+version = "0.0.1"
+description = ""
+authors = [
+  "Luke W. Johnston <lwjohnst@gmail.com>",
+  "Kristiane Beicher <kris.beicher@clin.au.dk>",
+  "Signe Kirk Brødbæk <signekb@clin.au.dk>",
+  "Marton Vago <marton.vago95@gmail.com >",
+]
+maintainers = [
+  "Luke W. Johnston <lwjohnst@gmail.com>",
+  "Kristiane Beicher <kris.beicher@clin.au.dk>",
+  "Signe Kirk Brødbæk <signekb@clin.au.dk>",
+  "Marton Vago <marton.vago95@gmail.com >",
+]
+readme = "README.md"
+homepage = "https://NAME.seedcase-project.org"
+repository = "https://github.com/seedcase-project/REPO"
+license = "MIT"
+packages = [{include = "NAME"}]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/seedcase-project/REPO/issues"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.2"
+pytest-django = "^4.8.0"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.6.2"
+
+[tool.poetry.group.django.dependencies]
+psycopg2-binary = "^2.9.9"
+django-widget-tweaks = "^1.5.0"
+dj-database-url = "^2.2.0"
+gunicorn = "^23.0.0"
+whitenoise = "^6.7.0"
+django = "^5.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "CONFIG_FOLDERNAME.settings"

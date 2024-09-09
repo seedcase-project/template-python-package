@@ -1,0 +1,37 @@
+group:
+  - files:
+      # General
+      - source: .github/CODEOWNERS
+        dest: .github/CODEOWNERS
+      - source: .dockerignore
+        dest: .dockerignore
+      - source: .editorconfig
+        dest: .editorconfig
+      - source: .gitignore
+        dest: .gitignore
+      - source: justfile
+        dest: justfile
+      - source: poetry.toml
+        dest: poetry.toml
+      - source: ruff.toml
+        dest: ruff.toml
+      - source: common/LICENSE.md
+        dest: LICENSE.md
+      - source: .github/pull_request_template.md
+        dest: .github/pull_request_template.md
+
+      # Actions
+      - source: .github/workflows/
+        dest: .github/workflows/
+        deleteOrphaned: true
+        exclude: |
+          sync-files.yml
+      - source: .github/_project-dependabot.yml
+        dest: .github/dependabot.yml
+
+      # VSCode Settings
+      - source: .vscode/
+        dest: .vscode/
+        deleteOrphaned: true
+    repos: |
+      seedcase-project/seedcase-sprout
