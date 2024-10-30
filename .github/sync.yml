@@ -3,6 +3,8 @@ group:
       # General
       - source: .github/CODEOWNERS
         dest: .github/CODEOWNERS
+      - source: .pre-commit-config.yaml
+        dest: .pre-commit-config.yaml
       - source: .dockerignore
         dest: .dockerignore
       - source: .editorconfig
