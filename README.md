@@ -19,3 +19,7 @@ poetry init
 Search for `NAME` and `REPO` and replace them with the name of your project and the repository name. Then look for any `TODO` items.
 
 You will need to set up Fly manually for now.
+
+## Setting things up
+
+Use the commands found in [`spaid`](https://github.com/seedcase-project/spaid) repo to run the next setup steps.

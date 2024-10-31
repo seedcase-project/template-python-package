@@ -60,7 +60,9 @@ build-website:
   export QUARTO_PYTHON=.venv/bin/python3
   poetry run quarto render --execute
 
-# Add files for a new function (function file and test file)
-add-function app part name:
-  touch ./{{app}}/{{part}}/{{name}}.py
-  touch ./tests/{{part}}/test_{{name}}.py
+check-commit:
+  #!/bin/zsh
+  if [[ $(git rev-parse --abbrev-ref HEAD) != "main" ]]
+  then
+    poetry run cz check --rev-range main..HEAD
+  fi
