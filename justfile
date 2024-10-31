@@ -1,6 +1,8 @@
 @_default:
     just --list --unsorted
 
+run-all: install-deps format-python check-python run-tests
+
 # Generate SVG images from all PlantUML files
 generate-puml-all:
   docker run --rm -v $(pwd):/puml -w /puml ghcr.io/plantuml/plantuml:latest -tsvg "**/*.puml"
