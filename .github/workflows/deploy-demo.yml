@@ -22,8 +22,8 @@ on:
 
 jobs:
   lint:
-    uses: seedcase-project/.github/.github/workflows/lint-python.yml@main
+    uses: seedcase-project/.github/.github/workflows/reusable-lint-python.yml@main
 
   test:
-    uses: seedcase-project/.github/.github/workflows/test.yml@main
+    uses: seedcase-project/.github/.github/workflows/reusable-test-python.yml@main
     needs: lint
