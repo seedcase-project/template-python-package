@@ -12,6 +12,7 @@
     "ms-python.vscode-pylance",
     "njpwerner.autodocstring",
     "quarto.quarto",
+    "ms-toolsai.jupyter",
     "streetsidesoftware.code-spell-checker",
     "vivaxy.vscode-conventional-commits",
     "charliermarsh.ruff",
