@@ -1,7 +1,7 @@
 name: Deploy Demo App
 
 on:
-  push:
+  pull_request:
     branches:
       - main
     paths-ignore:
@@ -19,6 +19,9 @@ on:
       - index.qmd
       - _publish.yml
       - _extensions/**
+  push:
+    branches:
+      - main
 
 jobs:
   lint:
