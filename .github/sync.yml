@@ -5,8 +5,6 @@ group:
         dest: .github/CODEOWNERS
       - source: .pre-commit-config.yaml
         dest: .pre-commit-config.yaml
-      - source: .dockerignore
-        dest: .dockerignore
       - source: .editorconfig
         dest: .editorconfig
       - source: .gitignore
