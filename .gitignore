@@ -81,9 +81,6 @@ _book
 public
 site
 
-# Python Web App
-*.sqlite3
-*.sqlite3-journal
 
 # Misc files
 *.log
