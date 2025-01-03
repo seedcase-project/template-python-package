@@ -16,8 +16,8 @@ generate-puml-all:
 generate-puml name:
   docker run --rm -v  $(pwd):/puml -w /puml ghcr.io/plantuml/plantuml:latest -tsvg "**/{{name}}.puml"
 
-# Run Python tests
-run-tests:
+# Run the Python tests
+test-python:
   poetry run pytest
 
 # Check Python code with the linter for any errors that need manual attention
