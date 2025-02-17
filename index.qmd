@@ -1,5 +1,5 @@
 ---
-title: "Welcome to Seedcase Sprout!"
+title: "Welcome to {{PACKAGE-NAME}}!"
 ---
 
 {{< include /docs/includes/_wip.qmd >}}
