@@ -1,5 +1,5 @@
 ---
-title: "Welcome to {{PACKAGE-NAME}}!"
+title: "Welcome to NAME!"
 ---
 
 {{< include /docs/includes/_wip.qmd >}}
