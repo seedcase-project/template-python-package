@@ -34,10 +34,10 @@ build-website:
 check-commits:
   #!/bin/zsh
   branch_name=$(git rev-parse --abbrev-ref HEAD)
-  number_of_commits=$(git rev-list --count HEAD ^$branch_name)
+  number_of_commits=$(git rev-list --count HEAD ^main)
   if [[ ${branch_name} != "main" && ${number_of_commits} -gt 0 ]]
   then
     poetry run cz check --rev-range main..HEAD
   else
-    echo "Not on main or haven't committed yet."
+    echo "Can't either be on ${branch_name} or have more than ${number_of_commits}."
   fi
