@@ -1,5 +1,7 @@
 project:
   type: seedcase-theme
+  # Delete auto-generated files from `quartodoc`
+  post-render: rm docs/reference/*.qmd
   render:
     - "docs/*"
     - "index.qmd"
