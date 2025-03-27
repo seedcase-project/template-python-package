@@ -25,6 +25,8 @@ format-python:
 build-website:
   # To let Quarto know where python is.
   export QUARTO_PYTHON=.venv/bin/python3
+  # Delete any previously built files from quartodoc
+  rm docs/reference/*.qmd
   poetry run quartodoc build
   poetry run quarto render --execute
 
