@@ -1,44 +1,41 @@
-[tool.poetry]
+[project]
 name = "template-python-package"
-version = "0.0.1"
-description = ""
+version = "0.1.0"
+description = "Template Python Package"
 authors = [
-  "Luke W. Johnston <lwjohnst@gmail.com>",
-  "Kristiane Beicher <kris.beicher@clin.au.dk>",
-  "Signe Kirk Brødbæk <signekb@clin.au.dk>",
-  "Marton Vago <marton.vago95@gmail.com >",
+  {name = "Luke W. Johnston", email = "lwjohnst@gmail.com" },
+  {name = "Kristiane Beicher", email = "kris.beicher@clin.au.dk" },
+  {name = "Signe Kirk Brødbæk", email = "signekb@clin.au.dk" },
+  {name = "Marton Vago", email = "marton.vago95@gmail.com" },
 ]
 maintainers = [
-  "Luke W. Johnston <lwjohnst@gmail.com>",
-  "Kristiane Beicher <kris.beicher@clin.au.dk>",
-  "Signe Kirk Brødbæk <signekb@clin.au.dk>",
-  "Marton Vago <marton.vago95@gmail.com >",
+  {name = "Luke W. Johnston", email = "lwjohnst@gmail.com" },
+  {name = "Kristiane Beicher", email = "kris.beicher@clin.au.dk" },
+  {name = "Signe Kirk Brødbæk", email = "signekb@clin.au.dk" },
+  {name = "Marton Vago", email = "marton.vago95@gmail.com" },
 ]
 readme = "README.md"
-homepage = "https://NAME.seedcase-project.org"
-repository = "https://github.com/seedcase-project/REPO"
 license = "MIT"
+license-files = ["LICENSE.md"]
+requires-python = ">=3.12"
+dependencies = []
 
-[tool.poetry.urls]
-"Bug Tracker" = "https://github.com/seedcase-project/REPO/issues"
+# TODO: Update these
+[project.urls]
+homepage = "https://PROJECT.seedcase-project.org"
+repository = "https://github.com/seedcase-project/REPO"
+changelog = "https://github.com/seedcase-project/REPO/blob/main/CHANGELOG.md"
+issues = "https://github.com/seedcase-project/REPO/issues"
 
-[tool.poetry.dependencies]
-python = "^3.12"
-
-[tool.poetry.group.test.dependencies]
-pytest = "^8.3.2"
-
-[tool.poetry.group.dev.dependencies]
-ruff = "^0.6.2"
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [tool.pytest.ini_options]
 addopts = [
   # A short traceback mode to make it easier to view
   "--tb=short",
-  # Use the package in `src/`
+  # Use the `src/` package
   "--import-mode=importlib",
 ]
