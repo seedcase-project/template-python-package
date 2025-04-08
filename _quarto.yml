@@ -44,7 +44,6 @@ website:
 #   seedcase-theme-html:
     # include-before-body:
       # - "includes/site-counter.html"
-      # - "includes/contribute.html"
 
 editor:
   markdown:
