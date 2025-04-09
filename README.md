@@ -9,13 +9,6 @@ gh repo create NAME --template seedcase-project/template-python-project
 
 ## Setting things up after cloning
 
-To add Poetry:
-
-``` bash
-cd new-project
-poetry init
-```
-
 Search for `NAME` and `REPO` and replace them with the name of your project and the repository name. Then look for any `TODO` items.
 
 ## Setting things up
