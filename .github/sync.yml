@@ -13,6 +13,8 @@ group:
         dest: justfile
       - source: .cz.toml
         dest: .cz.toml
+      - source: pytest.ini
+        dest: pytest.ini
       - source: ruff.toml
         dest: ruff.toml
       - source: LICENSE.md
