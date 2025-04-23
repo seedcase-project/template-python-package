@@ -14,3 +14,10 @@ Search for `NAME` and `REPO` and replace them with the name of your project and 
 ## Setting things up
 
 Use the commands found in [`spaid`](https://github.com/seedcase-project/spaid) repo to run the next setup steps.
+
+Need to install these packages after:
+
+``` bash
+uv add --dev pre-commit ruff typos pytest bandit commitizen \
+    genbadge jupyter pytest-cov quartodoc
+```
