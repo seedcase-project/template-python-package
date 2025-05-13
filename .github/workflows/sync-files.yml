@@ -37,5 +37,5 @@ jobs:
           GIT_USERNAME: ${{ steps.app-token.outputs.app-slug }}[bot]
           GIT_EMAIL: ${{ steps.get-user-id.outputs.user-id }}+${{ steps.app-token.outputs.app-slug }}[bot]@users.noreply.github.com
           COMMIT_PREFIX: "chore(sync): :hammer: "
-          BRANCH_PREFIX: chore
-          TEAM_REVIEWERS: admin
+          COMMIT_EACH_FILE: false
+          BRANCH_PREFIX: chore/python-package-sync
