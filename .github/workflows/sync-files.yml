@@ -16,7 +16,7 @@ jobs:
           private-key: ${{ secrets.SYNC_FILES_TOKEN }}
 
       - name: Checkout Repository
-        uses: actions/checkout@main
+        uses: actions/checkout@v4
         with:
           token: ${{ steps.app-token.outputs.token }}
 
