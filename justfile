@@ -2,12 +2,14 @@
     just --list --unsorted
 
 # Run all build-related recipes in the justfile
-run-all: install-deps install-precommit format-python check-python check-unused test-python check-security check-spelling check-commits build-website
+run-all: install-deps format-python check-python check-unused test-python check-security check-spelling check-commits build-website
 
 # Install the pre-commit hooks
 install-precommit:
   # Install pre-commit hooks
   uvx pre-commit install
+  # Run pre-commit hooks on all files
+  uvx pre-commit run --all-files
   # Update versions of pre-commit hooks
   uvx pre-commit autoupdate
 
