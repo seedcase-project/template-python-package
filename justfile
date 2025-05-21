@@ -73,4 +73,5 @@ check-unused:
   # - 100 %: function/method/class argument, unreachable code
   # - 90 %: import
   # - 60 %: attribute, class, function, method, property, variable
-  uv run vulture src/ tests/
+  # There are some things should be ignored though, with the allowlist.
+  uv run vulture src/ tests/ **/vulture-allowlist.py
