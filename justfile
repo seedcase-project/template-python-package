@@ -2,7 +2,14 @@
     just --list --unsorted
 
 # Run all build-related recipes in the justfile
-run-all: install-deps format-python check-python check-unused test-python check-security check-spelling check-commits build-website
+run-all: install-deps install-precommit format-python check-python check-unused test-python check-security check-spelling check-commits build-website
+
+# Install the pre-commit hooks
+install-precommit:
+  # Install pre-commit hooks
+  uvx pre-commit install
+  # Update versions of pre-commit hooks
+  uvx pre-commit autoupdate
 
 # Install Python package dependencies
 install-deps:
@@ -73,4 +80,5 @@ check-unused:
   # - 100 %: function/method/class argument, unreachable code
   # - 90 %: import
   # - 60 %: attribute, class, function, method, property, variable
-  uv run vulture src/ tests/
+  # Create an allowlist with `vulture --make-allowlist`
+  uv run vulture src/ tests/ **/vulture-allowlist.py
