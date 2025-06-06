@@ -5,6 +5,9 @@ on:
       - main
   workflow_dispatch:
 
+# Limit token permissions for security
+permissions: read-all
+
 jobs:
   sync:
     uses: seedcase-project/.github/.github/workflows/reusable-sync-files.yml@main
