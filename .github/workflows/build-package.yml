@@ -4,19 +4,6 @@ on:
   pull_request:
     branches:
       - main
-    paths-ignore:
-      # Config files
-      - ".github/**"
-      - ".vscode/**"
-      - ".gitignore"
-      # Documentation
-      - "docs/**"
-      - "*.md"
-      - "*.qmd"
-      # Website files
-      - _quarto.yml
-      - _publish.yml
-      - _extensions/**
   push:
     branches:
       - main
