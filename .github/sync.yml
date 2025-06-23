@@ -21,6 +21,8 @@ group:
         dest: LICENSE.md
       - source: .github/pull_request_template.md
         dest: .github/pull_request_template.md
+      - source: mypy.ini
+        dest: mypy.ini
 
       # Actions
       - source: .github/workflows/add-to-project.yml
