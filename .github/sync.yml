@@ -31,8 +31,8 @@ group:
         dest: .github/workflows/build-package.yml
       - source: .github/workflows/build-website.yml
         dest: .github/workflows/build-website.yml
-      - source: .github/workflows/update-version.yml
-        dest: .github/workflows/update-version.yml
+      - source: .github/workflows/release-package.yml
+        dest: .github/workflows/release-package.yml
       - source: .github/workflows/scorecards.yml
         dest: .github/workflows/scorecards.yml
       - source: .github/_project-dependabot.yml
