@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: monthly
+    versioning-strategy: increase-if-necessary
+    commit-message:
+      prefix: build
+      include: scope
+{%- if dependabot_pr_assignee %}
+    assignees:
+      - "{{ dependabot_pr_assignee }}"
+{% endif %}

@@ -1,0 +1,125 @@
+_subdirectory: template
+
+# Post-copy commands:
+_tasks:
+  # Add dev dependencies
+  - command: "git init -b main && uv add --dev pre-commit ruff typos pytest bandit commitizen genbadge jupyter pytest-cov quartodoc types-tabulate mypy vulture"
+    when: "{{ _copier_operation == 'copy' }}"
+  # If Seedcase project, add seedcase-theme extension
+  - command: "uv run quarto add --no-prompt seedcase-project/seedcase-theme"
+    when: "{{ _copier_operation == 'copy' and is_seedcase_project }}"
+  # If Seedcase project, use seedcase-theme as project type
+  - command: >-
+      uv run python -c "from pathlib import Path; file = Path('_quarto.yml'); file.write_text(file.read_text().replace('type: website', 'type: seedcase-theme', 1))"
+    when: "{{ _copier_operation == 'copy' and is_seedcase_project }}"
+
+
+# Message to show after generating or regenerating the project successfully
+_message_after_copy: |
+
+  Your project "{{ package_name }}" has been created successfully!
+
+  Next steps:
+
+  1. Change directory to the project root:
+
+    $ cd {{ _copier_conf.dst_path }}
+
+  2. Install the pre-commit hooks:
+
+    $ just install-precommit
+
+  3. Install [`spaid`](https://github.com/seedcase-project/spaid) and run these commands to upload and configure your project on GitHub:
+
+    $ spaid_gh_create_repo_from_local -h
+    $ spaid_gh_set_repo_settings -h
+    $ spaid_gh_ruleset_basic_protect_main -h
+
+  4. Configure GitHub following this
+    [guide](https://guidebook.seedcase-project.org/operations/security#using-github-apps-to-generate-tokens):
+
+    - Install the [auto-release-token](https://github.com/apps/auto-release-token) GitHub App
+    - Create these secrets: UPDATE_VERSION_TOKEN, ADD_TO_BOARD, NETLIFY_AUTH_TOKEN
+    - Create these variables: UPDATE_VERSION_APP_ID, ADD_TO_BOARD_APP_ID
+
+  5. List and complete all TODO items in the repository:
+
+    $ just list-todos
+
+# Questions:
+github_user:
+  type: str
+  help: "What is the GitHub username of the person or organisation who owns the package?"
+  validator: |
+    {% if github_user and not (github_user | regex_search('^[\w.-]+$')) %}
+    Must contain only alphanumeric characters and `_`, `-`, or `.`.
+    {% endif %}
+
+package_name:
+  type: str
+  help: "What is the name of the package?"
+  default: "{{ _copier_conf.dst_path | basename }}"
+  validator: |
+    {% if package_name and not (package_name | regex_search('^[\w.-]+$')) %}
+    Must contain only alphanumeric characters and `_`, `-`, or `.`.
+    {% endif %}
+
+package_name_snake_case:
+  type: str
+  default: "{{package_name | replace('-', '_') | replace('.', '_')}}"
+  when: false
+
+package_github_repo:
+  type: str
+  default: "{{ github_user ~ '/' ~ package_name }}"
+  when: false
+
+is_seedcase_project:
+  type: bool
+  help: "Is this package part of the Seedcase Project?"
+  default: "{{ github_user == 'seedcase-project' }}"
+
+seedcase_short_name:
+  type: str
+  help: "What is the short name of the package?"
+  default: "{{ package_name[9:] if ('seedcase-' in package_name) else '' }}"
+  when: "{{ is_seedcase_project }}"
+
+homepage:
+  type: str
+  help: "What is the homepage of your project?"
+  default: "{{ 'https://%s.seedcase-project.org' % seedcase_short_name if is_seedcase_project else '' }}"  
+
+author_given_name:
+  type: str
+  help: "What is your first/given name?"
+
+author_family_name:
+  type: str
+  help: "What is your last/family name?"
+
+author_email:
+  type: str
+  help: "What is your email address?"
+
+review_team:
+  type: str
+  help: What GitHub team is responsible for reviewing pull requests?
+  default: "{{ '@%s/developers' % github_user if github_user else '' }}"
+
+github_board_number:
+  type: str
+  help: "What is the number of the GitHub project board to add issues and PRs to?"
+  validator: |
+    {% if github_board_number and not github_board_number.isdigit() %}
+    The board number must be an integer.
+    {% endif %}
+
+copyright_year:
+  type: str
+  default: "{{ copyright_year | default('%Y' | strftime) }}"
+  when: false
+
+dependabot_pr_assignee:
+  type: str
+  help: "What is the GitHub username of the person to assign to PRs opened by dependabot?"
