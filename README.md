@@ -25,5 +25,5 @@ Need to install these packages after:
 
 ``` bash
 uv add --dev pre-commit ruff typos pytest bandit commitizen \
-    genbadge jupyter pytest-cov quartodoc mypy vulture
+    genbadge jupyter pytest-cov quartodoc types-tabulate mypy vulture
 ```
