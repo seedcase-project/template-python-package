@@ -2,4 +2,4 @@
   netlify:
     # TODO: Include correct ID
     - id: ""
-      url: "https://NAME-seedcase-project.netlify.app"
+      url: "https://seedcase-template-python-package.netlify.app"
