@@ -1,5 +1,45 @@
 ---
-title: "Welcome to NAME!"
+title: An opinionated template for Python Packages
 ---
 
-{{< include /docs/includes/_wip.qmd >}}
+{{< include /docs/includes/_badges.qmd >}}
+
+This is a template for creating a new Python package following the
+Seedcase structure. Use this template to quickly get started with a new
+Python package with all the necessary files and configurations in place,
+including for developing the package.
+
+## Features
+
+-   Use [uv](https://decisions.seedcase-project.org/why-uv/) to manage
+    the Python package.
+-   Build management with [just](https://just.systems/man/en/).
+-   Check typos with [typos](https://github.com/crate-ci/typos).
+-   Code formatting and linting with
+    [ruff](https://decisions.seedcase-project.org/why-ruff/).
+-   Pre-commit hooks with [pre-commit](https://pre-commit.com/).
+-   GitHub workflows for automatically adding Pull Requests and Issues
+    to a project board.
+-   Pull Request template for easy creation of new Pull Requests.
+-   [VS Code](https://code.visualstudio.com/) settings commonly used by
+    contributors working in VS Code.
+-   [EditorConfig](https://editorconfig.org/) for common cross-editor
+    settings for contributors.
+-   [`CITATION.cff`](https://citation-file-format.github.io/) file for
+    citation information.
+-   Website generation with [Quarto](https://quarto.org/).
+-   Python package folder and file structure that takes advantage of
+    Python's packaging ecosystem.
+-   [`pyproject.toml`](https://peps.python.org/pep-0518/) for tracking
+    dependencies and project metadata.
+
+## Want to contribute?
+
+We would love your feedback or contributions! Head over to our [GitHub
+repository](https://github.com/seedcase-project/{{< meta repo >}}) to
+share your ideas or contribute code. Your input makes us better!
+
+## Licensing
+
+This project is licensed under the [MIT
+License](https://github.com/seedcase-project/{{< meta repo >}}/blob/main/LICENSE.md).
