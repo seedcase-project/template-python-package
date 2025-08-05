@@ -63,10 +63,10 @@ including for developing the package.
 ## Want to contribute?
 
 We would love your feedback or contributions! Head over to our [GitHub
-repository](https://github.com/{{< meta gh.org >}}/{{< meta.repo >}}) to
+repository](https://github.com/{{< meta gh.org >}}/{{< meta gh.repo >}}) to
 share your ideas or contribute code. Your input makes us better!
 
 ## Licensing
 
 This project is licensed under the [MIT
-License](https://github.com/{{< meta gh.org >}}/{{< meta.repo >}}/blob/main/LICENSE.md).
+License](https://github.com/{{< meta gh.org >}}/{{< meta gh.repo >}}/blob/main/LICENSE.md).
