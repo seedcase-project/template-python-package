@@ -1,0 +1,5 @@
+- source: project
+  netlify:
+    # TODO: Include Netlify details
+    - id: ""
+      url: ""
