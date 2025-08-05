@@ -1,5 +1,4 @@
 - source: project
   netlify:
-    # TODO: Include correct ID
-    - id: ""
-      url: "https://NAME-seedcase-project.netlify.app"
+    - id: "8775b18b-3a1a-4dfc-b6c7-a1ef7205d30f"
+      url: "https://seedcase-template-python-package.netlify.app"

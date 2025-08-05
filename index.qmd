@@ -1,5 +1,72 @@
 ---
-title: "Welcome to NAME!"
+title: An opinionated template for Python Packages
 ---
 
-{{< include /docs/includes/_wip.qmd >}}
+{{< include /docs/includes/_badges.qmd >}}
+
+This is a template for creating a new Python package following the
+Seedcase structure. Use this template to quickly get started with a new
+Python package with all the necessary files and configurations in place,
+including for developing the package.
+
+## Features
+
+-   Use [uv](https://decisions.seedcase-project.org/why-uv/) to manage
+    the Python package and for project management.
+-   Includes a [justfile](https://just.systems/man/en/) for managing
+    common tasks like building the website and running checks.
+-   Uses [typos](https://github.com/crate-ci/typos) to check for common
+    spelling mistakes.
+-   Code formatting and linting with
+    [ruff](https://decisions.seedcase-project.org/why-ruff/).
+-   Run checks with [pre-commit](https://pre-commit.com/) hooks to
+    ensure consistent formatting and style across the project. It
+    includes checks for credentials, typos, and file formatting.
+-   GitHub workflows for automatically adding Pull Requests and Issues
+    to a project board.
+-   Pull Request template for easy creation of new Pull Requests.
+-   Includes [GitHub Actions](https://docs.github.com/en/actions) for
+    continuous integration, testing, and delivery for running checks,
+    formatting, releasing, and building the Python package and associated
+    documentation.
+-   Pull Request template for easy creation of new Pull Requests.
+-   [VS Code](https://code.visualstudio.com/) settings commonly used by
+    contributors working in VS Code.
+-   Includes an [EditorConfig](https://editorconfig.org/) file to ensure
+    consistent formatting across different editors.
+-   [`CITATION.cff`](https://citation-file-format.github.io/) file for
+    citation information.
+-   Python package folder and file structure that takes advantage of
+    Python's packaging ecosystem.
+-   [`pyproject.toml`](https://peps.python.org/pep-0518/) for tracking
+    dependencies and project metadata.
+-   Uses [Quarto](https://quarto.org/) Markdown for the website content,
+    allowing for easy integration of code, text, and figures.
+-   Uses
+    [Commitizen](https://decisions.seedcase-project.org/why-changelog-with-commitizen)
+    to
+    [check](https://decisions.seedcase-project.org/why-lint-with-commitizen/)
+    commit messages and automatically create the changelog.
+-   Automated Git tagging and GitHub releases with
+    [commitizen](https://decisions.seedcase-project.org/why-semantic-release-with-commitizen/)
+    that are based on messages following [Conventional
+    Commits](https://decisions.seedcase-project.org/why-conventional-commits).
+-   Uses a [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/)
+    license for the website content.
+-   Uses an [MIT](https://decisions.seedcase-project.org/why-mit-license/index.html)
+    license for the code.
+-   Optionally uses the
+    [`seedcase-theme`](https://github.com/{{< meta gh.org >}}/seedcase-theme)
+    Quarto extension for a standard appearance across websites.
+-   Uses [Netlify](https://www.netlify.com/) for hosting the website.
+
+## Want to contribute?
+
+We would love your feedback or contributions! Head over to our [GitHub
+repository](https://github.com/{{< meta gh.org >}}/{{< meta gh.repo >}}) to
+share your ideas or contribute code. Your input makes us better!
+
+## Licensing
+
+This project is licensed under the [MIT
+License](https://github.com/{{< meta gh.org >}}/{{< meta gh.repo >}}/blob/main/LICENSE.md).
