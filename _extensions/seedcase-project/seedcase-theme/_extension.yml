@@ -1,14 +1,14 @@
 title: seedcase-theme
 author: Luke W. Johnston
-version: 1.0.0
+version: 0.1.0
 quarto-required: ">=1.2.0"
 contributes:
   formats:
+    common:
+      shortcodes:
+        - quarto-ext/fontawesome
     html:
       from: markdown+emoji
-      theme:
-        - cosmo
-        - theme.scss
       toc: true
       toc-location: right
       toc-depth: 3
@@ -25,7 +25,7 @@ contributes:
       repo-actions: [edit, issue, source]
       search:
         location: navbar
-        type: overlay
+        type: textbox
       navbar:
         background: light
         logo: logos/navbar-logo-seedcase-project.svg
@@ -38,10 +38,12 @@ contributes:
           - text: "Code of Conduct"
             href: "https://github.com/seedcase-project/.github/blob/main/CODE_OF_CONDUCT.md"
           - text: "Contributing"
-            href: "https://community.seedcase-project.org/guides/"
+            href: "https://guidebook.seedcase-project.org/"
           - text: "Funded by the Novo Nordisk Foundation"
             href: https://seedcase-project.org/#acknowledgements
 
     csl: vancouver.csl
 
     format: seedcase-theme-html
+
+    brand: _brand.yml
