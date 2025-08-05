@@ -88,7 +88,7 @@ seedcase_short_name:
 homepage:
   type: str
   help: "What is the homepage of your project?"
-  default: "{{ 'https://%s.seedcase-project.org' % seedcase_short_name if is_seedcase_project else '' }}"  
+  default: "{{ 'https://%s.seedcase-project.org' % seedcase_short_name if is_seedcase_project else '' }}"
 
 author_given_name:
   type: str
