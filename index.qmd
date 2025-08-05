@@ -27,7 +27,7 @@ including for developing the package.
 -   Pull Request template for easy creation of new Pull Requests.
 -   Includes [GitHub Actions](https://docs.github.com/en/actions) for
     continuous integration, testing, and delivery for running checks,
-    formatting, releasing, and building the Python package and associated 
+    formatting, releasing, and building the Python package and associated
     documentation.
 -   Pull Request template for easy creation of new Pull Requests.
 -   [VS Code](https://code.visualstudio.com/) settings commonly used by

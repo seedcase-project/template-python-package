@@ -138,7 +138,7 @@ just update-quarto-theme
 
 This adds the `seedcase-theme` Quarto theme to the website, which
 provides a consistent look and feel across all Seedcase Project
-websites, including for Python package websites. 
+websites, including for Python package websites.
 It's called `update-quarto-theme` here since you can use this
 command to keep the theme updated.
 
