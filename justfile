@@ -2,7 +2,7 @@
     just --list --unsorted
 
 # Run all build-related recipes in the justfile
-run-all: install-deps format-python check-python check-unused test-python check-security check-spelling check-commits build-website
+run-all: check-spelling check-commits test build-website
 
 # Install the pre-commit hooks
 install-precommit:
@@ -13,78 +13,86 @@ install-precommit:
   # Update versions of pre-commit hooks
   uvx pre-commit autoupdate
 
-# Install Python package dependencies
-install-deps:
-  uv sync --all-extras --dev
-
-# Run the Python tests
-test-python:
-  uv run pytest
-  # Make the badge from the coverage report
-  uv run genbadge coverage \
-    -i coverage.xml \
-    -o htmlcov/coverage.svg
-
-# Check Python code for any errors that need manual attention
-check-python:
-  # Check formatting
-  uv run ruff check .
-  # Check types
-  uv run mypy .
-
-# Reformat Python code to match coding style and general structure
-format-python:
-  uv run ruff check --fix .
-  uv run ruff format .
-
-# Build the documentation website using Quarto
-build-website:
-  # To let Quarto know where python is.
-  export QUARTO_PYTHON=.venv/bin/python3
-  # Delete any previously built files from quartodoc.
-  # -f is to not give an error if the files don't exist yet.
-  rm -f docs/reference/*.qmd
-  uv run quartodoc build
-  uv run quarto render --execute
-
-# Run checks on commits with non-main branches
+# Check the commit messages on the current branch that are not on the main branch
 check-commits:
   #!/bin/zsh
   branch_name=$(git rev-parse --abbrev-ref HEAD)
   number_of_commits=$(git rev-list --count HEAD ^main)
   if [[ ${branch_name} != "main" && ${number_of_commits} -gt 0 ]]
   then
-    uv run cz check --rev-range main..HEAD
+    uvx --from commitizen cz check --rev-range main..HEAD
   else
-    echo "Can't either be on ${branch_name} or have more than ${number_of_commits}."
+    echo "On `main` or current branch doesn't have any commits."
   fi
-
-# Run basic security checks on the package
-check-security:
-  uv run bandit -r src/
 
 # Check for spelling errors in files
 check-spelling:
-  uv run typos
+  uvx typos
 
-# Build the documentation as PDF using Quarto
-build-pdf:
-  # To let Quarto know where python is.
-  export QUARTO_PYTHON=.venv/bin/python3
-  uv run quarto install tinytex
-  # For generating images from Mermaid diagrams
-  uv run quarto install chromium
-  uv run quarto render --profile pdf --to pdf
-  find docs -name "mermaid-figure-*.png" -delete
+# Test and check that a Python package can be created from the template
+test:
+  #!/bin/zsh
+  test_name="test-python-package"
+  test_dir="$(pwd)/_temp/$test_name"
+  template_dir="$(pwd)"
+  commit=$(git rev-parse HEAD)
+  rm -rf $test_dir
+  # vcs-ref means the current commit/head, not a tag.
+  uvx copier copy $template_dir $test_dir \
+    --vcs-ref=$commit \
+    --defaults \
+    --trust \
+    --data github_user="first-last" \
+    --data package_name=$test_name \
+    --data is_seedcase_project=true \
+    --data author_given_name="First" \
+    --data author_family_name="Last" \
+    --data author_email="first.last@example.com" \
+    --data review_team="@first-last/developers" \
+    --data github_board_number=22 \
+    --data dependabot_pr_assignee="mango90"
+  # Run checks in the generated test Python package
+  cd $test_dir
+  git add .
+  git commit -m "test: initial copy"
+  just check-python check-spelling
+  # TODO: Find some way to test the `update` command
+  # Check that recopy works
+  echo "Testing recopy command -----------"
+  rm .cz.toml
+  git add .
+  git commit -m "test: preparing to recopy from the template"
+  uvx copier recopy \
+    --vcs-ref=$commit \
+    --defaults \
+    --overwrite \
+    --trust
+  # Check that copying onto an existing Python package works
+  echo "Using the template in an existing package command -----------"
+  rm .cz.toml .copier-answers.yml LICENSE.md
+  git add .
+  git commit -m "test: preparing to copy onto an existing package"
+  uvx copier copy \
+    $template_dir $test_dir \
+    --vcs-ref=$commit \
+    --defaults \
+    --trust \
+    --overwrite \
+    --data github_user="first-last" \
+    --data package_name=$test_name \
+    --data is_seedcase_project=true \
+    --data author_given_name="First" \
+    --data author_family_name="Last" \
+    --data author_email="first.last@example.com" \
+    --data review_team="@first-last/developers" \
+    --data github_board_number=22 \
+    --data dependabot_pr_assignee="mango90"
 
-# Check for unused code in the package and its tests
-check-unused:
-  # exit code=0: No unused code was found
-  # exit code=3: Unused code was found
-  # Three confidence values:
-  # - 100 %: function/method/class argument, unreachable code
-  # - 90 %: import
-  # - 60 %: attribute, class, function, method, property, variable
-  # There are some things should be ignored though, with the allowlist.
-  # Create an allowlist with `vulture --make-allowlist`
-  uv run vulture src/ tests/ **/vulture-allowlist.py
+# Clean up any leftover and temporary build files
+cleanup:
+  #!/bin/zsh
+  rm -rf _temp
+
+# Build the website using Quarto
+build-website:
+  uvx --from quarto quarto render
