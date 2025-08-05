@@ -60,12 +60,11 @@ quartodoc:
 
 metadata-files:
   - docs/reference/_sidebar.yml
-{% if is_seedcase_project %}
+
 format:
-  seedcase-theme-html:
+  {{ "seedcase-theme-html" if is_seedcase_project else "html" }}:
     include-before-body:
       - "docs/site-counter.html"
-{%- endif %}
 
 editor:
   markdown:
