@@ -1,0 +1,31 @@
+title: "Template Python Package: An opinionated setup for making Python packages"
+abstract: "A template for making a Git repository that follows strongly opinionated practices for building and managing Python packages."
+authors:
+  - family-names: Johnston
+    given-names: Luke William
+    orcid: "https://orcid.org/0000-0003-4169-2616"
+    affiliation: "Steno Diabetes Center Aarhus"
+  - family-names: Brødbæk
+    given-names: Signe Kirk
+    affiliation: "Steno Diabetes Center Aarhus"
+    orcid: "https://orcid.org/0009-0000-2208-7088"
+  - family-names: Beicher
+    given-names: Kristiane
+    affiliation: "Steno Diabetes Center Aarhus"
+    orcid: "https://orcid.org/0000-0001-7556-9566"
+  - family-names: Vago
+    given-names: Marton
+    affiliation: "Steno Diabetes Center Aarhus"
+cff-version: 1.2.0
+# doi:
+# date:
+keywords:
+  - "copier template"
+  - "template"
+  - "template repository"
+  - "template project"
+  - "template python package"
+license: MIT
+message: "If you use this software, please cite it using these metadata."
+repository-code: "https://github.com/seedcase-project/template-python-package"
+url: "https://template-python-package.seedcase-project.org"
