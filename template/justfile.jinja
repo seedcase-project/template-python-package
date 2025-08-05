@@ -2,13 +2,14 @@
     just --list --unsorted
 
 @_checks: check-python check-unused test-python check-security check-spelling check-commits
+@_tests: test-python
 @_builds: build-contributors build-website build-readme
 
 # Run all build-related recipes in the justfile
 {%- if is_seedcase_project %}
-run-all: install-deps update-quarto-theme format-python _checks _builds
+run-all: install-deps update-quarto-theme format-python _checks _tests _builds
 {%- else %} 
-run-all: install-deps format-python _checks _builds
+run-all: install-deps format-python _checks _tests _builds
 {%- endif %} 
 
 # List all TODO items in the repository

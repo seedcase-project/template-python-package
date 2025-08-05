@@ -2,10 +2,12 @@
     just --list --unsorted
 
 @_checks: check-spelling check-commits
+# Test Seedcase and non-Seedcase projects
+@_tests: (test "true") (test "false")
 @_builds: build-contributors build-website build-readme
 
 # Run all build-related recipes in the justfile
-run-all: update-quarto-theme update-template _checks test _builds
+run-all: update-quarto-theme update-template _checks _tests _builds
 
 # Install the pre-commit hooks
 install-precommit:
@@ -45,10 +47,10 @@ check-spelling:
   uvx typos
 
 # Test and check that a Python package can be created from the template
-test:
+test is_seedcase_project:
   #!/bin/zsh
   test_name="test-python-package"
-  test_dir="$(pwd)/_temp/$test_name"
+  test_dir="$(pwd)/_temp/{{ is_seedcase_project }}/$test_name"
   template_dir="$(pwd)"
   commit=$(git rev-parse HEAD)
   rm -rf $test_dir
@@ -59,7 +61,7 @@ test:
     --trust \
     --data github_user="first-last" \
     --data package_name=$test_name \
-    --data is_seedcase_project=true \
+    --data is_seedcase_project={{ is_seedcase_project }} \
     --data author_given_name="First" \
     --data author_family_name="Last" \
     --data author_email="first.last@example.com" \
@@ -95,7 +97,7 @@ test:
     --overwrite \
     --data github_user="first-last" \
     --data package_name=$test_name \
-    --data is_seedcase_project=true \
+    --data is_seedcase_project={{ is_seedcase_project }} \
     --data author_given_name="First" \
     --data author_family_name="Last" \
     --data author_email="first.last@example.com" \
