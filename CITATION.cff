@@ -1,4 +1,4 @@
-title: "Template Python package: An opinionated setup for making Python packages."
+title: "Template Python Package: An opinionated setup for making Python packages"
 abstract: "A template for making a Git repository that follows strongly opinionated practices for building and managing Python packages."
 authors:
   - family-names: Johnston
@@ -12,11 +12,13 @@ authors:
   - family-names: Beicher
     given-names: Kristiane
     affiliation: "Steno Diabetes Center Aarhus"
+    orcid: "https://orcid.org/0000-0001-7556-9566"
   - family-names: Vago
     given-names: Marton
     affiliation: "Steno Diabetes Center Aarhus"
 cff-version: 1.2.0
 # doi:
+# date:
 keywords:
   - "copier template"
   - "template"

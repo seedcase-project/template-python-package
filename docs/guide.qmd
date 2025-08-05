@@ -119,12 +119,28 @@ repository with the settings we use, but you can follow them if you want
 to set up your Python package in a similar way. They are also included
 in a message after you've copied the template.
 
-After copying the template, while in the directory of the new Data
-Package, run the following:
+After copying the template, while in the directory of the new Python
+package, run the following:
 
 ``` bash
 just install-precommit
 ```
+
+This sets up the pre-commit hooks to run standard checks on your
+repository whenever you commit files to the history.
+
+If you are using the template to create a Python package for the Seedcase
+Project, run:
+
+``` bash
+just update-quarto-theme
+```
+
+This adds the `seedcase-theme` Quarto theme to the website, which
+provides a consistent look and feel across all Seedcase Project
+websites, including for Python package websites. 
+It's called `update-quarto-theme` here since you can use this
+command to keep the theme updated.
 
 Next, install [`spaid`](https://github.com/seedcase-project/spaid) and
 use the following commands to run the next setup steps:
@@ -136,14 +152,26 @@ spaid_gh_ruleset_basic_protect_main -h
 ```
 
 Some configuration is needed after copying this template to a new
-repository, including configuration external to the repository.
+repository, including configuration external to the repository. Some
+GitHub workflows require installing GitHub Apps, for greater security
+purposes and easier administration when managing multiple repositories.
+The [security
+section](https://guidebook.seedcase-project.org/operations/security#using-github-apps-to-generate-tokens)
+in our [Guidebook](https://guidebook.seedcase-project.org/) provides
+instructions on how to set up GitHub Apps, secrets, and variables.
+Ideally the secrets and variables should be set up in the organization
+settings. The specific workflows in this template that require this
+additional setup are:
 
--   The template file `.github/workflows/release-package.yml` requires
-    the [auto-release-token](https://github.com/apps/auto-release-token)
-    GitHub App to be installed.
--   The GitHub secrets `UPDATE_VERSION_TOKEN`, `ADD_TO_BOARD`, and
-    `NETLIFY_AUTH_TOKEN` and variables `UPDATE_VERSION_APP_ID` and
-    `ADD_TO_BOARD_APP_ID` have to be set up in the repository (or
-    organization) settings. See this
-    [guide](https://guidebook.seedcase-project.org/operations/security#using-github-apps-to-generate-tokens)
-    for more details on how to configure this.
+-   The workflow `.github/workflows/release-package.yml` requires the
+    [auto-release-token](https://github.com/apps/auto-release-token)
+    GitHub App as well as a creating a GitHub secret called
+    `UPDATE_VERSION_TOKEN` and a variable called `UPDATE_VERSION_APP_ID`
+    that has the App ID.
+-   The workflow `.github/workflows/add-to-project.yml` requires the
+    [add-to-board-token](https://github.com/apps/add-to-board-token)
+    GitHub App, along with the `ADD_TO_BOARD_TOKEN` secret and the
+    `ADD_TO_BOARD_APP_ID` variable of the GitHub App's ID.
+
+If you use Netlify, you will also need to add a `NETLIFY_AUTH_TOKEN` secret
+of your Netlify Token.
