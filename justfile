@@ -26,7 +26,7 @@ update-template:
   mkdir -p template/tools
   cp tools/get-contributors.sh template/tools/
   cp .github/pull_request_template.md template/.github/
-  cp .github/workflows/build-website.yml .github/workflows/dependency-review.yml template/.github/workflows/
+  cp .github/workflows/dependency-review.yml template/.github/workflows/
 
 # Check the commit messages on the current branch that are not on the main branch
 check-commits:
@@ -118,4 +118,4 @@ build-readme:
 
 # Generate a Quarto include file with the contributors
 build-contributors:
-  sh ./tools/get-contributors.sh seedcase-project/template-workshop
+  sh ./tools/get-contributors.sh seedcase-project/template-python-project

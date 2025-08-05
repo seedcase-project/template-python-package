@@ -30,6 +30,7 @@
   "python.languageServer": "Pylance",
   "files.insertFinalNewline": true,
   "files.associations": {
+    "justfile.jinja": "django-txt",
     "*.yml.jinja": "jinja-yaml",
     "*.cff.jinja": "jinja-yaml",
     "*.toml.jinja": "jinja-toml",
