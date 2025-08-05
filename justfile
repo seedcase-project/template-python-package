@@ -1,8 +1,11 @@
 @_default:
     just --list --unsorted
 
+@_checks: check-spelling check-commits
+@_builds: build-contributors build-website build-readme
+
 # Run all build-related recipes in the justfile
-run-all: check-spelling check-commits build-website
+run-all: update-quarto-theme update-template _checks test _builds
 
 # Install the pre-commit hooks
 install-precommit:
@@ -12,6 +15,18 @@ install-precommit:
   uvx pre-commit run --all-files
   # Update versions of pre-commit hooks
   uvx pre-commit autoupdate
+
+# Update the Quarto seedcase-theme extension
+update-quarto-theme:
+  quarto add seedcase-project/seedcase-theme --no-prompt
+
+# Update files in the template from the copier parent folder
+update-template:
+  cp .cz.toml .pre-commit-config.yaml .typos.toml .editorconfig template/
+  mkdir -p template/tools
+  cp tools/get-contributors.sh template/tools/
+  cp .github/pull_request_template.md template/.github/
+  cp .github/workflows/build-website.yml .github/workflows/dependency-review.yml template/.github/workflows/
 
 # Check the commit messages on the current branch that are not on the main branch
 check-commits:
@@ -29,6 +44,24 @@ check-commits:
 check-spelling:
   uvx typos
 
+# Test and check that a Python package can be created from the template
+# TODO: add test for copier
+test:
+  echo "copier test"
+
+# Clean up any leftover and temporary build files
+cleanup:
+  #!/bin/zsh
+  rm -rf _temp
+
 # Build the website using Quarto
 build-website:
   uvx --from quarto quarto render
+
+# Re-build the README file from the Quarto version
+build-readme:
+  uvx --from quarto quarto render README.qmd --to gfm
+
+# Generate a Quarto include file with the contributors
+build-contributors:
+  sh ./tools/get-contributors.sh seedcase-project/template-workshop
