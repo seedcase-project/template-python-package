@@ -30,9 +30,10 @@ _message_after_copy: |
   4. Configure GitHub following this
     [guide](https://guidebook.seedcase-project.org/operations/security#using-github-apps-to-generate-tokens):
 
-    - Install the [auto-release-token](https://github.com/apps/auto-release-token) GitHub App
-    - Create these secrets: UPDATE_VERSION_TOKEN, ADD_TO_BOARD, NETLIFY_AUTH_TOKEN (if using Netlify)
-    - Create these variables: UPDATE_VERSION_APP_ID, ADD_TO_BOARD_APP_ID
+    - Install the [auto-release-token](https://github.com/apps/auto-release-token)
+      and [add-to-board-token](https://github.com/apps/add-to-board-token) GitHub Apps
+    - Create an `UPDATE_VERSION_TOKEN` and `ADD_TO_BOARD_TOKEN` secret for the GitHub Apps
+    - Create an `UPDATE_VERSION_APP_ID` and `ADD_TO_BOARD_APP_ID` variable of the GitHub Apps' IDs
 
   5. List and complete all TODO items in the repository:
 
