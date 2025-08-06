@@ -8,7 +8,3 @@ updates:
     commit-message:
       prefix: build
       include: scope
-{%- if dependabot_pr_assignee %}
-    assignees:
-      - "{{ dependabot_pr_assignee }}"
-{% endif %}

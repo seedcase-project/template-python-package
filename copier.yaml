@@ -107,7 +107,3 @@ copyright_year:
   type: str
   default: "{{ copyright_year | default('%Y' | strftime) }}"
   when: false
-
-dependabot_pr_assignee:
-  type: str
-  help: "What is the GitHub username of the person to assign to PRs opened by dependabot?"

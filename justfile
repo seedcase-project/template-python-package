@@ -65,8 +65,7 @@ test is_seedcase_project:
     --data author_family_name="Last" \
     --data author_email="first.last@example.com" \
     --data review_team="@first-last/developers" \
-    --data github_board_number=22 \
-    --data dependabot_pr_assignee="mango90"
+    --data github_board_number=22
   # Run checks in the generated test Python package
   cd $test_dir
   git add .
@@ -100,8 +99,7 @@ test is_seedcase_project:
     --data author_family_name="Last" \
     --data author_email="first.last@example.com" \
     --data review_team="@first-last/developers" \
-    --data github_board_number=22 \
-    --data dependabot_pr_assignee="mango90"
+    --data github_board_number=22
 
 # Clean up any leftover and temporary build files
 cleanup:
