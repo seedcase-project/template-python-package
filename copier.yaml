@@ -40,13 +40,19 @@ _message_after_copy: |
     $ just list-todos
 
 # Questions:
+package_github_repo:
+  type: str
+  help: "What is or will be the GitHub repository spec for the project?"
+  placeholder: "user/repo"
+  validator: |
+    {% if package_github_repo and not (package_github_repo | regex_search('^[\w.-]+\/[\w.-]+$')) %}
+    Must be in the format `user/repo` and contain only alphanumeric characters and `_`, `-`, or `.`.
+    {% endif %}
+
 github_user:
   type: str
-  help: "What is the GitHub username of the person or organisation who owns the package?"
-  validator: |
-    {% if github_user and not (github_user | regex_search('^[\w.-]+$')) %}
-    Must contain only alphanumeric characters and `_`, `-`, or `.`.
-    {% endif %}
+  default: "{{ package_github_repo.split('/')[0] if package_github_repo else '' }}"
+  when: false
 
 package_name:
   type: str
@@ -60,11 +66,6 @@ package_name:
 package_name_snake_case:
   type: str
   default: "{{package_name | replace('-', '_') | replace('.', '_')}}"
-  when: false
-
-package_github_repo:
-  type: str
-  default: "{{ github_user ~ '/' ~ package_name }}"
   when: false
 
 is_seedcase_project:
