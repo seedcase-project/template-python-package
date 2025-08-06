@@ -73,16 +73,10 @@ is_seedcase_project:
   help: "Is this package part of the Seedcase Project?"
   default: "{{ github_user == 'seedcase-project' }}"
 
-seedcase_short_name:
-  type: str
-  help: "What is the short name of the package?"
-  default: "{{ package_name[9:] if ('seedcase-' in package_name) else '' }}"
-  when: "{{ is_seedcase_project }}"
-
 homepage:
   type: str
   help: "What is the homepage of your project?"
-  default: "{{ 'https://%s.seedcase-project.org' % seedcase_short_name if is_seedcase_project else '' }}"
+  default: "{{ 'https://%s.seedcase-project.org' % package_name if is_seedcase_project else '' }}"
 
 author_given_name:
   type: str

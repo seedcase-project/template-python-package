@@ -16,8 +16,8 @@ website:
     pinned: true
     title: false
     {%- if is_seedcase_project %}
-    logo: "_extensions/seedcase-project/seedcase-theme/logos/navbar-logo-seedcase-{{ seedcase_short_name }}.svg"
-    logo-alt: "Seedcase {{ seedcase_short_name | title }} logo: Main page"
+    logo: "_extensions/seedcase-project/seedcase-theme/logos/navbar-logo-{{ package_name }}.svg"
+    logo-alt: "{{ package_name }} logo: Main page"
     {%- else %}
     # TODO: add logo
     logo: ""
