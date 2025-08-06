@@ -136,6 +136,8 @@ Project, run:
 just update-quarto-theme
 ```
 
+Then set `seedcase-theme` as your project `type` in `_quarto.yml`.
+
 This adds the `seedcase-theme` Quarto theme to the website, which
 provides a consistent look and feel across all Seedcase Project
 websites, including for Python package websites.

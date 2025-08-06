@@ -5,14 +5,6 @@ _tasks:
   # Add dev dependencies
   - command: "git init -b main && uv add --dev pre-commit ruff typos pytest bandit commitizen genbadge jupyter pytest-cov quartodoc types-tabulate mypy vulture"
     when: "{{ _copier_operation == 'copy' }}"
-  # If Seedcase project, add seedcase-theme extension
-  - command: "just update-quarto-theme"
-    when: "{{ _copier_operation == 'copy' and is_seedcase_project }}"
-  # If Seedcase project, use seedcase-theme as project type
-  - command: >-
-      uv run python -c "from pathlib import Path; file = Path('_quarto.yml'); file.write_text(file.read_text().replace('type: website', 'type: seedcase-theme', 1))"
-    when: "{{ _copier_operation == 'copy' and is_seedcase_project }}"
-
 
 # Message to show after generating or regenerating the project successfully
 _message_after_copy: |
