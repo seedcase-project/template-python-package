@@ -59,7 +59,7 @@ test is_seedcase_project:
     --vcs-ref=$commit \
     --defaults \
     --trust \
-    --data github_user="first-last" \
+    --data package_github_repo="first-last/repo" \
     --data is_seedcase_project={{ is_seedcase_project }} \
     --data author_given_name="First" \
     --data author_family_name="Last" \
@@ -93,7 +93,7 @@ test is_seedcase_project:
     --defaults \
     --trust \
     --overwrite \
-    --data github_user="first-last" \
+    --data package_github_repo="first-last/repo" \
     --data is_seedcase_project={{ is_seedcase_project }} \
     --data author_given_name="First" \
     --data author_family_name="Last" \
