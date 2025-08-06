@@ -60,7 +60,6 @@ test is_seedcase_project:
     --defaults \
     --trust \
     --data github_user="first-last" \
-    --data package_name=$test_name \
     --data is_seedcase_project={{ is_seedcase_project }} \
     --data author_given_name="First" \
     --data author_family_name="Last" \
@@ -96,7 +95,6 @@ test is_seedcase_project:
     --trust \
     --overwrite \
     --data github_user="first-last" \
-    --data package_name=$test_name \
     --data is_seedcase_project={{ is_seedcase_project }} \
     --data author_given_name="First" \
     --data author_family_name="Last" \

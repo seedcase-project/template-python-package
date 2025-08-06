@@ -3,7 +3,7 @@ _subdirectory: template
 # Post-copy commands:
 _tasks:
   # Add dev dependencies
-  - command: "git init -b main && uv add --dev pre-commit ruff typos pytest bandit commitizen genbadge jupyter pytest-cov quartodoc types-tabulate mypy vulture"
+  - command: "git init -b main; uv add --dev pre-commit ruff typos pytest bandit commitizen genbadge jupyter pytest-cov quartodoc types-tabulate mypy vulture"
     when: "{{ _copier_operation == 'copy' }}"
 
 # Message to show after generating or regenerating the project successfully
@@ -101,7 +101,7 @@ review_team:
 
 github_board_number:
   type: str
-  help: "What is the number of the GitHub project board to add issues and PRs to?"
+  help: "What is the GitHub project board number to add issues and PRs to?"
   validator: |
     {% if github_board_number and not github_board_number.isdigit() %}
     The board number must be an integer.
