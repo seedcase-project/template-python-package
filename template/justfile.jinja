@@ -112,3 +112,11 @@ build-readme:
 # Generate a Quarto include file with the contributors
 build-contributors:
   sh ./tools/get-contributors.sh {{ package_github_repo }}
+
+# Check for and apply updates from the template
+update-from-template:
+  uvx copier update --trust --defaults
+
+# Reset repo changes to match the template
+reset-from-template:
+  uvx copier recopy --trust --defaults
