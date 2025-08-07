@@ -1,23 +1,68 @@
-# Template for Seedcase Python packages
+---
+format: gfm
+execute:
+  echo: false
+jupyter: python3
+metadata-files:
+  - _metadata.yml
+---
 
-This repository contains a template for setting up new Python package projects in Seedcase. The first step is to create a new repository using this template. This can easily be done by clicking the "Use this template" button on the repository page or by using the GitHub CLI:
+# {{< meta titles.full >}}
 
-``` bash
-# NAME is the name to give the new repository
-gh repo create NAME --template seedcase-project/template-python-project
+{{< include /docs/includes/_badges.qmd >}}
+
+This repository contains a [copier](https://copier.readthedocs.io/)
+template for setting up a new repository for a Python package. Along
+with a structured directory layout, this template includes configured
+development tools, CI configuration, and supporting files for package
+setup, publishing, and maintenance.
+
+Check out our
+[website](https://{{< meta gh.repo >}}.{{< meta gh.org >}}.org/) for
+more information, such as the features it provides and a
+[guide](https://{{< meta gh.repo >}}.{{< meta gh.org >}}.org/docs/guide/)
+to using the template. For a list of changes, see our
+[changelog](https://{{< meta gh.repo >}}.{{< meta gh.org >}}.org/docs/releases/)
+page.
+
+## Contributing
+
+Check out our [contributing
+page](https://{{< meta gh.repo >}}.{{< meta gh.org >}}.org/contributing/)
+for information on how to contribute to the project, including how to
+set up your development environment.
+
+Please note that this project is released with a [Contributor Code of
+Conduct](https://github.com/{{< meta gh.org >}}/.github/blob/main/CODE_OF_CONDUCT.md).
+By participating in this project you agree to abide by its terms.
+
+::: content-hidden
+<!-- TODO: Unhide after more contributors -->
+
+### Contributors
+
+{{< include /_contributors.qmd >}}
+:::
+
+## Licensing
+
+This project is licensed under the [MIT
+License](https://github.com/{{< meta gh.org >}}/{{< meta gh.repo >}}/blob/main/LICENSE.md).
+
+## Citing
+
+This project is part of the Seedcase Project, which is a collaborative
+effort to create a framework for data management and analysis in
+research. If you use this project in your work, please cite it as
+follows:
+
+```{python}
+#| output: asis
+!uvx --quiet cffconvert --format apalike
 ```
 
-## Setting things up after cloning
+Or as a BibTeX entry:
 
-Search for `NAME` and `REPO` and replace them with the name of your project and the repository name. Then look for any `TODO` items.
-
-## Setting things up
-
-Use the commands found in [`spaid`](https://github.com/seedcase-project/spaid) repo to run the next setup steps.
-
-Need to install these packages after:
-
-``` bash
-uv add --dev pre-commit ruff typos pytest bandit commitizen \
-    genbadge jupyter pytest-cov quartodoc
+```{python}
+!uvx --quiet cffconvert --format bibtex
 ```
