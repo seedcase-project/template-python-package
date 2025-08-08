@@ -1,31 +1,69 @@
 
 
-# Template for Seedcase Python packages
+# Template Python Package: An opinionated setup for making Python packages
 
-This repository contains a template for setting up new Python package
-projects in Seedcase. The first step is to create a new repository using
-this template. This can easily be done by clicking the “Use this
-template” button on the repository page or by using the GitHub CLI:
+<!-- [![DOI]()]() -->
 
-``` bash
-# NAME is the name to give the new repository
-gh repo create NAME --template seedcase-project/template-python-project
-```
+[![Copier](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-grayscale-inverted-border-teal.json?raw=true)](https://github.com/copier-org/copier)
+[![GitHub
+License](https://img.shields.io/github/license/seedcase-project/template-python-package.svg)](https://github.com/seedcase-project/template-python-package/blob/main/LICENSE.md)
+[![GitHub
+Release](https://img.shields.io/github/v/release/seedcase-project/template-python-package.svg)](https://github.com/seedcase-project/template-python-package/releases/latest)
+[![Build
+website](https://github.com/seedcase-project/template-python-package/actions/workflows/build-website.yml/badge.svg)](https://github.com/seedcase-project/template-python-package/actions/workflows/build-website.yml)
+[![CodeQL](https://github.com/seedcase-project/template-python-package/actions/workflows/github-code-scanning/codeql/badge.svg?branch=main)](https://github.com/seedcase-project/template-python-package/actions/workflows/github-code-scanning/codeql)
+[![pre-commit.ci
+status](https://results.pre-commit.ci/badge/github/seedcase-project/template-python-package/main.svg)](https://results.pre-commit.ci/latest/github/seedcase-project/template-python-package/main)
+[![lifecycle](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![Project Status: Active – The project has reached a stable, usable
+state and is being actively
+developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
-## Setting things up after cloning
+This repository contains a [copier](https://copier.readthedocs.io/)
+template for setting up a new repository for a Python package. Along
+with a structured directory layout, this template includes configured
+development tools, CI configuration, and supporting files for package
+setup, publishing, and maintenance.
 
-Search for `NAME` and `REPO` and replace them with the name of your
-project and the repository name. Then look for any `TODO` items.
+Check out our
+[website](https://template-python-package.seedcase-project.org/) for
+more information, such as the features it provides and a
+[guide](https://template-python-package.seedcase-project.org/docs/guide/)
+to using the template. For a list of changes, see our
+[changelog](https://template-python-package.seedcase-project.org/docs/releases/)
+page.
 
-## Setting things up
+## Contributing
 
-Use the commands found in
-[`spaid`](https://github.com/seedcase-project/spaid) repo to run the
-next setup steps.
+Check out our [contributing
+page](https://template-python-package.seedcase-project.org/contributing/)
+for information on how to contribute to the project, including how to
+set up your development environment.
 
-Need to install these packages after:
+Please note that this project is released with a [Contributor Code of
+Conduct](https://github.com/seedcase-project/.github/blob/main/CODE_OF_CONDUCT.md).
+By participating in this project you agree to abide by its terms.
 
-``` bash
-uv add --dev pre-commit ruff typos pytest bandit commitizen \
-    genbadge jupyter pytest-cov quartodoc
-```
+## Licensing
+
+This project is licensed under the [MIT
+License](https://github.com/seedcase-project/template-python-package/blob/main/LICENSE.md).
+
+## Citing
+
+This project is part of the Seedcase Project, which is a collaborative
+effort to create a framework for data management and analysis in
+research. If you use this project in your work, please cite it as
+follows:
+
+Johnston L.W., Brødbæk S.K., Beicher K., Vago M. Template Python
+Package: An opinionated setup for making Python packages URL:
+https://template-python-package.seedcase-project.org
+
+Or as a BibTeX entry:
+
+    @misc{YourReferenceHere,
+    author = {Johnston, Luke William and Brødbæk, Signe Kirk and Beicher, Kristiane and Vago, Marton},
+    title = {Template Python Package: An opinionated setup for making Python packages},
+    url = {https://template-python-package.seedcase-project.org}
+    }

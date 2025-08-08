@@ -2,3 +2,7 @@
 gh:
   org: "seedcase-project"
   repo: "template-python-package"
+
+titles:
+  full: "Template Python Package: An opinionated setup for making Python packages"
+  short: "Template Python Package"
