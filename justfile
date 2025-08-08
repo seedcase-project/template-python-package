@@ -2,10 +2,12 @@
     just --list --unsorted
 
 @_checks: check-spelling check-commits
+# Test Seedcase and non-Seedcase projects
+@_tests: (test "true") (test "false")
 @_builds: build-contributors build-website build-readme
 
 # Run all build-related recipes in the justfile
-run-all: update-quarto-theme update-template _checks test _builds
+run-all: update-quarto-theme update-template _checks _tests _builds
 
 # Install the pre-commit hooks
 install-precommit:
@@ -26,7 +28,7 @@ update-template:
   mkdir -p template/tools
   cp tools/get-contributors.sh template/tools/
   cp .github/pull_request_template.md template/.github/
-  cp .github/workflows/build-website.yml .github/workflows/dependency-review.yml template/.github/workflows/
+  cp .github/workflows/dependency-review.yml template/.github/workflows/
 
 # Check the commit messages on the current branch that are not on the main branch
 check-commits:
@@ -45,9 +47,59 @@ check-spelling:
   uvx typos
 
 # Test and check that a Python package can be created from the template
-# TODO: add test for copier
-test:
-  echo "copier test"
+test is_seedcase_project:
+  #!/bin/zsh
+  test_name="test-python-package"
+  test_dir="$(pwd)/_temp/{{ is_seedcase_project }}/$test_name"
+  template_dir="$(pwd)"
+  commit=$(git rev-parse HEAD)
+  rm -rf $test_dir
+  # vcs-ref means the current commit/head, not a tag.
+  uvx copier copy $template_dir $test_dir \
+    --vcs-ref=$commit \
+    --defaults \
+    --trust \
+    --data package_github_repo="first-last/repo" \
+    --data is_seedcase_project={{ is_seedcase_project }} \
+    --data author_given_name="First" \
+    --data author_family_name="Last" \
+    --data author_email="first.last@example.com" \
+    --data review_team="@first-last/developers" \
+    --data github_board_number=22
+  # Run checks in the generated test Python package
+  cd $test_dir
+  git add .
+  git commit -m "test: initial copy"
+  just check-python check-spelling
+  # TODO: Find some way to test the `update` command
+  # Check that recopy works
+  echo "Testing recopy command -----------"
+  rm .cz.toml
+  git add .
+  git commit -m "test: preparing to recopy from the template"
+  uvx copier recopy \
+    --vcs-ref=$commit \
+    --defaults \
+    --overwrite \
+    --trust
+  # Check that copying onto an existing Python package works
+  echo "Using the template in an existing package command -----------"
+  rm .cz.toml .copier-answers.yml LICENSE.md
+  git add .
+  git commit -m "test: preparing to copy onto an existing package"
+  uvx copier copy \
+    $template_dir $test_dir \
+    --vcs-ref=$commit \
+    --defaults \
+    --trust \
+    --overwrite \
+    --data package_github_repo="first-last/repo" \
+    --data is_seedcase_project={{ is_seedcase_project }} \
+    --data author_given_name="First" \
+    --data author_family_name="Last" \
+    --data author_email="first.last@example.com" \
+    --data review_team="@first-last/developers" \
+    --data github_board_number=22
 
 # Clean up any leftover and temporary build files
 cleanup:
@@ -64,4 +116,4 @@ build-readme:
 
 # Generate a Quarto include file with the contributors
 build-contributors:
-  sh ./tools/get-contributors.sh seedcase-project/template-workshop
+  sh ./tools/get-contributors.sh seedcase-project/template-python-project

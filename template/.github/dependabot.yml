@@ -1,0 +1,10 @@
+version: 2
+updates:
+  - package-ecosystem: uv
+    directory: /
+    schedule:
+      interval: monthly
+    versioning-strategy: increase-if-necessary
+    commit-message:
+      prefix: build
+      include: scope

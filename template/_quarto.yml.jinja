@@ -1,0 +1,75 @@
+project:
+  type: website
+  # Delete auto-generated files from `quartodoc`
+  post-render: rm -f docs/reference/*.qmd
+  render:
+    - "docs/*"
+    - "index.qmd"
+
+website:
+  # TODO: Fill in the title of the website.
+  title: ""
+  site-url: "{{ homepage }}"
+  repo-url: "https://github.com/{{ package_github_repo }}"
+  page-navigation: true
+  navbar:
+    pinned: true
+    title: false
+    {%- if is_seedcase_project %}
+    logo: "_extensions/seedcase-project/seedcase-theme/logos/navbar-logo-{{ package_name }}.svg"
+    logo-alt: "{{ package_name }} logo: Main page"
+    {%- else %}
+    # TODO: add logo
+    logo: ""
+    logo-alt: "{{ package_name }} logo: Main page"
+    {%- endif %}
+    left:
+      - text: "Guide"
+        href: docs/guide/index.qmd
+      - text: "Design"
+        href: docs/design/index.qmd
+    tools:
+      - icon: github
+        href: "https://github.com/{{ package_github_repo }}"
+        aria-label: "GitHub icon: Source code"
+      {% if is_seedcase_project -%}
+      - icon: house
+        href: "https://seedcase-project.org"
+        aria-label: "House icon: Main website for the Seedcase Project"
+      {%- endif %}
+  sidebar:
+    - id: design
+      pinned: true
+      style: "floating"
+      contents:
+        - text: "Design"
+          href: docs/design/index.qmd
+    - id: guide
+      contents:
+        - section: "Guide"
+          href: docs/guide/index.qmd
+
+quartodoc:
+  sidebar: "docs/reference/_sidebar.yml"
+  style: "pkgdown"
+  dir: "docs/reference"
+  package: "{{ package_name_snake_case }}"
+  parser: google
+  dynamic: true
+  renderer:
+    style: _renderer.py
+    table_style: description-list
+    show_signature_annotations: true
+
+metadata-files:
+  - docs/reference/_sidebar.yml
+
+format:
+  {{ "seedcase-theme-html" if is_seedcase_project else "html" }}:
+    include-before-body:
+      - "docs/site-counter.html"
+
+editor:
+  markdown:
+    wrap: 72
+    canonical: true

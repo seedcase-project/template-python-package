@@ -1,0 +1,109 @@
+_subdirectory: template
+
+# Post-copy commands:
+_tasks:
+  # Add dev dependencies
+  - command: "git init -b main; uv add --dev pre-commit ruff typos pytest bandit commitizen genbadge jupyter pytest-cov quartodoc types-tabulate mypy vulture"
+    when: "{{ _copier_operation == 'copy' }}"
+
+# Message to show after generating or regenerating the project successfully
+_message_after_copy: |
+
+  Your project "{{ package_name }}" has been created successfully!
+
+  Next steps:
+
+  1. Change directory to the project root:
+
+    $ cd {{ _copier_conf.dst_path }}
+
+  2. Install the pre-commit hooks:
+
+    $ just install-precommit
+
+  3. Install [`spaid`](https://github.com/seedcase-project/spaid) and run these commands to upload and configure your project on GitHub:
+
+    $ spaid_gh_create_repo_from_local -h
+    $ spaid_gh_set_repo_settings -h
+    $ spaid_gh_ruleset_basic_protect_main -h
+
+  4. Configure GitHub following this
+    [guide](https://guidebook.seedcase-project.org/operations/security#using-github-apps-to-generate-tokens):
+
+    - Install the [auto-release-token](https://github.com/apps/auto-release-token)
+      and [add-to-board-token](https://github.com/apps/add-to-board-token) GitHub Apps
+    - Create an `UPDATE_VERSION_TOKEN` and `ADD_TO_BOARD_TOKEN` secret for the GitHub Apps
+    - Create an `UPDATE_VERSION_APP_ID` and `ADD_TO_BOARD_APP_ID` variable of the GitHub Apps' IDs
+
+  5. List and complete all TODO items in the repository:
+
+    $ just list-todos
+
+# Questions:
+package_github_repo:
+  type: str
+  help: "What is or will be the GitHub repository spec for the project?"
+  placeholder: "user/repo"
+  validator: |
+    {% if package_github_repo and not (package_github_repo | regex_search('^[\w.-]+\/[\w.-]+$')) %}
+    Must be in the format `user/repo` and contain only alphanumeric characters and `_`, `-`, or `.`.
+    {% endif %}
+
+github_user:
+  type: str
+  default: "{{ package_github_repo.split('/')[0] if package_github_repo else '' }}"
+  when: false
+
+package_name:
+  type: str
+  help: "What is the name of the package?"
+  default: "{{ _copier_conf.dst_path | basename }}"
+  validator: |
+    {% if package_name and not (package_name | regex_search('^[\w.-]+$')) %}
+    Must contain only alphanumeric characters and `_`, `-`, or `.`.
+    {% endif %}
+
+package_name_snake_case:
+  type: str
+  default: "{{package_name | replace('-', '_') | replace('.', '_')}}"
+  when: false
+
+is_seedcase_project:
+  type: bool
+  help: "Is this package part of the Seedcase Project?"
+  default: "{{ github_user == 'seedcase-project' }}"
+
+homepage:
+  type: str
+  help: "What is the homepage of your project?"
+  default: "{{ 'https://%s.seedcase-project.org' % package_name if is_seedcase_project else '' }}"
+
+author_given_name:
+  type: str
+  help: "What is your first/given name?"
+
+author_family_name:
+  type: str
+  help: "What is your last/family name?"
+
+author_email:
+  type: str
+  help: "What is your email address?"
+
+review_team:
+  type: str
+  help: What GitHub team is responsible for reviewing pull requests?
+  default: "{{ '@%s/developers' % github_user if github_user else '' }}"
+
+github_board_number:
+  type: str
+  help: "What is the GitHub project board number to add issues and PRs to?"
+  validator: |
+    {% if github_board_number and not github_board_number.isdigit() %}
+    The board number must be an integer.
+    {% endif %}
+
+copyright_year:
+  type: str
+  default: "{{ copyright_year | default('%Y' | strftime) }}"
+  when: false
