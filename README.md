@@ -21,9 +21,10 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 
 This repository contains a [copier](https://copier.readthedocs.io/)
 template for setting up a new repository for a Python package. Along
-with a structured directory layout, this template includes configured
-development tools, CI configuration, and supporting files for package
-setup, publishing, and maintenance.
+with a structured directory layout, this template includes
+configurations for tools that improve developer experience, continuous
+integration and delivery workflows, and supporting files for building
+robust Python packages.
 
 Check out our
 [website](https://template-python-package.seedcase-project.org/) for

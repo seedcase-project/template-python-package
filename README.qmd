@@ -13,9 +13,10 @@ metadata-files:
 
 This repository contains a [copier](https://copier.readthedocs.io/)
 template for setting up a new repository for a Python package. Along
-with a structured directory layout, this template includes configurations
-for tools that improve developer experience, continuous integration and
-delivery workflows, and supporting files for building robust Python packages.
+with a structured directory layout, this template includes
+configurations for tools that improve developer experience, continuous
+integration and delivery workflows, and supporting files for building
+robust Python packages.
 
 Check out our
 [website](https://{{< meta gh.repo >}}.{{< meta gh.org >}}.org/) for
