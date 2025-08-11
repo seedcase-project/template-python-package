@@ -3,7 +3,7 @@
 
 @_checks: check-spelling check-commits
 # Test Seedcase and non-Seedcase projects
-@_tests: (test "true") (test "false")
+@_tests: (test "true" "netlify") (test "false" "netlify") (test "true" "gh-pages") (test "false" "gh-pages")
 @_builds: build-contributors build-website build-readme
 
 # Run all build-related recipes in the justfile
