@@ -55,6 +55,11 @@ is_seedcase_project:
   help: "Is this package part of the Seedcase Project?"
   default: true
 
+github_repo:
+  type: str
+  default: "{{ _copier_conf.dst_path | realpath | basename }}"
+  when: false
+
 github_user:
   type: str
   help: "What is the name of the GitHub user or organisation where the repository will be or is stored?"
@@ -96,13 +101,6 @@ github_board_number:
     {% if github_board_number and not github_board_number.isdigit() %}
     The board number must be an integer.
     {% endif %}
-
-# Configurations not asked
-
-github_repo:
-  type: str
-  default: "{{ _copier_conf.dst_path | realpath | basename }}"
-  when: false
 
 github_repo_snake_case:
   type: str
