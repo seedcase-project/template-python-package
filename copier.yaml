@@ -9,7 +9,7 @@ _tasks:
 # Message to show after generating or regenerating the project successfully
 _message_after_copy: |
 
-  Your project "{{ package_name }}" has been created successfully!
+  Your project "{{ github_repo }}" has been created successfully!
 
   Next steps:
 
@@ -40,43 +40,26 @@ _message_after_copy: |
     $ just list-todos
 
 # Questions:
-package_github_repo:
-  type: str
-  help: "What is or will be the GitHub repository spec for the project?"
-  placeholder: "user/repo"
-  validator: |
-    {% if package_github_repo and not (package_github_repo | regex_search('^[\w.-]+\/[\w.-]+$')) %}
-    Must be in the format `user/repo` and contain only alphanumeric characters and `_`, `-`, or `.`.
-    {% endif %}
-
-github_user:
-  type: str
-  default: "{{ package_github_repo.split('/')[0] if package_github_repo else '' }}"
-  when: false
-
-package_name:
-  type: str
-  help: "What is the name of the package?"
-  default: "{{ _copier_conf.dst_path | basename }}"
-  validator: |
-    {% if package_name and not (package_name | regex_search('^[\w.-]+$')) %}
-    Must contain only alphanumeric characters and `_`, `-`, or `.`.
-    {% endif %}
-
-package_name_snake_case:
-  type: str
-  default: "{{package_name | replace('-', '_') | replace('.', '_')}}"
-  when: false
-
 is_seedcase_project:
   type: bool
   help: "Is this package part of the Seedcase Project?"
-  default: "{{ github_user == 'seedcase-project' }}"
+  default: true
+
+github_user:
+  type: str
+  help: "What is the name of the GitHub user or organization where the website repository will be or is stored?"
+
+hosting_provider:
+  type: str
+  help: "What hosting provider will you use for the documentation website?"
+  choices:
+    - netlify
+    - gh-pages
 
 homepage:
   type: str
   help: "What is the homepage of your project?"
-  default: "{{ 'https://%s.seedcase-project.org' % package_name if is_seedcase_project else '' }}"
+  default: "{{ 'https://%s.seedcase-project.org' % github_repo if is_seedcase_project else '' }}"
 
 author_given_name:
   type: str
@@ -102,6 +85,23 @@ github_board_number:
     {% if github_board_number and not github_board_number.isdigit() %}
     The board number must be an integer.
     {% endif %}
+
+# Configurations not asked
+
+github_repo:
+  type: str
+  default: "{{ _copier_conf.dst_path | realpath | basename }}"
+  when: false
+
+github_repo_snake_case:
+  type: str
+  default: "{{github_repo | replace('-', '_') | replace('.', '_')}}"
+  when: false
+
+github_repo_spec:
+  type: str
+  default: "{{ github_user }}/{{ github_repo }}"
+  when: false
 
 copyright_year:
   type: str

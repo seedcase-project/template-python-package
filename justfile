@@ -3,7 +3,7 @@
 
 @_checks: check-spelling check-commits
 # Test Seedcase and non-Seedcase projects
-@_tests: (test "true") (test "false")
+@_tests: (test "true" "netlify") (test "false" "netlify") (test "true" "gh-pages") (test "false" "gh-pages")
 @_builds: build-contributors build-website build-readme
 
 # Run all build-related recipes in the justfile
@@ -47,7 +47,7 @@ check-spelling:
   uvx typos
 
 # Test and check that a Python package can be created from the template
-test is_seedcase_project:
+test is_seedcase_project="true" hosting_provider="netlify":  
   #!/bin/zsh
   test_name="test-python-package"
   test_dir="$(pwd)/_temp/{{ is_seedcase_project }}/$test_name"
@@ -59,8 +59,9 @@ test is_seedcase_project:
     --vcs-ref=$commit \
     --defaults \
     --trust \
-    --data package_github_repo="first-last/repo" \
     --data is_seedcase_project={{ is_seedcase_project }} \
+    --data github_user="first-last" \
+    --data hosting_provider={{ hosting_provider }} \
     --data author_given_name="First" \
     --data author_family_name="Last" \
     --data author_email="first.last@example.com" \
@@ -93,8 +94,9 @@ test is_seedcase_project:
     --defaults \
     --trust \
     --overwrite \
-    --data package_github_repo="first-last/repo" \
     --data is_seedcase_project={{ is_seedcase_project }} \
+    --data github_user="first-last" \
+    --data hosting_provider={{ hosting_provider }} \
     --data author_given_name="First" \
     --data author_family_name="Last" \
     --data author_email="first.last@example.com" \
