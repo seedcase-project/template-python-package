@@ -48,7 +48,7 @@ _message_after_copy: |
     ``` bash
     just list-todos
     ```
-    
+
 # Questions:
 is_seedcase_project:
   type: bool
@@ -57,7 +57,7 @@ is_seedcase_project:
 
 github_user:
   type: str
-  help: "What is the name of the GitHub user or organization where the website repository will be or is stored?"
+  help: "What is the name of the GitHub user or organisation where the repository will be or is stored?"
 
 hosting_provider:
   type: str
