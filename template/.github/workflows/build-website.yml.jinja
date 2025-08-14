@@ -11,7 +11,7 @@ permissions: read-all
 jobs:
   build-website:
     uses: seedcase-project/.github/.github/workflows/reusable-build-docs-with-python.yml@main
-    {% if hosting_provider == 'gh-pages' -%}
+    {%- if hosting_provider == 'gh-pages' %}
     with:
       hosting-provider: gh-pages
     permissions:
