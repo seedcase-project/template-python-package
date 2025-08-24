@@ -5,6 +5,8 @@ project:
   render:
     - "docs/*"
     - "index.qmd"
+    - "404.qmd"
+    - "CONTRIBUTING.md"
 
 website:
   # TODO: Fill in the title of the website.
@@ -32,7 +34,7 @@ website:
       - icon: github
         href: "https://github.com/{{ package_github_repo }}"
         aria-label: "GitHub icon: Source code"
-      {% if is_seedcase_project -%}
+      {%- if is_seedcase_project %}
       - icon: house
         href: "https://seedcase-project.org"
         aria-label: "House icon: Main website for the Seedcase Project"
