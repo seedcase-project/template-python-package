@@ -59,7 +59,7 @@ build-website:
   export QUARTO_PYTHON=.venv/bin/python3
   # Delete any previously built files from quartodoc.
   # -f is to not give an error if the files don't exist yet.
-  rm -f docs/reference/*.qmd
+  rm -rf docs/reference
   uv run quartodoc build
   uv run quarto render --execute
 
