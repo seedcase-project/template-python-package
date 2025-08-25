@@ -73,6 +73,13 @@ is_seedcase_project:
   help: "Is this package part of the Seedcase Project?"
   default: "{{ github_user == 'seedcase-project' }}"
 
+hosting_provider:
+  type: str
+  help: "What hosting provider will you use for the documentation website?"
+  choices:
+    - netlify
+    - gh-pages
+
 homepage:
   type: str
   help: "What is the homepage of your project?"
