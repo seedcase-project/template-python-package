@@ -42,9 +42,14 @@ First, open a Terminal and move into the directory where you want to
 create the new Python package. Then run the following command:
 
 ``` bash
-# Copy into the current directory, which is the "."
-uvx copier copy --trust gh:seedcase-project/template-python-package .
+uvx copier copy --trust gh:seedcase-project/template-python-package new-package
 ```
+
+Here, `new-package` is the name of the new folder you will create from
+the template. The template assumes that the name of your new folder will
+also be the name of the GitHub repository for the Python package. So the
+new folder name should be a short, lowercase name without spaces or
+special characters.
 
 ::: callout-caution
 This template runs some post-copy commands using your terminal. In order
@@ -64,12 +69,13 @@ to the existing package. This will add all the template's files and
 configurations to the existing package.
 
 ``` bash
-uvx copier copy --trust gh:seedcase-project/template-python-package .
+uvx copier copy --trust gh:seedcase-project/template-python-package new-package
 ```
 
-It will go through a series of prompts, as in the case of creating a new
-Python package, including asking if you want to overwrite existing
-files.
+See the comment above in the "Creating a new Python package" section
+about naming the new folder. It will go through a series of prompts, as
+in the case of creating a new Python package, including asking if you
+want to overwrite existing files.
 
 ::: callout-note
 To use the `copy` command, the Python package needs to be tracked by Git
@@ -129,8 +135,8 @@ just install-precommit
 This sets up the pre-commit hooks to run standard checks on your
 repository whenever you commit files to the history.
 
-If you are using the template to create a Python package for the Seedcase
-Project, run:
+If you are using the template to create a Python package for the
+Seedcase Project, run:
 
 ``` bash
 just update-quarto-theme
@@ -140,9 +146,9 @@ Then set `seedcase-theme` as your project `type` in `_quarto.yml`.
 
 This adds the `seedcase-theme` Quarto theme to the website, which
 provides a consistent look and feel across all Seedcase Project
-websites, including for Python package websites.
-It's called `update-quarto-theme` here since you can use this
-command to keep the theme updated.
+websites, including for Python package websites. It's called
+`update-quarto-theme` here since you can use this command to keep the
+theme updated.
 
 Next, install [`spaid`](https://github.com/seedcase-project/spaid) and
 use the following commands to run the next setup steps:
@@ -175,5 +181,5 @@ additional setup are:
     GitHub App, along with the `ADD_TO_BOARD_TOKEN` secret and the
     `ADD_TO_BOARD_APP_ID` variable of the GitHub App's ID.
 
-If you use Netlify, you will also need to add a `NETLIFY_AUTH_TOKEN` secret
-of your Netlify Token.
+If you use Netlify, you will also need to add a `NETLIFY_AUTH_TOKEN`
+secret of your Netlify Token.
