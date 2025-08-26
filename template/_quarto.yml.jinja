@@ -12,18 +12,18 @@ website:
   # TODO: Fill in the title of the website.
   title: ""
   site-url: "{{ homepage }}"
-  repo-url: "https://github.com/{{ package_github_repo }}"
+  repo-url: "https://github.com/{{ github_repo_spec }}"
   page-navigation: true
   navbar:
     pinned: true
     title: false
     {%- if is_seedcase_project %}
-    logo: "_extensions/seedcase-project/seedcase-theme/logos/navbar-logo-{{ package_name }}.svg"
-    logo-alt: "{{ package_name }} logo: Main page"
+    logo: "_extensions/seedcase-project/seedcase-theme/logos/navbar-logo-{{ github_repo }}.svg"
+    logo-alt: "{{ github_repo }} logo: Main page"
     {%- else %}
     # TODO: add logo
     logo: ""
-    logo-alt: "{{ package_name }} logo: Main page"
+    logo-alt: "{{ github_repo }} logo: Main page"
     {%- endif %}
     left:
       - text: "Guide"
@@ -32,7 +32,7 @@ website:
         href: docs/design/index.qmd
     tools:
       - icon: github
-        href: "https://github.com/{{ package_github_repo }}"
+        href: "https://github.com/{{ github_repo_spec }}"
         aria-label: "GitHub icon: Source code"
       {%- if is_seedcase_project %}
       - icon: house
@@ -55,7 +55,7 @@ quartodoc:
   sidebar: "docs/reference/_sidebar.yml"
   style: "pkgdown"
   dir: "docs/reference"
-  package: "{{ package_name_snake_case }}"
+  package: "{{ github_repo_snake_case }}"
   parser: google
   dynamic: true
   renderer:
