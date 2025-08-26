@@ -65,6 +65,13 @@ github_user:
   help: "What is the name of the GitHub user or organisation where the repository will be or is stored?"
   default: "{{ 'seedcase-project' if is_seedcase_project else '' }}"
 
+hosting_provider:
+  type: str
+  help: "What hosting provider will you use for the documentation website?"
+  choices:
+    - netlify
+    - gh-pages
+
 homepage:
   type: str
   help: "What is the homepage of your project?"
