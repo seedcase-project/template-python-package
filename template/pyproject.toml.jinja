@@ -1,5 +1,5 @@
 [project]
-name = "{{ package_name }}"
+name = "{{ github_repo }}"
 version = "0.1.0"
 # TODO: Add a description of the package.
 description = ""
@@ -19,11 +19,9 @@ dependencies = []
 
 [project.urls]
 homepage = "{{ homepage }}"
-{%- if package_github_repo %}
-repository = "https://github.com/{{ package_github_repo }}"
-changelog = "https://github.com/{{ package_github_repo }}/blob/main/CHANGELOG.md"
-issues = "https://github.com/{{ package_github_repo }}/issues"
-{% endif %}
+repository = "https://github.com/{{ github_repo_spec }}"
+changelog = "https://github.com/{{ github_repo_spec }}/blob/main/CHANGELOG.md"
+issues = "https://github.com/{{ github_repo_spec }}/issues"
 
 [build-system]
 requires = ["hatchling"]
