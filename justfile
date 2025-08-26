@@ -60,9 +60,9 @@ test is_seedcase_project="true" hosting_provider="netlify":
     --vcs-ref=$commit \
     --defaults \
     --trust \
-    --data package_github_repo="first-last/repo" \
     --data is_seedcase_project={{ is_seedcase_project }} \
     --data hosting_provider={{ hosting_provider }} \
+    --data github_user="first-last" \
     --data author_given_name="First" \
     --data author_family_name="Last" \
     --data author_email="first.last@example.com" \
@@ -95,9 +95,9 @@ test is_seedcase_project="true" hosting_provider="netlify":
     --defaults \
     --trust \
     --overwrite \
-    --data package_github_repo="first-last/repo" \
     --data is_seedcase_project={{ is_seedcase_project }} \
     --data hosting_provider={{ hosting_provider }} \
+    --data github_user="first-last" \
     --data author_given_name="First" \
     --data author_family_name="Last" \
     --data author_email="first.last@example.com" \
