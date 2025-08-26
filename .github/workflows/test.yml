@@ -1,0 +1,36 @@
+name: Test template creation
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+# Least privilege permissions
+permissions: read-all
+
+jobs:
+  test-copier:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@4959332f0f014c5280e7eac8b70c90cb574c9f9b
+        with:
+          enable-cache: true
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@9e48da27e184aa238fcb49f5db75469626d43adb # v2.1.9
+
+      - name: Install justfile
+        run: sudo apt install -y just
+
+      - name: Set Git user
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "fake@example.com"
+
+      - name: Test and check template creation
+        run: just _tests

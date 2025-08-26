@@ -11,7 +11,7 @@ permissions: read-all
 jobs:
   release:
     # This job outputs env variables `previous_version` and `current_version`.
-    # Only give permissions for this job.
+    # The workflow needs write permissions for `GITHUB_TOKEN` to create a release.
     permissions:
       contents: write
     uses: seedcase-project/.github/.github/workflows/reusable-release-project.yml@main

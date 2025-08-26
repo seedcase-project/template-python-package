@@ -3,7 +3,7 @@
 
 @_checks: check-spelling check-commits
 # Test Seedcase and non-Seedcase projects
-@_tests: (test "true") (test "false")
+@_tests: (test "true" "netlify") (test "false" "netlify") (test "true" "gh-pages") (test "false" "gh-pages")
 @_builds: build-contributors build-website build-readme
 
 # Run all build-related recipes in the justfile
@@ -32,78 +32,27 @@ update-template:
 
 # Check the commit messages on the current branch that are not on the main branch
 check-commits:
-  #!/bin/zsh
+  #!/usr/bin/env bash
   branch_name=$(git rev-parse --abbrev-ref HEAD)
   number_of_commits=$(git rev-list --count HEAD ^main)
   if [[ ${branch_name} != "main" && ${number_of_commits} -gt 0 ]]
   then
+    # If issue happens, try `uv tool update-shell`
     uvx --from commitizen cz check --rev-range main..HEAD
   else
-    echo "On `main` or current branch doesn't have any commits."
+    echo "On 'main' or current branch doesn't have any commits."
   fi
 
 # Check for spelling errors in files
 check-spelling:
   uvx typos
 
-# Test and check that a Python package can be created from the template
-test is_seedcase_project:
-  #!/bin/zsh
-  test_name="test-python-package"
-  test_dir="$(pwd)/_temp/{{ is_seedcase_project }}/$test_name"
-  template_dir="$(pwd)"
-  commit=$(git rev-parse HEAD)
-  rm -rf $test_dir
-  # vcs-ref means the current commit/head, not a tag.
-  uvx copier copy $template_dir $test_dir \
-    --vcs-ref=$commit \
-    --defaults \
-    --trust \
-    --data package_github_repo="first-last/repo" \
-    --data is_seedcase_project={{ is_seedcase_project }} \
-    --data author_given_name="First" \
-    --data author_family_name="Last" \
-    --data author_email="first.last@example.com" \
-    --data review_team="@first-last/developers" \
-    --data github_board_number=22
-  # Run checks in the generated test Python package
-  cd $test_dir
-  git add .
-  git commit -m "test: initial copy"
-  just check-python check-spelling
-  # TODO: Find some way to test the `update` command
-  # Check that recopy works
-  echo "Testing recopy command -----------"
-  rm .cz.toml
-  git add .
-  git commit -m "test: preparing to recopy from the template"
-  uvx copier recopy \
-    --vcs-ref=$commit \
-    --defaults \
-    --overwrite \
-    --trust
-  # Check that copying onto an existing Python package works
-  echo "Using the template in an existing package command -----------"
-  rm .cz.toml .copier-answers.yml LICENSE.md
-  git add .
-  git commit -m "test: preparing to copy onto an existing package"
-  uvx copier copy \
-    $template_dir $test_dir \
-    --vcs-ref=$commit \
-    --defaults \
-    --trust \
-    --overwrite \
-    --data package_github_repo="first-last/repo" \
-    --data is_seedcase_project={{ is_seedcase_project }} \
-    --data author_given_name="First" \
-    --data author_family_name="Last" \
-    --data author_email="first.last@example.com" \
-    --data review_team="@first-last/developers" \
-    --data github_board_number=22
+# Test that a Python package can be created from the template, with parameters for: `is_seedcase_project` (true or false) and `hosting_provider` (either "gh-pages" or "netlify")
+test is_seedcase_project="true" hosting_provider="netlify":
+  sh ./test-template.sh {{ is_seedcase_project }} {{ hosting_provider }}
 
 # Clean up any leftover and temporary build files
 cleanup:
-  #!/bin/zsh
   rm -rf _temp
 
 # Build the website using Quarto
