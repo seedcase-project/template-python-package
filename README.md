@@ -47,8 +47,7 @@ By participating in this project you agree to abide by its terms.
 
 ## Licensing
 
-This project is licensed under the [MIT
-License](https://github.com/seedcase-project/template-python-package/blob/main/LICENSE.md).
+This project is licensed under the [MIT License](LICENSE.md).
 
 ## Citing
 
