@@ -1,3 +1,33 @@
+# Changelog
+
+Since we follow [Conventional
+Commits](https://decisions.seedcase-project.org/why-conventional-commits),
+we're able to automatically create a release based on the commit message
+by using
+[Commitizen](https://decisions.seedcase-project.org/why-semantic-release-with-commitizen).
+This means that releases can happen quite often, sometimes several in
+a day. It also means any individual release will not have many changes
+within it. Below is a list of releases along with what was changed
+within it.
+
+## 0.16.3 (2025-09-01)
+
+### Refactor
+
+- :hammer: use `--upgrade` when installing Python dependencies (#174)
+
+## 0.16.2 (2025-09-01)
+
+### Refactor
+
+- :wrench: add `theme` option in `_quarto.yml`, and `brand` for Seedcase (#170)
+
+## 0.16.1 (2025-09-01)
+
+### Refactor
+
+- :technologist: simplify the pull request template (#165)
+
 ## 0.16.0 (2025-08-26)
 
 ### Feat

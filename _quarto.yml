@@ -3,10 +3,8 @@ project:
   render:
     # Don't render anything in the template directory.
     - "!template/"
-    - "docs/"
-    - "index.qmd"
-    - "404.qmd"
-    - "CONTRIBUTING.md"
+    - "*.qmd"
+    - "*.md"
 
 website:
   title: "Template Python Package"
@@ -19,13 +17,7 @@ website:
     pinned: true
     left:
       - text: "Overview"
-        menu:
-          - text: "Welcome"
-            href: index.qmd
-          - text: "Releases"
-            href: docs/releases.qmd
-          - text: "Contributing"
-            href: CONTRIBUTING.md
+        href: index.qmd
       - text: "Guide"
         href: docs/guide.qmd
     tools:
@@ -35,6 +27,15 @@ website:
       - icon: house
         href: https://seedcase-project.org
         aria-label: "House icon: Seedcase Project home page"
+  sidebar:
+    - id: overview
+      pinned: true
+      style: "floating"
+      contents:
+        - text: "Welcome"
+          href: index.qmd
+        - CHANGELOG.md
+        - CONTRIBUTING.md
 
 format:
   seedcase-theme-html:
@@ -47,6 +48,3 @@ editor:
   markdown:
     wrap: 72
     canonical: true
-
-execute:
-  echo: false

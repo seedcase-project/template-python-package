@@ -31,7 +31,7 @@ update-quarto-theme:
 {% endif %}
 # Install Python package dependencies
 install-deps:
-  uv sync --all-extras --dev
+  uv sync --all-extras --dev --upgrade
 
 # Run the Python tests
 test-python:

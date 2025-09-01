@@ -72,5 +72,4 @@ share your ideas or contribute code. Your input makes us better!
 
 ## Licensing
 
-This project is licensed under the [MIT
-License](https://github.com/{{< meta gh.org >}}/{{< meta gh.repo >}}/blob/main/LICENSE.md).
+This project is licensed under the [MIT License](/LICENSE.md).
