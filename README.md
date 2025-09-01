@@ -2,8 +2,7 @@
 
 # Template Python Package: An opinionated setup for making Python packages
 
-<!-- [![DOI]()]() -->
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17018496.svg)](https://doi.org/10.5281/zenodo.17018496)
 [![Copier](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-grayscale-inverted-border-teal.json?raw=true.svg)](https://github.com/copier-org/copier)
 [![GitHub
 License](https://img.shields.io/github/license/seedcase-project/template-python-package.svg)](https://github.com/seedcase-project/template-python-package/blob/main/LICENSE.md)
@@ -66,14 +65,18 @@ effort to create a framework for data management and analysis in
 research. If you use this project in your work, please cite it as
 follows:
 
-Johnston L.W., Brødbæk S.K., Beicher K., Vago M. Template Python
-Package: An opinionated setup for making Python packages URL:
+Johnston L.W., Brødbæk S.K., Beicher K., Vago M. (2025). Template Python
+Package: An opinionated setup for making Python packages DOI:
+10.5281/zenodo.17018496 URL:
 https://template-python-package.seedcase-project.org
 
 Or as a BibTeX entry:
 
     @misc{YourReferenceHere,
     author = {Johnston, Luke William and Brødbæk, Signe Kirk and Beicher, Kristiane and Vago, Marton},
+    doi = {10.5281/zenodo.17018496},
+    month = {9},
     title = {Template Python Package: An opinionated setup for making Python packages},
-    url = {https://template-python-package.seedcase-project.org}
+    url = {https://template-python-package.seedcase-project.org},
+    year = {2025}
     }
