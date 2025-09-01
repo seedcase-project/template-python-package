@@ -1,4 +1,5 @@
 project:
+  # TODO: change to extension name if using a custom extension
   type: website
   # Delete auto-generated files from `quartodoc`
   post-render: rm -f docs/reference/*.qmd
@@ -72,9 +73,20 @@ metadata-files:
   - docs/reference/_sidebar.yml
 
 format:
-  {{ "seedcase-theme-html" if is_seedcase_project else "html" }}:
-    include-before-body:
-      - "docs/includes/site-counter.html"
+  {% if is_seedcase_project -%}
+  seedcase-theme-html:
+    theme:
+      - brand
+  {%- else -%}
+  # TODO: Use Quarto extension if available
+  html:
+    theme:
+      # TODO: Choose a different theme if desired
+      - litera
+  {%- endif %}
+    # TODO: Uncomment if using the goatcounter website visitor counter
+    # include-before-body:
+      # - "docs/includes/site-counter.html"
 
 editor:
   markdown:

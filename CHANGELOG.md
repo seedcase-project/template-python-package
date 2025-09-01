@@ -10,6 +10,24 @@ a day. It also means any individual release will not have many changes
 within it. Below is a list of releases along with what was changed
 within it.
 
+## 0.16.4 (2025-09-01)
+
+### Refactor
+
+- :pushpin: update pre-commit versions (#171)
+
+## 0.16.3 (2025-09-01)
+
+### Refactor
+
+- :hammer: use `--upgrade` when installing Python dependencies (#174)
+
+## 0.16.2 (2025-09-01)
+
+### Refactor
+
+- :wrench: add `theme` option in `_quarto.yml`, and `brand` for Seedcase (#170)
+
 ## 0.16.1 (2025-09-01)
 
 ### Refactor
