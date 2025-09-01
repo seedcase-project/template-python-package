@@ -72,11 +72,6 @@ hosting_provider:
     - netlify
     - gh-pages
 
-homepage:
-  type: str
-  help: "What is the homepage of your project?"
-  default: "{{ 'https://%s.seedcase-project.org' % github_repo if is_seedcase_project else '' }}"
-
 author_given_name:
   type: str
   help: "What is your first/given name?"
@@ -115,4 +110,9 @@ github_repo_spec:
 copyright_year:
   type: str
   default: "{{ copyright_year | default('%Y' | strftime) }}"
+  when: false
+
+homepage:
+  type: str
+  default: "https://{{ github_repo }}.{{ github_user }}.org"
   when: false
