@@ -44,8 +44,7 @@ to abide by its terms.
 
 ## Licensing
 
-This project is licensed under the [MIT
-License](https://github.com/{{< meta gh.org >}}/{{< meta gh.repo >}}/blob/main/LICENSE.md).
+This project is licensed under the [MIT License](LICENSE.md).
 
 ## Citing
 
