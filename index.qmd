@@ -66,6 +66,10 @@ We would love your feedback or contributions! Head over to our [GitHub
 repository](https://github.com/{{< meta gh.org >}}/{{< meta gh.repo >}}) to
 share your ideas or contribute code. Your input makes us better!
 
+### Contributors
+
+{{< include /_contributors.qmd >}}
+
 ## Licensing
 
 This project is licensed under the [MIT License](/LICENSE.md).
