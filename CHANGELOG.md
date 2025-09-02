@@ -1,3 +1,87 @@
+# Changelog
+
+Since we follow [Conventional
+Commits](https://decisions.seedcase-project.org/why-conventional-commits),
+we're able to automatically create a release based on the commit message
+by using
+[Commitizen](https://decisions.seedcase-project.org/why-semantic-release-with-commitizen).
+This means that releases can happen quite often, sometimes several in
+a day. It also means any individual release will not have many changes
+within it. Below is a list of releases along with what was changed
+within it.
+
+## 0.17.5 (2025-09-02)
+
+### Refactor
+
+- :wrench: can render everything in Quarto project (#183)
+
+## 0.17.4 (2025-09-02)
+
+### Refactor
+
+- :wrench: add more items to sidebar, like overview (#182)
+
+## 0.17.3 (2025-09-02)
+
+### Refactor
+
+- :recycle: create homepage as variable, not question (#179)
+
+## 0.17.2 (2025-09-02)
+
+### Refactor
+
+- :hammer: ignore `justfile` when listing TODO items (#181)
+
+## 0.17.1 (2025-09-02)
+
+### Refactor
+
+- :recycle: need `date-released` in `CITATION.cff` (#180)
+
+## 0.17.0 (2025-09-02)
+
+### Feat
+
+- :sparkles: add CHANGELOG with some description of it (#178)
+
+## 0.16.6 (2025-09-02)
+
+### Refactor
+
+- :recycle: delete whole references folder pre and post render (#142)
+
+## 0.16.5 (2025-09-01)
+
+### Refactor
+
+- :truck: move GoatCounter file into `docs/includes/` (#177)
+
+## 0.16.4 (2025-09-01)
+
+### Refactor
+
+- :pushpin: update pre-commit versions (#171)
+
+## 0.16.3 (2025-09-01)
+
+### Refactor
+
+- :hammer: use `--upgrade` when installing Python dependencies (#174)
+
+## 0.16.2 (2025-09-01)
+
+### Refactor
+
+- :wrench: add `theme` option in `_quarto.yml`, and `brand` for Seedcase (#170)
+
+## 0.16.1 (2025-09-01)
+
+### Refactor
+
+- :technologist: simplify the pull request template (#165)
+
 ## 0.16.0 (2025-08-26)
 
 ### Feat

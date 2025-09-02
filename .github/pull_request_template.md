@@ -1,6 +1,6 @@
 # Description
 
-This PR DESCRIBE CHANGES.
+These changes EXPLANATION.
 
 Closes #
 
@@ -8,6 +8,5 @@ This PR needs a quick/an in-depth review.
 
 ## Checklist
 
-- [ ] Added or updated tests
-- [ ] Updated documentation
 - [ ] Ran `just run-all`
+- [ ] Formatted Markdown, if modified
