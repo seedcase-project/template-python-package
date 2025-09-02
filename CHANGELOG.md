@@ -10,6 +10,12 @@ a day. It also means any individual release will not have many changes
 within it. Below is a list of releases along with what was changed
 within it.
 
+## 0.17.5 (2025-09-02)
+
+### Refactor
+
+- :wrench: can render everything in Quarto project (#183)
+
 ## 0.17.4 (2025-09-02)
 
 ### Refactor
