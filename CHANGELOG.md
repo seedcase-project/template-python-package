@@ -10,6 +10,12 @@ a day. It also means any individual release will not have many changes
 within it. Below is a list of releases along with what was changed
 within it.
 
+## 0.17.0 (2025-09-02)
+
+### Feat
+
+- :sparkles: add CHANGELOG with some description of it (#178)
+
 ## 0.16.6 (2025-09-02)
 
 ### Refactor
