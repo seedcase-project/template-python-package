@@ -10,6 +10,12 @@ a day. It also means any individual release will not have many changes
 within it. Below is a list of releases along with what was changed
 within it.
 
+## 0.17.4 (2025-09-02)
+
+### Refactor
+
+- :wrench: add more items to sidebar, like overview (#182)
+
 ## 0.17.3 (2025-09-02)
 
 ### Refactor
