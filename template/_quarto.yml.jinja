@@ -1,8 +1,6 @@
 project:
   # TODO: change to extension name if using a custom extension
   type: website
-  # Delete auto-generated files from `quartodoc`
-  post-render: rm -f docs/reference/*.qmd
 
 website:
   # TODO: Fill in the title of the website.
@@ -27,10 +25,14 @@ website:
     logo-alt: "{{ github_repo }} logo: Main page"
     {%- endif %}
     left:
+      - text: "Overview"
+        href: docs/index.qmd
       - text: "Guide"
         href: docs/guide/index.qmd
       - text: "Design"
         href: docs/design/index.qmd
+      # - text: "Reference"
+      #   href: docs/reference/index.qmd
     tools:
       - icon: github
         href: "https://github.com/{{ github_repo_spec }}"
@@ -41,9 +43,14 @@ website:
         aria-label: "House icon: Main website for the Seedcase Project"
       {%- endif %}
   sidebar:
-    - id: design
+    - id: overview
       pinned: true
       style: "floating"
+      contents:
+        - docs/index.qmd
+        - CHANGELOG.qmd
+        - CONTRIBUTING.md
+    - id: design
       contents:
         - text: "Design"
           href: docs/design/index.qmd

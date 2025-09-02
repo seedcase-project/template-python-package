@@ -10,6 +10,42 @@ a day. It also means any individual release will not have many changes
 within it. Below is a list of releases along with what was changed
 within it.
 
+## 0.17.4 (2025-09-02)
+
+### Refactor
+
+- :wrench: add more items to sidebar, like overview (#182)
+
+## 0.17.3 (2025-09-02)
+
+### Refactor
+
+- :recycle: create homepage as variable, not question (#179)
+
+## 0.17.2 (2025-09-02)
+
+### Refactor
+
+- :hammer: ignore `justfile` when listing TODO items (#181)
+
+## 0.17.1 (2025-09-02)
+
+### Refactor
+
+- :recycle: need `date-released` in `CITATION.cff` (#180)
+
+## 0.17.0 (2025-09-02)
+
+### Feat
+
+- :sparkles: add CHANGELOG with some description of it (#178)
+
+## 0.16.6 (2025-09-02)
+
+### Refactor
+
+- :recycle: delete whole references folder pre and post render (#142)
+
 ## 0.16.5 (2025-09-01)
 
 ### Refactor
