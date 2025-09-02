@@ -10,6 +10,12 @@ a day. It also means any individual release will not have many changes
 within it. Below is a list of releases along with what was changed
 within it.
 
+## 0.17.2 (2025-09-02)
+
+### Refactor
+
+- :hammer: ignore `justfile` when listing TODO items (#181)
+
 ## 0.17.1 (2025-09-02)
 
 ### Refactor
