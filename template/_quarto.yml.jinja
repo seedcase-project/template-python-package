@@ -1,8 +1,6 @@
 project:
   # TODO: change to extension name if using a custom extension
   type: website
-  # Delete auto-generated files from `quartodoc`
-  post-render: rm -f docs/reference/*.qmd
   render:
     - "docs/*"
     - "index.qmd"
@@ -86,7 +84,7 @@ format:
   {%- endif %}
     # TODO: Uncomment if using the goatcounter website visitor counter
     # include-before-body:
-      # - "includes/site-counter.html"
+      # - "docs/includes/site-counter.html"
 
 editor:
   markdown:
