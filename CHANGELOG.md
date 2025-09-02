@@ -10,6 +10,12 @@ a day. It also means any individual release will not have many changes
 within it. Below is a list of releases along with what was changed
 within it.
 
+## 0.17.3 (2025-09-02)
+
+### Refactor
+
+- :recycle: create homepage as variable, not question (#179)
+
 ## 0.17.2 (2025-09-02)
 
 ### Refactor
