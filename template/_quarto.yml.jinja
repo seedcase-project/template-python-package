@@ -1,12 +1,6 @@
 project:
+  # TODO: change to extension name if using a custom extension
   type: website
-  # Delete auto-generated files from `quartodoc`
-  post-render: rm -f docs/reference/*.qmd
-  render:
-    - "docs/*"
-    - "index.qmd"
-    - "404.qmd"
-    - "CONTRIBUTING.md"
 
 website:
   # TODO: Fill in the title of the website.
@@ -31,10 +25,14 @@ website:
     logo-alt: "{{ github_repo }} logo: Main page"
     {%- endif %}
     left:
+      - text: "Overview"
+        href: docs/index.qmd
       - text: "Guide"
         href: docs/guide/index.qmd
       - text: "Design"
         href: docs/design/index.qmd
+      # - text: "Reference"
+      #   href: docs/reference/index.qmd
     tools:
       - icon: github
         href: "https://github.com/{{ github_repo_spec }}"
@@ -45,9 +43,14 @@ website:
         aria-label: "House icon: Main website for the Seedcase Project"
       {%- endif %}
   sidebar:
-    - id: design
+    - id: overview
       pinned: true
       style: "floating"
+      contents:
+        - docs/index.qmd
+        - CHANGELOG.qmd
+        - CONTRIBUTING.md
+    - id: design
       contents:
         - text: "Design"
           href: docs/design/index.qmd
@@ -72,9 +75,20 @@ metadata-files:
   - docs/reference/_sidebar.yml
 
 format:
-  {{ "seedcase-theme-html" if is_seedcase_project else "html" }}:
-    include-before-body:
-      - "docs/site-counter.html"
+  {% if is_seedcase_project -%}
+  seedcase-theme-html:
+    theme:
+      - brand
+  {%- else -%}
+  # TODO: Use Quarto extension if available
+  html:
+    theme:
+      # TODO: Choose a different theme if desired
+      - litera
+  {%- endif %}
+    # TODO: Uncomment if using the goatcounter website visitor counter
+    # include-before-body:
+      # - "docs/includes/site-counter.html"
 
 editor:
   markdown:

@@ -24,7 +24,7 @@ update-quarto-theme:
 
 # Update files in the template from the copier parent folder
 update-template:
-  cp .pre-commit-config.yaml .typos.toml .editorconfig template/
+  cp CODE_OF_CONDUCT.md .pre-commit-config.yaml .typos.toml .editorconfig template/
   mkdir -p template/tools
   cp tools/get-contributors.sh template/tools/
   cp .github/pull_request_template.md template/.github/
@@ -50,6 +50,11 @@ check-spelling:
 # Test that a Python package can be created from the template, with parameters for: `is_seedcase_project` (true or false) and `hosting_provider` (either "gh-pages" or "netlify")
 test is_seedcase_project="true" hosting_provider="netlify":
   sh ./test-template.sh {{ is_seedcase_project }} {{ hosting_provider }}
+
+# Test template with the manual questionnaire answers
+test-manual:
+  mkdir -p _temp/manual-test/
+  uvx copier copy --trust -r HEAD . _temp/manual-test
 
 # Clean up any leftover and temporary build files
 cleanup:

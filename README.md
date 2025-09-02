@@ -2,13 +2,13 @@
 
 # Template Python Package: An opinionated setup for making Python packages
 
-<!-- [![DOI]()]() -->
-
-[![Copier](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-grayscale-inverted-border-teal.json?raw=true)](https://github.com/copier-org/copier)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17018496.svg)](https://doi.org/10.5281/zenodo.17018496)
+[![Copier](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-grayscale-inverted-border-teal.json?raw=true.svg)](https://github.com/copier-org/copier)
 [![GitHub
 License](https://img.shields.io/github/license/seedcase-project/template-python-package.svg)](https://github.com/seedcase-project/template-python-package/blob/main/LICENSE.md)
 [![GitHub
 Release](https://img.shields.io/github/v/release/seedcase-project/template-python-package.svg)](https://github.com/seedcase-project/template-python-package/releases/latest)
+[![Test](https://github.com/seedcase-project/template-python-package/actions/workflows/test.yml/badge.svg)](https://github.com/seedcase-project/template-python-package/actions/workflows/test.yml)
 [![Build
 website](https://github.com/seedcase-project/template-python-package/actions/workflows/build-website.yml/badge.svg)](https://github.com/seedcase-project/template-python-package/actions/workflows/build-website.yml)
 [![CodeQL](https://github.com/seedcase-project/template-python-package/actions/workflows/github-code-scanning/codeql/badge.svg?branch=main)](https://github.com/seedcase-project/template-python-package/actions/workflows/github-code-scanning/codeql)
@@ -42,13 +42,21 @@ for information on how to contribute to the project, including how to
 set up your development environment.
 
 Please note that this project is released with a [Contributor Code of
-Conduct](https://github.com/seedcase-project/.github/blob/main/CODE_OF_CONDUCT.md).
-By participating in this project you agree to abide by its terms.
+Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree
+to abide by its terms.
+
+### Contributors
+
+These are the people who have contributed by submitting changes through
+pull requests :tada:
+
+[@lwjohnst86](https://github.com/lwjohnst86),
+[@martonvago](https://github.com/martonvago),
+[@signekb](https://github.com/signekb)
 
 ## Licensing
 
-This project is licensed under the [MIT
-License](https://github.com/seedcase-project/template-python-package/blob/main/LICENSE.md).
+This project is licensed under the [MIT License](LICENSE.md).
 
 ## Citing
 
@@ -57,14 +65,18 @@ effort to create a framework for data management and analysis in
 research. If you use this project in your work, please cite it as
 follows:
 
-Johnston L.W., Brødbæk S.K., Beicher K., Vago M. Template Python
-Package: An opinionated setup for making Python packages URL:
+Johnston L.W., Brødbæk S.K., Beicher K., Vago M. (2025). Template Python
+Package: An opinionated setup for making Python packages DOI:
+10.5281/zenodo.17018496 URL:
 https://template-python-package.seedcase-project.org
 
 Or as a BibTeX entry:
 
     @misc{YourReferenceHere,
     author = {Johnston, Luke William and Brødbæk, Signe Kirk and Beicher, Kristiane and Vago, Marton},
+    doi = {10.5281/zenodo.17018496},
+    month = {9},
     title = {Template Python Package: An opinionated setup for making Python packages},
-    url = {https://template-python-package.seedcase-project.org}
+    url = {https://template-python-package.seedcase-project.org},
+    year = {2025}
     }
