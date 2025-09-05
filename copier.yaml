@@ -60,6 +60,11 @@ github_user:
   help: "What is the name of the GitHub user or organisation where the repository will be or is stored?"
   default: "{{ 'seedcase-project' if is_seedcase_project else '' }}"
 
+github_repo:
+  type: str
+  help: "What is the name of the GitHub repository where the website will be or is stored? We strongly recommend using the default given."
+  default: "{{ _folder_name }}"
+
 hosting_provider:
   type: str
   help: "What hosting provider will you use for the documentation website?"
@@ -93,12 +98,6 @@ github_board_number:
     {% endif %}
 
 # Configurations not asked
-
-github_repo:
-  type: str
-  default: "{{ _copier_conf.dst_path | realpath | basename }}"
-  when: false
-
 github_repo_snake_case:
   type: str
   default: "{{github_repo | replace('-', '_') | replace('.', '_')}}"
