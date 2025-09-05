@@ -28,7 +28,8 @@ install-precommit:
 {%- if is_seedcase_project %}
 # Update the Quarto seedcase-theme extension
 update-quarto-theme:
-  quarto add seedcase-project/seedcase-theme --no-prompt
+  # Will add if not already installed, otherwise updates.
+  quarto update seedcase-project/seedcase-theme --no-prompt
 {%- endif %}
 
 # Install Python package dependencies
