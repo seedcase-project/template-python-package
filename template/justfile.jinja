@@ -14,7 +14,12 @@ run-all: install-deps format-python _checks _tests _builds
 
 # List all TODO items in the repository
 list-todos:
-  grep -R -n --exclude="*.code-snippets" --exclude="justfile" "TODO" *
+  grep -R -n \
+    --exclude="*.code-snippets" \
+    --exclude-dir=.quarto \
+    --exclude=justfile \
+    --exclude=_site \
+    "TODO" *
 
 # Install the pre-commit hooks
 install-precommit:
