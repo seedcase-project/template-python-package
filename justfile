@@ -53,8 +53,8 @@ test is_seedcase_project="true" hosting_provider="netlify":
 
 # Test template with the manual questionnaire answers
 test-manual:
-  mkdir -p _temp/manual-test/
-  uvx copier copy --trust -r HEAD . _temp/manual-test
+  mkdir -p _temp/manual
+  uvx copier copy --trust -r HEAD . _temp/manual/test-template
 
 # Clean up any leftover and temporary build files
 cleanup:
