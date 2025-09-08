@@ -70,4 +70,4 @@ build-readme:
 
 # Generate a Quarto include file with the contributors
 build-contributors:
-  sh ./tools/get-contributors.sh seedcase-project/template-python-project
+  sh ./tools/get-contributors.sh seedcase-project/template-python-project > docs/includes/_contributors.qmd
