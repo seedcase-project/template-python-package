@@ -9,6 +9,20 @@ often, sometimes several in a day. It also means any individual release
 will not have many changes within it. Below is a list of releases along
 with what was changed within it.
 
+## 0.17.8 (2025-09-08)
+
+### Fix
+
+- :hammer: ignore other dirs and files when listing todos (#200)
+- :bug: `github_repo` (via `_folder_name`) doesn't work using `update` (#197)
+
+### Refactor
+
+- :pushpin: update pre-commit hook versions (#199)
+- :memo: simplify CHANGELOG description (#193)
+- :hammer: contributor script outputs text, output to file with justfile (#192)
+- :fire: `update-from-workflow` is too complicated and not needed (#190)
+
 ## 0.17.7 (2025-09-05)
 
 ### Refactor
