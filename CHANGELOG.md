@@ -9,6 +9,12 @@ often, sometimes several in a day. It also means any individual release
 will not have many changes within it. Below is a list of releases along
 with what was changed within it.
 
+## 0.17.9 (2025-09-10)
+
+### Refactor
+
+- :pencil2: use `update`, not `add` for Quarto extension (#195)
+
 ## 0.17.8 (2025-09-08)
 
 ### Fix
