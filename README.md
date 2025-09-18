@@ -47,8 +47,8 @@ to abide by its terms.
 
 ### Contributors
 
-These are the people who have contributed by submitting changes through
-pull requests :tada:
+The following people have contributed to this project by submitting pull
+requests :tada:
 
 [@lwjohnst86](https://github.com/lwjohnst86),
 [@martonvago](https://github.com/martonvago),

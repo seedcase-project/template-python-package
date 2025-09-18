@@ -39,7 +39,7 @@ to abide by its terms.
 
 ### Contributors
 
-{{< include /_contributors.qmd >}}
+{{< include /docs/includes/_contributors.qmd >}}
 
 ## Licensing
 
