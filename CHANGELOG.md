@@ -9,6 +9,16 @@ often, sometimes several in a day. It also means any individual release
 will not have many changes within it. Below is a list of releases along
 with what was changed within it.
 
+## 0.17.10 (2025-09-18)
+
+### Fix
+
+- :bug: overwrite `_contributor.qmd` with `>` (#207)
+
+### Refactor
+
+- :arrow_up: upgrade pre-commit hook versions (#208)
+
 ## 0.17.9 (2025-09-10)
 
 ### Refactor
