@@ -17,6 +17,12 @@ individual release will not have many changes within it. Below is a list
 of the releases we've made so far, along with what was changed within
 each release.
 
+## 0.17.12 (2026-01-15)
+
+### Refactor
+
+- :recycle: expand on explanation of release process (#229)
+
 ## 0.17.11 (2026-01-15)
 
 ### Fix
