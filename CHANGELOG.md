@@ -9,6 +9,16 @@ often, sometimes several in a day. It also means any individual release
 will not have many changes within it. Below is a list of releases along
 with what was changed within it.
 
+## 0.17.11 (2026-01-15)
+
+### Fix
+
+- :bug: Quarto auto-adds this line, this fixes it so Quarto stops (#230)
+
+### Refactor
+
+- :arrow_up: update pre-commit hook versions (#231)
+
 ## 0.17.10 (2025-09-18)
 
 ### Fix
