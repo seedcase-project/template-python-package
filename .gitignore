@@ -36,6 +36,7 @@ docs/.quarto/
 *.ipynb
 *.quarto_ipynb
 *.storage
+**/*.quarto_ipynb
 
 # Quartodoc
 /docs/reference/
