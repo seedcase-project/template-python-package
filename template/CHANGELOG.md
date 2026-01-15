@@ -3,7 +3,7 @@
 Since we follow [Conventional
 Commits](https://decisions.seedcase-project.org/why-conventional-commits)
 when writing commit messages, we're able to automatically create formal
-releases of the Python package based on the commit messages. The 
+releases of the Python package based on the commit messages. The
 releases are also published to Zenodo for easier discovery, archival,
 and citation purposes. We use
 [Commitizen](https://decisions.seedcase-project.org/why-semantic-release-with-commitizen)
