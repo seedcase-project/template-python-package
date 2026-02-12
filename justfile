@@ -7,7 +7,7 @@
 @_builds: build-contributors build-website build-readme
 
 # Run all build-related recipes in the justfile
-run-all: update-quarto-theme update-template _checks _tests _builds
+run-all: update-quarto-theme update-template _checks format-md _tests _builds
 
 # Install the pre-commit hooks
 install-precommit:
@@ -25,7 +25,7 @@ update-quarto-theme:
 
 # Update files in the template from the copier parent folder
 update-template:
-  cp CODE_OF_CONDUCT.md .pre-commit-config.yaml .typos.toml .editorconfig template/
+  cp CODE_OF_CONDUCT.md .pre-commit-config.yaml .typos.toml .editorconfig .rumdl.toml template/
   mkdir -p template/tools
   cp tools/get-contributors.sh template/tools/
   cp .github/pull_request_template.md template/.github/
@@ -47,6 +47,10 @@ check-commits:
 # Check for spelling errors in files
 check-spelling:
   uvx typos
+
+# Format Markdown files
+format-md:
+  uvx rumdl fmt --silent
 
 # Test that a Python package can be created from the template, with parameters for: `is_seedcase_project` (true or false) and `hosting_provider` (either "gh-pages" or "netlify")
 test is_seedcase_project="true" hosting_provider="netlify":
