@@ -27,8 +27,8 @@ integration and delivery workflows, and supporting files for building
 robust Python packages.
 
 Check out our
-[website](https://template-python-package.seedcase-project.org/) for
-more information, such as the features it provides and a
+[website](https://template-python-package.seedcase-project.org) for more
+information, such as the features it provides and a
 [guide](https://template-python-package.seedcase-project.org/docs/guide/)
 to using the template. For a list of changes, see our
 [changelog](https://template-python-package.seedcase-project.org/docs/releases/)

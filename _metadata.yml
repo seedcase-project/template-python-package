@@ -6,3 +6,7 @@ gh:
 titles:
   full: "Template Python Package: An opinionated setup for making Python packages"
   short: "Template Python Package"
+
+links:
+  github: "https://github.com/seedcase-project/template-python-package"
+  site: "https://template-python-package.seedcase-project.org"
