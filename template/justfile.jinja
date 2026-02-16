@@ -1,8 +1,10 @@
 @_default:
     just --list --unsorted
 
-@_checks: check-python check-unused check-security check-spelling check-commits
+@_checks: check-python check-unused check-security check-spelling check-urls check-commits
+
 @_tests: test-python
+
 @_builds: build-contributors build-website build-readme
 
 # Run all build-related recipes in the justfile
@@ -95,6 +97,14 @@ check-security:
 # Check for spelling errors in files
 check-spelling:
   uv run typos
+
+# Install lychee from https://lychee.cli.rs/guides/getting-started/
+# Check that URLs work
+check-urls:
+  lychee . \
+    --verbose \
+    --extensions md,qmd,py \
+    --exclude-path "_badges.qmd"
 
 # Build the documentation as PDF using Quarto
 build-pdf:

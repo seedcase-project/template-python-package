@@ -11,22 +11,22 @@ metadata-files:
 
 {{< include /docs/includes/_badges.qmd >}}
 
-This repository contains a [copier](https://copier.readthedocs.io/)
-template for setting up a new repository for a Python package. Along
-with a structured directory layout, this template includes
-configurations for tools that improve developer experience, continuous
-integration and delivery workflows, and supporting files for building
-robust Python packages.
+This repository contains a
+[copier](https://copier.readthedocs.io/en/stable/) template for setting
+up a new repository for a Python package. Along with a structured
+directory layout, this template includes configurations for tools that
+improve developer experience, continuous integration and delivery
+workflows, and supporting files for building robust Python packages.
 
 Check out our [website]({{< meta links.site >}}) for more information,
 such as the features it provides and a
-[guide]({{< meta links.site >}}/docs/guide/) to using the template. For
-a list of changes, see our
-[changelog]({{< meta links.site >}}/docs/releases/) page.
+[guide]({{< meta links.site >}}/docs/guide) to using the template. For a
+list of changes, see our
+[changelog]({{< meta links.site >}}/changelog.html) page.
 
 ## Contributing
 
-Check out our [contributing page]({{< meta links.site >}}/contributing/)
+Check out our [contributing page]({{< meta links.site >}}/contributing)
 for information on how to contribute to the project, including how to
 set up your development environment.
 
