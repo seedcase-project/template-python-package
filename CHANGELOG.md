@@ -1,13 +1,13 @@
 # Changelog
 
 Since we follow
-[Conventional Commits](https://decisions.seedcase-project.org/why-conventional-commits)
+[Conventional Commits](https://decisions.seedcase-project.org/why-conventional-commits/)
 when writing commit messages, we're able to automatically create formal
 "releases" of the template based on the commit messages. Releases in the
 context of template are when changes occur to the `template/` files or
 to the `copier.yaml` files. The releases are also published to Zenodo
 for easier discovery, archival, and citation purposes. We use
-[Commitizen](https://decisions.seedcase-project.org/why-semantic-release-with-commitizen)
+[Commitizen](https://decisions.seedcase-project.org/why-semantic-release-with-commitizen/)
 to be able to automatically create these releases, which uses
 [SemVar](https://semverdoc.org) as the version numbering scheme.
 

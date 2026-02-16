@@ -19,25 +19,25 @@ status](https://results.pre-commit.ci/badge/github/seedcase-project/template-pyt
 state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
-This repository contains a [copier](https://copier.readthedocs.io/)
-template for setting up a new repository for a Python package. Along
-with a structured directory layout, this template includes
-configurations for tools that improve developer experience, continuous
-integration and delivery workflows, and supporting files for building
-robust Python packages.
+This repository contains a
+[copier](https://copier.readthedocs.io/en/stable/) template for setting
+up a new repository for a Python package. Along with a structured
+directory layout, this template includes configurations for tools that
+improve developer experience, continuous integration and delivery
+workflows, and supporting files for building robust Python packages.
 
 Check out our
 [website](https://template-python-package.seedcase-project.org) for more
 information, such as the features it provides and a
-[guide](https://template-python-package.seedcase-project.org/docs/guide/)
+[guide](https://template-python-package.seedcase-project.org/docs/guide)
 to using the template. For a list of changes, see our
-[changelog](https://template-python-package.seedcase-project.org/docs/releases/)
+[changelog](https://template-python-package.seedcase-project.org/changelog.html)
 page.
 
 ## Contributing
 
 Check out our [contributing
-page](https://template-python-package.seedcase-project.org/contributing/)
+page](https://template-python-package.seedcase-project.org/contributing)
 for information on how to contribute to the project, including how to
 set up your development environment.
 
@@ -52,7 +52,8 @@ requests :tada:
 
 [@lwjohnst86](https://github.com/lwjohnst86),
 [@martonvago](https://github.com/martonvago),
-[@signekb](https://github.com/signekb)
+[@signekb](https://github.com/signekb),
+[@joelostblom](https://github.com/joelostblom)
 
 ## Licensing
 
