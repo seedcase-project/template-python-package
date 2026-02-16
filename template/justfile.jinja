@@ -7,7 +7,7 @@
 
 # Run all build-related recipes in the justfile
 {%- if is_seedcase_project %}
-run-all: install-deps update-quarto-theme format-python _checks _tests _builds
+run-all: install-deps update-quarto-theme format-python format-md _checks _tests _builds
 {%- else %}
 run-all: install-deps format-python _checks _tests _builds
 {%- endif %}
@@ -60,6 +60,10 @@ check-python:
 format-python:
   uv run ruff check --fix .
   uv run ruff format .
+
+# Format Markdown files
+format-md:
+  uvx rumdl fmt --silent
 
 # Build the documentation website using Quarto
 build-website:
