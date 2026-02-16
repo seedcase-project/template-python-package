@@ -2,7 +2,9 @@
     just --list --unsorted
 
 @_checks: check-python check-unused check-security check-spelling check-urls check-commits
+
 @_tests: test-python
+
 @_builds: build-contributors build-website build-readme
 
 # Run all build-related recipes in the justfile
@@ -100,6 +102,7 @@ check-spelling:
 # Check that URLs work
 check-urls:
   lychee . \
+    --verbose \
     --extensions md,qmd,py \
     --exclude-path "_badges.qmd"
 
