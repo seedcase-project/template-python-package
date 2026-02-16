@@ -68,6 +68,8 @@ including for developing the package.
 - Uses [rumdl](https://rumdl.dev/) to format Markdown files so that they
   are standardized and consistent across the project, as well as being
   easier to read in raw form.
+- Checks URLs with [Lychee](https://lychee.cli.rs) to ensure they aren't
+  broken or blocked.
 
 ## Want to contribute?
 

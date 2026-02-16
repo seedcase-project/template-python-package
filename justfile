@@ -1,7 +1,7 @@
 @_default:
     just --list --unsorted
 
-@_checks: check-spelling check-commits
+@_checks: check-spelling check-urls check-commits
 # Test Seedcase and non-Seedcase projects
 @_tests: (test "true" "netlify") (test "false" "netlify") (test "true" "gh-pages") (test "false" "gh-pages")
 @_builds: build-contributors build-website build-readme
@@ -43,6 +43,13 @@ check-commits:
   else
     echo "On 'main' or current branch doesn't have any commits."
   fi
+
+# Install lychee from https://lychee.cli.rs/guides/getting-started/
+# Check that URLs work
+check-urls:
+  lychee . \
+    --extensions md,qmd,jinja \
+    --exclude-path "_badges.qmd"
 
 # Check for spelling errors in files
 check-spelling:
