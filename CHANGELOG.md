@@ -17,6 +17,12 @@ individual release will not have many changes within it. Below is a list
 of the releases we've made so far, along with what was changed within
 each release.
 
+## 0.18.0 (2026-02-16)
+
+### Feat
+
+- :sparkles: show source line on mypy errors (#243)
+
 ## 0.17.12 (2026-01-15)
 
 ### Refactor
