@@ -21,7 +21,8 @@ each release.
 
 ### Feat
 
-- :sparkles: use ruff to check for unused arguments instead of vulture (#246)
+- :sparkles: use ruff to check for unused arguments instead of vulture
+  (#246)
 
 ## 0.20.0 (2026-02-16)
 
@@ -79,16 +80,15 @@ each release.
 
 - :hammer: ignore other dirs and files when listing todos (#200)
 - :bug: `github_repo` (via `_folder_name`) doesn't work using `update`
-    (#197)
+  (#197)
 
 ### Refactor
 
 - :pushpin: update pre-commit hook versions (#199)
 - :memo: simplify CHANGELOG description (#193)
-- :hammer: contributor script outputs text, output to file with
-    justfile (#192)
-- :fire: `update-from-workflow` is too complicated and not needed
-    (#190)
+- :hammer: contributor script outputs text, output to file with justfile
+  (#192)
+- :fire: `update-from-workflow` is too complicated and not needed (#190)
 
 ## 0.17.7 (2025-09-05)
 
@@ -166,8 +166,8 @@ each release.
 
 ### Refactor
 
-- :wrench: add `theme` option in `_quarto.yml`, and `brand` for
-    Seedcase (#170)
+- :wrench: add `theme` option in `_quarto.yml`, and `brand` for Seedcase
+  (#170)
 
 ## 0.16.1 (2025-09-01)
 
@@ -193,18 +193,18 @@ each release.
 ### Fix
 
 - :bug: need to run build workflow after version bump to get changelog
-    (#110)
+  (#110)
 - :construction_worker: explicitly checkout newest version to publish
-    (#107)
+  (#107)
 - :construction_worker: forgot to checkout before building and
-    publishing (#106)
-- :construction_worker: only run when previous and current versions
-    are different (#98)
+  publishing (#106)
+- :construction_worker: only run when previous and current versions are
+  different (#98)
 - :construction_worker: use the `has_released` output to run or not
-    (#97)
+  (#97)
 - :bug: install uv in publish step and only for tags (#96)
 - :hammer: the `check-commits` recipe wasn't correctly checking them
-    (#48)
+  (#48)
 - :hammer: the `check-commits` recipe wasn't correctly checking them
 - :bug: remove auto-built reference docs before/after building (#47)
 - :bug: remove auto-built reference docs before/after building
