@@ -8,7 +8,7 @@
 @_builds: build-contributors build-website build-readme
 
 # Run all build-related recipes in the justfile
-{%- if is_seedcase_project %}
+{%- if for_seedcase %}
 run-all: install-deps update-quarto-theme format-python format-md _checks _tests _builds
 {%- else %}
 run-all: install-deps format-python _checks _tests _builds
@@ -32,7 +32,7 @@ install-precommit:
   # Update versions of pre-commit hooks
   uvx pre-commit autoupdate
 
-{%- if is_seedcase_project %}
+{%- if for_seedcase %}
 # Update the Quarto seedcase-theme extension
 update-quarto-theme:
   # Add theme if it doesn't exist, update if it does

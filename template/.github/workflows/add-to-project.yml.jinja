@@ -20,7 +20,8 @@ jobs:
     permissions:
       pull-requests: write
     with:
-      board-number: {{ github_board_number }}
+      # TODO: Fill in the board number.
+      board-number: ""
       app-id: {{ '${{ vars.ADD_TO_BOARD_APP_ID }}' }}
     secrets:
       add-to-board-token: {{ '${{ secrets.ADD_TO_BOARD }}' }}

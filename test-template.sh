@@ -2,21 +2,21 @@
 
 # Needs these arguments:
 #
-# 1. is_seedcase_project: true or false
+# 1. for_seedcase: true or false
 # 2. hosting_provider: e.g., "github", "gitlab", etc.
 
 # Argument naming -----
-is_seedcase_project="${1}"
+for_seedcase="${1}"
 hosting_provider="${2}"
 
-if [ -z "$is_seedcase_project" ] || [ -z "$hosting_provider" ]; then
-  echo "Usage: sh $0 <is_seedcase_project> <hosting_provider>"
+if [ -z "$for_seedcase" ] || [ -z "$hosting_provider" ]; then
+  echo "Usage: sh $0 <for_seedcase> <hosting_provider>"
   echo "Example: sh $0 true netlify"
   exit 1
 fi
 
 # Set up variables and functions for the test -----
-test_name="$is_seedcase_project-$hosting_provider"
+test_name="$for_seedcase-$hosting_provider"
 test_dir="$(pwd)/_temp/auto/$test_name"
 template_dir="$(pwd)"
 
@@ -29,14 +29,9 @@ copy () {
   uvx copier copy $1 $2 \
     -r HEAD \
     --defaults \
-    --data is_seedcase_project=$is_seedcase_project \
+    --data for_seedcase=$for_seedcase \
     --data github_user="first-last" \
     --data hosting_provider=$hosting_provider \
-    --data author_given_name="First" \
-    --data author_family_name="Last" \
-    --data author_email="first.last@example.com" \
-    --data review_team="@first-last/developers" \
-    --data github_board_number=22 \
     --overwrite
 }
 
@@ -48,7 +43,7 @@ mkdir -p $test_dir
 # Check initial creation -----
 # TODO: Find some way to test the `update` command
 # Any step that fails will exit the script with an error and not continue
-echo "Testing copy for new projects when: 'is_seedcase_project'='$is_seedcase_project', 'hosting_provider'='$hosting_provider' -----------"
+echo "Testing copy for new projects when: 'for_seedcase'='$for_seedcase', 'hosting_provider'='$hosting_provider' -----------"
 (
   cd $test_dir &&
     copy $template_dir $test_dir &&
@@ -56,7 +51,7 @@ echo "Testing copy for new projects when: 'is_seedcase_project'='$is_seedcase_pr
     git add . &&
     git commit --quiet -m "test: initial copy" &&
     # Check that recopy works -----
-    echo "Testing recopy when: 'is_seedcase_project'='$$is_seedcase_project', 'hosting_provider'='$hosting_provider' -----------" &&
+    echo "Testing recopy when: 'for_seedcase'='$for_seedcase', 'hosting_provider'='$hosting_provider' -----------" &&
     rm .gitignore &&
     git add . &&
     git commit --quiet -m "test: preparing to recopy from the template" &&
@@ -67,7 +62,7 @@ echo "Testing copy for new projects when: 'is_seedcase_project'='$is_seedcase_pr
       --skip-tasks \
       --trust &&
     # Check that copying onto an existing project works -----
-    echo "Testing copy in existing projects when: 'is_seedcase_project'='$is_seedcase_project', 'hosting_provider'='$hosting_provider' -----------" &&
+    echo "Testing copy in existing projects when: 'for_seedcase'='$for_seedcase', 'hosting_provider'='$hosting_provider' -----------" &&
     rm .gitignore .copier-answers.yml &&
     git add . &&
     git commit --quiet -m "test: preparing to copy onto an existing project" &&

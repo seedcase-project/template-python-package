@@ -53,8 +53,8 @@ format-md:
   uvx rumdl fmt --silent **/*.qmd.jinja **/*.md.jinja
 
 # Test template creation with specific parameters: LIST
-test is_seedcase_project="true" hosting_provider="netlify":
-    sh ./test-template.sh {{ is_seedcase_project }} {{ hosting_provider }}
+test for_seedcase="true" hosting_provider="netlify":
+    sh ./test-template.sh {{ for_seedcase }} {{ hosting_provider }}
 
 # Test template creation through use of the question approach
 test-manual:

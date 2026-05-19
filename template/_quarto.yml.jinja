@@ -16,7 +16,7 @@ website:
   navbar:
     pinned: true
     title: false
-    {%- if is_seedcase_project %}
+    {%- if for_seedcase %}
     logo: "_extensions/seedcase-project/seedcase-theme/logos/{{ github_repo }}/navbar.svg"
     logo-alt: "{{ github_repo }} logo: Main page"
     {%- else %}
@@ -37,7 +37,7 @@ website:
       - icon: github
         href: "https://github.com/{{ github_repo_spec }}"
         aria-label: "GitHub icon: Source code"
-      {%- if is_seedcase_project %}
+      {%- if for_seedcase %}
       - icon: house
         href: "https://seedcase-project.org"
         aria-label: "House icon: Main website for the Seedcase Project"
@@ -75,7 +75,7 @@ metadata-files:
   - docs/reference/_sidebar.yml
 
 format:
-  {% if is_seedcase_project -%}
+  {% if for_seedcase -%}
   seedcase-theme-html:
     theme:
       - brand
