@@ -1,5 +1,6 @@
 [files]
 extend-exclude = [
+  "*.html",
   "*.json",
   "*.css",
   ".quarto/*",
@@ -7,4 +8,7 @@ extend-exclude = [
   "_extensions/*",
   ".coverage-report/*",
   "site_libs/",
+  "*.svg",
+  # Since it has hashes
+  "CHANGELOG.md",
 ]
