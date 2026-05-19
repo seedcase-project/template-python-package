@@ -1,11 +1,5 @@
 _subdirectory: template
 
-# Post-copy commands:
-_tasks:
-  # Add dev dependencies
-  - command: "git init -b main; uv add --dev pre-commit ruff typos pytest bandit commitizen genbadge jupyter pytest-cov quartodoc types-tabulate mypy vulture"
-    when: "{{ _copier_operation == 'copy' }}"
-
 # Message to show after generating or regenerating the project successfully
 _message_after_copy: |
 
