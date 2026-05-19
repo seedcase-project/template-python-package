@@ -66,7 +66,8 @@ jobs:
         continue-on-error: true
         id: check_changes
         run: |
-          if cog check --from-latest-tag; then
+          # Determine if a bump is possible.
+          if [[ $(cog bump --auto --dry-run) != No* ]]; then
             echo "has_changes=true" >> $GITHUB_OUTPUT
           else
             echo "has_changes=false" >> $GITHUB_OUTPUT
@@ -83,7 +84,8 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           version=$(cog get-version)
-          uvx git-cliff --latest --output RELEASE_NOTES.md --strip all
+          # Remove logging from git-cliff.
+          RUST_LOG='none' uvx git-cliff --latest --output RELEASE_NOTES.md --strip all
           gh release create "${version}" \
             --title "Release ${version}" \
             --notes-file RELEASE_NOTES.md
