@@ -20,26 +20,30 @@ state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
 This repository contains a
-[copier](https://copier.readthedocs.io/en/stable/) template for setting
-up a new repository for a Python package. Along with a structured
-directory layout, this template includes configurations for tools that
-improve developer experience, continuous integration and delivery
-workflows, and supporting files for building robust Python packages.
+[Copier](https://copier.readthedocs.io/en/stable/) template for setting
+up a new repository for a Python package. We made this template because
+we manage and develop several Python packages in Seedcase, and this
+template is designed to make it easier to create, develop, and maintain
+those Python packages.
 
 Check out our
 [website](https://template-python-package.seedcase-project.org) for more
 information, such as the features it provides and a
 [guide](https://template-python-package.seedcase-project.org/docs/guide)
 to using the template. For a list of changes, see our
-[changelog](https://template-python-package.seedcase-project.org/changelog.html)
-page.
+[changelog](CHANGELOG.md) page.
+
+> [!TIP]
+>
+> This template repository was generated from the
+> [t-squared](https://github.com/seedcase-project/t-squared) Seedcase
+> template :tada:
 
 ## Contributing
 
-Check out our [contributing
-page](https://template-python-package.seedcase-project.org/contributing)
-for information on how to contribute to the project, including how to
-set up your development environment.
+Check out our [contributing page](CONTRIBUTING.md) for information on
+how to contribute to the project, including how to set up your
+development environment.
 
 Please note that this project is released with a [Contributor Code of
 Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree
@@ -50,10 +54,10 @@ to abide by its terms.
 The following people have contributed to this project by submitting pull
 requests :tada:
 
+[@joelostblom](https://github.com/joelostblom),
 [@lwjohnst86](https://github.com/lwjohnst86),
 [@martonvago](https://github.com/martonvago),
-[@signekb](https://github.com/signekb),
-[@joelostblom](https://github.com/joelostblom)
+[@signekb](https://github.com/signekb)
 
 ## Licensing
 
@@ -61,10 +65,7 @@ This project is licensed under the [MIT License](LICENSE.md).
 
 ## Citing
 
-This project is part of the Seedcase Project, which is a collaborative
-effort to create a framework for data management and analysis in
-research. If you use this project in your work, please cite it as
-follows:
+If you use this project in your work, please cite it as follows:
 
 Johnston L.W., Brødbæk S.K., Beicher K., Vago M. (2025). Template Python
 Package: An opinionated setup for making Python packages DOI:

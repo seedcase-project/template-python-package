@@ -1,11 +1,8 @@
-# Metadata for the website
 gh:
   org: "seedcase-project"
   repo: "template-python-package"
 
-titles:
-  full: "Template Python Package: An opinionated setup for making Python packages"
-  short: "Template Python Package"
+tagline: "Template Python Package: An opinionated setup for making Python packages"
 
 links:
   github: "https://github.com/seedcase-project/template-python-package"

@@ -48,6 +48,8 @@ _book
 public
 site
 
+# Cache folders
+*_cache/
 
 # Misc files
 *.log
