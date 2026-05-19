@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Needs two arguments:
+# Needs these arguments:
 #
 # 1. is_seedcase_project: true or false
 # 2. hosting_provider: e.g., "github", "gitlab", etc.
@@ -16,17 +16,16 @@ if [ -z "$is_seedcase_project" ] || [ -z "$hosting_provider" ]; then
 fi
 
 # Set up variables and functions for the test -----
-test_name="test-package-$hosting_provider"
-test_dir="$(pwd)/_temp/$is_seedcase_project/$test_name"
+test_name="$is_seedcase_project-$hosting_provider"
+test_dir="$(pwd)/_temp/auto/$test_name"
 template_dir="$(pwd)"
 
 # Needs three arguments:
 #
 # 1. Template directory
 # 2. Destination directory
-# 3. VCS ref (commit, branch, tag, etc.)
 copy () {
-  # `-r HEAD` means to copy from the current HEAD, including uncommitted changes
+  # '-r HEAD' means use the HEAD, including uncommitted changes.
   uvx copier copy $1 $2 \
     -r HEAD \
     --defaults \
@@ -38,9 +37,7 @@ copy () {
     --data author_email="first.last@example.com" \
     --data review_team="@first-last/developers" \
     --data github_board_number=22 \
-    --overwrite \
-    --skip-tasks \
-    --trust
+    --overwrite
 }
 
 # Pre-test setup -----
@@ -60,7 +57,7 @@ echo "Testing copy for new projects when: 'is_seedcase_project'='$is_seedcase_pr
     git commit --quiet -m "test: initial copy" &&
     # Check that recopy works -----
     echo "Testing recopy when: 'is_seedcase_project'='$$is_seedcase_project', 'hosting_provider'='$hosting_provider' -----------" &&
-    rm .cz.toml &&
+    rm .gitignore &&
     git add . &&
     git commit --quiet -m "test: preparing to recopy from the template" &&
     uvx copier recopy \
@@ -69,12 +66,10 @@ echo "Testing copy for new projects when: 'is_seedcase_project'='$is_seedcase_pr
       --overwrite \
       --skip-tasks \
       --trust &&
-    # Check that copying onto an existing package works -----
+    # Check that copying onto an existing project works -----
     echo "Testing copy in existing projects when: 'is_seedcase_project'='$is_seedcase_project', 'hosting_provider'='$hosting_provider' -----------" &&
-    rm .cz.toml .copier-answers.yml &&
+    rm .gitignore .copier-answers.yml &&
     git add . &&
-    git commit --quiet -m "test: preparing to copy onto an existing package" &&
-    copy $template_dir $test_dir #&&
-    # Checks and builds -----
-    # just run-all
+    git commit --quiet -m "test: preparing to copy onto an existing project" &&
+    copy $template_dir $test_dir
 )
