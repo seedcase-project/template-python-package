@@ -22,6 +22,74 @@ within each release.
 Commits from bots, like `dependabot` or `pre-commit-ci`, are not
 included in the changelog.
 
+## [0.22.2](https://github.com/seedcase-project/template-python-package/compare/0.22.1..0.22.2) - 2026-05-19
+
+### ♻️ Refactor
+
+- Simplify the Copier questions by removing many of them
+  [#278](https://github.com/seedcase-project/template-python-package/pull/278)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([a0bf7ad](https://github.com/seedcase-project/template-python-package/commit/a0bf7ad707e57cc26ebefd63cbd92621531c2226))
+
+### 📝 Documentation
+
+- Update license year
+  [#269](https://github.com/seedcase-project/template-python-package/pull/269)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([2b8969e](https://github.com/seedcase-project/template-python-package/commit/2b8969eec32f568088b7a87f20012048add001ed))
+- Update `CONTRIBUTING.md` from t-squared, explain about files
+  [#272](https://github.com/seedcase-project/template-python-package/pull/272)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([9119dd3](https://github.com/seedcase-project/template-python-package/commit/9119dd3d3b2dec32b8f46e219dc43a8b5ae057d1))
+- Split out guide into multiple pages
+  [#275](https://github.com/seedcase-project/template-python-package/pull/275)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([9106e1d](https://github.com/seedcase-project/template-python-package/commit/9106e1df81d0952a1296234b6279b9e207bf05c0))
+- Improve README from t-squared
+  [#273](https://github.com/seedcase-project/template-python-package/pull/273)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([b2d1b34](https://github.com/seedcase-project/template-python-package/commit/b2d1b34c6832d2eb606a5eccb28420fd3a94b5fa))
+
+### 💄 Styling
+
+- Update Seedcase Quarto theme
+  [#276](https://github.com/seedcase-project/template-python-package/pull/276)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([75a4a39](https://github.com/seedcase-project/template-python-package/commit/75a4a398a24295fc5b2053b7ea4ef7942c3b4946))
+
+### 🧪 Tests
+
+- Update test script from t-squared updates
+  [#271](https://github.com/seedcase-project/template-python-package/pull/271)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([ae2e490](https://github.com/seedcase-project/template-python-package/commit/ae2e49094e6764ad73510c478040175c996644fe))
+
+### 👷 CI/CD
+
+- Update workflows from t-squared, improve releasing
+  [#267](https://github.com/seedcase-project/template-python-package/pull/267)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([855c11f](https://github.com/seedcase-project/template-python-package/commit/855c11f06dcbf91a321c6eaf2aa747655c45856f))
+- Correct logic to check if release is possible
+  [#277](https://github.com/seedcase-project/template-python-package/pull/277)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([7ca4a65](https://github.com/seedcase-project/template-python-package/commit/7ca4a654825985af2026722dc359c420a7799d67))
+
+### 👩‍💻 Miscellaneous
+
+- DevEx improvements from t-squared
+  [#268](https://github.com/seedcase-project/template-python-package/pull/268)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([f31cbec](https://github.com/seedcase-project/template-python-package/commit/f31cbec4dff5bff7038c7f0957dd2b51438e3709))
+- Improve justfile from t-squared
+  [#270](https://github.com/seedcase-project/template-python-package/pull/270)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([8b96b6c](https://github.com/seedcase-project/template-python-package/commit/8b96b6ce8158f1e4c74dfcaa3e5eb55848da82c6))
+- Improve formatting of contributor list
+  [#274](https://github.com/seedcase-project/template-python-package/pull/274)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([6562be2](https://github.com/seedcase-project/template-python-package/commit/6562be2555d9af61b49e39d8e42437913c0e98ee))
+
 ## [0.22.1](https://github.com/seedcase-project/template-python-package/compare/0.22.0..0.22.1) - 2026-04-10
 
 ### 🐛 Fixes
@@ -493,7 +561,7 @@ included in the changelog.
 - Update test snippet to given, when, then
   [#29](https://github.com/seedcase-project/template-python-package/pull/29)
   by [`@signekb`](https://github.com/signekb)
-  ([b2f8data](https://github.com/seedcase-project/template-python-package/commit/b2f8daa439a024a8fefa1ebe4b163a6e331917a2))
+  ([b2f8daa](https://github.com/seedcase-project/template-python-package/commit/b2f8daa439a024a8fefa1ebe4b163a6e331917a2))
 - Add `test-python` to `run-all`
   [#38](https://github.com/seedcase-project/template-python-package/pull/38)
   by [`@signekb`](https://github.com/signekb)
