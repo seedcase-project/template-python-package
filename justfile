@@ -1,89 +1,97 @@
 @_default:
-    just --list --unsorted
-
-@_checks: check-spelling check-urls check-commits
-
-# Test Seedcase and non-Seedcase projects
-@_tests: (test "true" "netlify") (test "false" "netlify") (test "true" "gh-pages") (test "false" "gh-pages")
-
-@_builds: build-contributors build-website build-readme
+  just --list --unsorted
 
 # Run all build-related recipes in the justfile
-run-all: update-quarto-theme update-template _checks format-md _tests _builds
+run-all: update-quarto-theme sync-template-files check-all format-md test-all build-all
+
+# List all TODO items in the repository
+list-todos:
+  grep -R -n \
+  --exclude-dir=.quarto \
+  --exclude-dir=template \
+  --exclude-dir=_temp \
+  --exclude-dir=_site \
+  --exclude=justfile \
+  --exclude=copier.yaml \
+  "TODO" *
 
 # Install the pre-commit hooks
 install-precommit:
-    # Install pre-commit hooks
-    uvx pre-commit install
-    # Run pre-commit hooks on all files
-    uvx pre-commit run --all-files
-    # Update versions of pre-commit hooks
-    uvx pre-commit autoupdate
+  uvx pre-commit install
+  uvx pre-commit autoupdate
+  uvx pre-commit run --all-files
 
-# Update the Quarto seedcase-theme extension
+# Update (or add if not present) the Quarto seedcase-theme extension
 update-quarto-theme:
-    # Add theme if it doesn't exist, update if it does
-    quarto update seedcase-project/seedcase-theme --no-prompt
+  quarto update seedcase-project/seedcase-theme --no-prompt
 
-# Update files in the template from the copier parent folder
-update-template:
-    cp CODE_OF_CONDUCT.md .pre-commit-config.yaml .typos.toml .editorconfig .rumdl.toml template/
-    mkdir -p template/tools
-    cp tools/get-contributors.sh template/tools/
-    cp .github/pull_request_template.md template/.github/
-    cp .github/workflows/dependency-review.yml template/.github/workflows/
-
-# Check the commit messages on the current branch that are not on the main branch
-check-commits:
-    #!/usr/bin/env bash
-    branch_name=$(git rev-parse --abbrev-ref HEAD)
-    number_of_commits=$(git rev-list --count HEAD ^main)
-    if [[ ${branch_name} != "main" && ${number_of_commits} -gt 0 ]]
-    then
-      # If issue happens, try `uv tool update-shell`
-      uvx --from commitizen cz check --rev-range main..HEAD
-    else
-      echo "On 'main' or current branch doesn't have any commits."
-    fi
-
-# Install lychee from https://lychee.cli.rs/guides/getting-started/
-
-# Check that URLs work
-check-urls:
-    lychee . \
-      --verbose \
-      --extensions md,qmd,jinja \
-      --exclude-path "_badges.qmd"
+# Update files in the template from the Copier parent folder
+sync-template-files:
+  cp CODE_OF_CONDUCT.md .pre-commit-config.yaml .typos.toml .editorconfig .rumdl.toml template/
+  mkdir -p template/tools
+  cp tools/get-contributors.sh template/tools/
+  cp .github/pull_request_template.md template/.github/
 
 # Check for spelling errors in files
 check-spelling:
-    uvx typos
+  uvx typos
+
+# Check that URLs work
+check-urls:
+  lychee . \
+    --verbose \
+    --extensions md,qmd,jinja \
+    --exclude-path "_badges.qmd"
+
+# Run all check-related recipes
+check-all: check-spelling check-urls
 
 # Format Markdown files
 format-md:
-    uvx rumdl fmt --silent
+  uvx rumdl fmt --silent
+  # includes option doesn't work with Jinja files, so do manually
+  uvx rumdl fmt --silent **/*.qmd.jinja **/*.md.jinja
 
-# Test that a Python package can be created from the template, with parameters for: `is_seedcase_project` (true or false) and `hosting_provider` (either "gh-pages" or "netlify")
+# Test template creation with specific parameters: LIST
 test is_seedcase_project="true" hosting_provider="netlify":
     sh ./test-template.sh {{ is_seedcase_project }} {{ hosting_provider }}
 
-# Test template with the manual questionnaire answers
+# Test template creation through use of the question approach
 test-manual:
-    mkdir -p _temp/manual
-    uvx copier copy --trust -r HEAD . _temp/manual/test-template
+  mkdir -p _temp/manual
+  rm -rf _temp/manual/test-template
+  uvx copier copy -r HEAD . _temp/manual/test-template
+
+# Run all test-related recipes
+test-all: (test "true" "netlify") (test "false" "netlify") (test "true" "gh-pages") (test "false" "gh-pages")
 
 # Clean up any leftover and temporary build files
 cleanup:
-    rm -rf _temp
-
-# Build the website using Quarto
-build-website:
-    uvx --from quarto quarto render
+  rm -rf _temp
 
 # Re-build the README file from the Quarto version
 build-readme:
-    uvx --from quarto quarto render README.qmd --to gfm
+  uvx --from quarto quarto render README.qmd --to gfm
 
 # Generate a Quarto include file with the contributors
 build-contributors:
-    sh ./tools/get-contributors.sh seedcase-project/template-python-project > docs/includes/_contributors.qmd
+  sh ./tools/get-contributors.sh seedcase-project/template-python-package > docs/includes/_contributors.qmd
+
+# Build the website using Quarto
+build-website:
+  uvx --from quarto quarto render
+
+# Preview the website with automatic reload on changes
+preview-website:
+  quarto preview
+
+# Run all build-related recipes
+build-all: build-contributors build-website build-readme
+
+# Check for and apply updates from the template
+update-from-template:
+  uvx copier update --defaults
+
+# Reset repo changes to match the template
+reset-from-template:
+  uvx copier recopy --defaults
