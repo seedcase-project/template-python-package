@@ -27,14 +27,15 @@ update-quarto-theme:
 
 # Update files in the template from the Copier parent folder
 sync-template-files:
-  cp CODE_OF_CONDUCT.md .pre-commit-config.yaml .typos.toml .editorconfig .rumdl.toml template/
+  cp CODE_OF_CONDUCT.md .pre-commit-config.yaml .typos.toml .editorconfig template/
+  cp .config/* template/.config/
   mkdir -p template/tools
   cp tools/get-contributors.sh template/tools/
   cp .github/pull_request_template.md template/.github/
 
 # Check for spelling errors in files
 check-spelling:
-  uvx typos
+  uvx typos --config .config/typos.toml
 
 # Check that URLs work
 check-urls:

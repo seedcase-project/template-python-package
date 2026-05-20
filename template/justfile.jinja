@@ -54,14 +54,14 @@ test-python:
 # Check Python code for any errors that need manual attention
 check-python:
   # Check formatting
-  uv run ruff check .
+  uv run ruff check . --config .config/ruff.toml
   # Check types
-  uv run mypy --pretty .
+  uv run mypy --pretty . --config-file .config/mypy.ini
 
 # Reformat Python code to match coding style and general structure
 format-python:
-  uv run ruff check --fix .
-  uv run ruff format .
+  uv run ruff check --fix . --config .config/ruff.toml
+  uv run ruff format . --config .config/ruff.toml
 
 # Format Markdown files
 format-md:
@@ -103,7 +103,7 @@ check-security:
 
 # Check for spelling errors in files
 check-spelling:
-  uv run typos
+  uv run typos --config .config/typos.toml
 
 # Install lychee from https://lychee.cli.rs/guides/getting-started/
 # Check that URLs work
