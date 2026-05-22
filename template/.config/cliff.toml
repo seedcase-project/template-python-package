@@ -17,7 +17,7 @@ Since we follow
 for commit messages, we can automatically create
 releases of the Python package based on those messages. The
 releases are also published to Zenodo for easier discovery, archiving,
-and citation. 
+and citation.
 
 We use
 [Cocogitto](https://decisions.seedcase-project.org/why-semantic-release-with-cocogitto/)
@@ -26,7 +26,7 @@ to automate releases, which uses
 and [Git Cliff](https://decisions.seedcase-project.org/why-changelog-with-git-cliff/)
 to generate the changelog from commit messages.
 
-Because releases are generated automatically, new versions are released 
+Because releases are generated automatically, new versions are released
 often---sometimes several times in a day---
 and each release usually contains only a small number of changes. Below
 is a list of the releases and the changes
