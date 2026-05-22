@@ -9,6 +9,8 @@ on:
   # To guarantee Maintained check is occasionally updated. See
   # https://github.com/ossf/scorecard/blob/main/docs/checks.md#maintained
   schedule:
+    # Default used by the scorecard action.
+    # Runs every Tuesday at 7:20am UTC. See https://crontab.guru/#20_7_*_*_2
     - cron: "20 7 * * 2"
   push:
     branches:
