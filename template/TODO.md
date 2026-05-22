@@ -4,7 +4,7 @@
   after copying the project.
 - Run `git init -b main` to create the project as a Git repository.
 - Install these packages
-  `uv add --dev pre-commit ruff typos pytest bandit commitizen genbadge jupyter pytest-cov quartodoc types-tabulate mypy vulture`
+  `uv add --dev pytest genbadge jupyter pytest-cov quartodoc quarto types-tabulate mypy`
 - Run `just list-todos` and complete all the TODO items.
 - Run `just install-precommit` to install the pre-commit hooks.
 - Run `just build-readme` to build the Markdown version of the README.
