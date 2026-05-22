@@ -22,6 +22,39 @@ within each release.
 Commits from bots, like `dependabot` or `pre-commit-ci`, are not
 included in the changelog.
 
+## [0.23.0](https://github.com/seedcase-project/template-python-package/compare/0.22.3..0.23.0) - 2026-05-22
+
+### ✨ Features
+
+- Add `pyproject.toml` classifiers for better discoverability
+  [#290](https://github.com/seedcase-project/template-python-package/pull/290)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([fd37f23](https://github.com/seedcase-project/template-python-package/commit/fd37f23ad574d992566e6f85808f11f28e2852dc))
+
+## [0.22.3](https://github.com/seedcase-project/template-python-package/compare/0.22.2..0.22.3) - 2026-05-22
+
+### ♻️ Refactor
+
+- Remove Conventional Commit scopes and use raw emoji
+  [#283](https://github.com/seedcase-project/template-python-package/pull/283)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([03ab0ba](https://github.com/seedcase-project/template-python-package/commit/03ab0ba6d9b8dbbf6ade4232b4458dc5fc913902))
+- Remove `build-pdf` from justfile, not needed anymore
+  [#288](https://github.com/seedcase-project/template-python-package/pull/288)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([3ca4fe5](https://github.com/seedcase-project/template-python-package/commit/3ca4fe5277ebfe6806e5b7db7cbbe361cec63a7d))
+- Switch to using `uvx` for dev tooling, `uv run` isn't needed
+  [#285](https://github.com/seedcase-project/template-python-package/pull/285)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([126dca2](https://github.com/seedcase-project/template-python-package/commit/126dca25c77882ad4188a330c504587e7eb7a680))
+
+### 📝 Documentation
+
+- Minor clean up of docs
+  [#286](https://github.com/seedcase-project/template-python-package/pull/286)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([73f4bb6](https://github.com/seedcase-project/template-python-package/commit/73f4bb69f0ce9565c1bd40ba3cb38eb55e79a693))
+
 ## [0.22.2](https://github.com/seedcase-project/template-python-package/compare/0.22.1..0.22.2) - 2026-05-19
 
 ### ♻️ Refactor
