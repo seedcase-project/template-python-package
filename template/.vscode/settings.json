@@ -36,5 +36,7 @@
   "python.testing.pytestPath": "${workspaceFolder}/.venv/bin/pytest",
   "mypy.runUsingActiveInterpreter": true,
   "ruff.configuration": ".config/ruff.toml",
-  "mypy.configFile": ".config/mypy.ini"
+  "mypy.configFile": ".config/mypy.ini",
+  "conventionalCommits.emojiFormat": "emoji",
+  "conventionalCommits.promptScopes": false
 }
