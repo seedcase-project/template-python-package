@@ -22,6 +22,15 @@ within each release.
 Commits from bots, like `dependabot` or `pre-commit-ci`, are not
 included in the changelog.
 
+## [0.23.0](https://github.com/seedcase-project/template-python-package/compare/0.22.3..0.23.0) - 2026-05-22
+
+### ✨ Features
+
+- Add `pyproject.toml` classifiers for better discoverability
+  [#290](https://github.com/seedcase-project/template-python-package/pull/290)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([fd37f23](https://github.com/seedcase-project/template-python-package/commit/fd37f23ad574d992566e6f85808f11f28e2852dc))
+
 ## [0.22.3](https://github.com/seedcase-project/template-python-package/compare/0.22.2..0.22.3) - 2026-05-22
 
 ### ♻️ Refactor
