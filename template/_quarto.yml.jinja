@@ -1,5 +1,5 @@
 project:
-  # TODO: change to extension name if using a custom extension
+  # TODO: Change to extension name if using a custom extension
   type: website
 
 website:
@@ -8,7 +8,7 @@ website:
   {% if hosting_provider == "gh-pages" -%}
   site-url: "https://{{ github_user }}.github.io/{{ github_repo }}/"
   {%- elif hosting_provider == "netlify" -%}
-  # TODO: Set the Netlify custom domain URL
+  # TODO: Add the Netlify custom domain URL
   site-url: ""
   {%- endif %}
   repo-url: "https://github.com/{{ github_repo_spec }}"
@@ -20,7 +20,7 @@ website:
     logo: "_extensions/seedcase-project/seedcase-theme/logos/{{ github_repo }}/navbar.svg"
     logo-alt: "{{ github_repo }} logo: Main page"
     {%- else %}
-    # TODO: add logo
+    # TODO: Add logo if desired
     logo: ""
     logo-alt: "{{ github_repo }} logo: Main page"
     {%- endif %}
