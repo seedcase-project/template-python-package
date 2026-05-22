@@ -15,7 +15,7 @@ metadata-files:
 Check out our [website]({{< meta links.site >}}) for more information,
 such as the features it provides and a
 [guide]({{< meta links.site >}}/docs/guide) to using the package. For a
-list of changes, see our [changelog](CHANGELOG.md) page.
+list of changes, see our [changelog](CHANGELOG.md).
 
 ::: callout-tip
 This Python package was generated from the
