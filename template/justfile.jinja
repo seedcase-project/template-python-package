@@ -54,14 +54,14 @@ test-python:
 # Check Python code for any errors that need manual attention
 check-python:
   # Check formatting
-  uv run ruff check .
+  uvx ruff check . --config .config/ruff.toml
   # Check types
-  uv run mypy --pretty .
+  uv run mypy --pretty . --config-file .config/mypy.ini
 
 # Reformat Python code to match coding style and general structure
 format-python:
-  uv run ruff check --fix .
-  uv run ruff format .
+  uvx ruff check --fix . --config .config/ruff.toml
+  uvx ruff format . --config .config/ruff.toml
 
 # Format Markdown files
 format-md:
@@ -86,11 +86,11 @@ preview-website: build-quartodoc
 
 # Run basic security checks on the package
 check-security:
-  uv run bandit -r src/
+  uvx bandit -r src/
 
 # Check for spelling errors in files
 check-spelling:
-  uv run typos
+  uvx typos
 
 # Install lychee from https://lychee.cli.rs/guides/getting-started/
 # Check that URLs work
@@ -99,16 +99,6 @@ check-urls:
     --verbose \
     --extensions md,qmd,py \
     --exclude-path "_badges.qmd"
-
-# Build the documentation as PDF using Quarto
-build-pdf:
-  # To let Quarto know where python is.
-  export QUARTO_PYTHON=.venv/bin/python3
-  uv run quarto install tinytex
-  # For generating images from Mermaid diagrams
-  uv run quarto install chromium
-  uv run quarto render --profile pdf --to pdf
-  find docs -name "mermaid-figure-*.png" -delete
 
 # Check for unused code in the package and its tests
 check-unused:
@@ -120,7 +110,7 @@ check-unused:
   # - 60 %: attribute, class, function, method, property, variable
   # There are some things should be ignored though, with the allowlist.
   # Create an allowlist with `vulture --make-allowlist`
-  uv run vulture --min-confidence 100 src/ tests/ **/vulture-allowlist.py
+  uvx vulture --min-confidence 100 src/ tests/ **/vulture-allowlist.py
 
 # Re-build the README file from the Quarto version
 build-readme:

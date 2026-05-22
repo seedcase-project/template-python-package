@@ -16,6 +16,26 @@ license = "MIT"
 license-files = ["LICENSE.md"]
 requires-python = ">=3.12"
 dependencies = []
+# From https://pypi.org/classifiers/
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+
+  # Strict typing, checked via mypy
+  "Typing :: Typed",
+
+  # How mature is this project? Common values are
+  #   3 - Alpha
+  #   4 - Beta
+  #   5 - Production/Stable
+  "Development Status :: 4 - Beta",
+
+  # Indicate who your project is intended for
+  "Intended Audience :: Developers",
+
+  # Specify the Python versions you support here.
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+]
 
 [project.urls]
 # TODO: Add URLs relevant to the project.
@@ -27,3 +47,12 @@ issues = "https://github.com/{{ github_repo_spec }}/issues"
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+# - A short traceback (tb) mode to make it easier to view
+# - Use the `src/` package (importlib)
+# - Use code coverage on the `src/` package
+# - If tests fail, do not generate coverage report
+# - Create the coverage report in XML (for badge), terminal, and HTML
+# - Trigger failure if below 90% code coverage
+addopts = "--tb=short --import-mode=importlib --cov=src --no-cov-on-fail --cov-report=term --cov-report=xml --cov-report=html --cov-fail-under=90"
