@@ -19,7 +19,7 @@ so is at various states of completion.
 To contribute to `{{ github_repo }}`, you first need to install
 [uv](https://docs.astral.sh/uv/) and
 [justfile](https://just.systems/man/en/packages.html). We use uv and
-justfile to manage our project, such as to run checks and test the
+justfile to manage our package, such as to run checks and test the
 template. Both the uv and justfile websites have a more detailed guide
 on using uv, but below are some simple instructions to get you started.
 
@@ -40,7 +40,7 @@ just
 ```
 
 As you contribute, make sure your changes will pass our tests by opening
-a terminal so that the working directory is the root of this project's
+a terminal so that the working directory is the root of this package's
 repository and running:
 
 ``` bash
@@ -53,7 +53,65 @@ as Git messages. Using this convention allows us to be able to
 automatically create a release based on the commit message by using
 [Commitizen](https://decisions.seedcase-project.org/why-semantic-release-with-commitizen/).
 If you don't use Conventional Commits when making a commit, we will
-revise the pull request title to follow that format, as we use [squash
-merges](https://git-scm.com/docs/git-merge) when merging pull requests,
+revise the pull request title to follow that format, as we use squash
+merges when merging pull requests,
 so all other commits in the pull request will be squashed into one
 commit.
+
+## :file_folder: Explanation of files and folders
+
+
+- `.github/`: Contains GitHub-specific files, such as issue and pull
+  request templates, workflows,
+  [dependabot](https://docs.github.com/en/code-security/tutorials/secure-your-dependencies/dependabot-quickstart-guide)
+  configuration, pull request templates, and a
+  [CODEOWNERS](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)
+  file.
+- `tools/vulture-allowlist.py`: List of variables that shouldn't be
+  flagged by [Vulture](https://github.com/jendrikseipp/vulture) as
+  unused.
+- `tools/get-contributors.sh`: Script to get list of package
+  contributors.
+- `tests/`: Test files for the package.
+- `src/`: Source code for the package.
+- `docs/`: Documentation about using and developing the Python package.
+- `.config/`: Contains configuration files for various tools used in the package,
+  such as:
+    - `quartodoc.py`: Custom
+      [`quartodoc`](https://machow.github.io/quartodoc/) renderer.
+    - `mypy.ini`: [`mypy`](https://mypy.readthedocs.io/en/stable/)
+      configuration file for type checking Python code.
+    - `ruff.toml`: [Ruff](https://docs.astral.sh/ruff/) configuration file
+      for linting and formatting Python code.
+    - `rumdl.toml`: [rumdl](https://rumdl.dev/) configuration file for
+      formatting Markdown files so that they are standardized and consistent
+    {%- if for_seedcase %}
+    - `cog.toml`: [Cocogitto](https://docs.cocogitto.io) configuration file
+      for managing versions.
+    - `cliff.toml`: [git-cliff](https://git-cliff.org) configuration file for
+      creating the changelog.
+    {%- endif %}
+- `.copier-answers.yml`: Contains the answers you gave when copying the
+  package from the template.
+  **You should not modify this file directly.**
+- `.pre-commit-config.yaml`: [Pre-commit](https://pre-commit.com/)
+  configuration file for managing and running checks before each commit.
+- `.typos.toml`: [typos](https://github.com/crate-ci/typos) spell
+  checker configuration file.
+- `justfile`: [`just`](https://just.systems/man/en/) configuration file
+  for scripting package tasks.
+- `.editorconfig`: Editor configuration file for
+  [EditorConfig](https://editorconfig.org/) to maintain consistent
+  coding styles across different editors and IDEs.
+- `CHANGELOG.md`: Changelog file for tracking changes in the package.
+- `CITATION.cff`: Structured citation metadata for your package.
+- `CONTRIBUTING.md`: Guidelines for contributing to the package.
+- `_metadata.yml`: Quarto metadata file for the website, including
+  information about the package, such as the titles and GitHub names.
+- `_quarto.yml`: Quarto configuration file for the website, including
+  settings for the website, such as the theme, navigation, and other
+  options.
+- `pyproject.toml`: Main Python package configuration file defining
+  metadata and dependencies.
+- `uv.lock`: Lockfile used by [`uv`](https://docs.astral.sh/uv/) to
+  record exact versions of installed dependencies.
