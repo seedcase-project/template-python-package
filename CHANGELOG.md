@@ -22,6 +22,24 @@ within each release.
 Commits from bots, like `dependabot` or `pre-commit-ci`, are not
 included in the changelog.
 
+## [0.23.3](https://github.com/seedcase-project/template-python-package/compare/0.23.2..0.23.3) - 2026-06-01
+
+### ♻️ Refactor
+
+- Switch to using Cocogitto and git-cliff for releasing
+  [#282](https://github.com/seedcase-project/template-python-package/pull/282)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([deea47b](https://github.com/seedcase-project/template-python-package/commit/deea47b97fa16d540f80a5695b60017793bdee98))
+
+## [0.23.2](https://github.com/seedcase-project/template-python-package/compare/0.23.1..0.23.2) - 2026-05-22
+
+### ♻️ Refactor
+
+- Match changes from t-squared and from root folder
+  [#287](https://github.com/seedcase-project/template-python-package/pull/287)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([317884a](https://github.com/seedcase-project/template-python-package/commit/317884a3486afc9d8aa7524039d3c1014babb9df))
+
 ## [0.23.1](https://github.com/seedcase-project/template-python-package/compare/0.23.0..0.23.1) - 2026-05-22
 
 ### ♻️ Refactor

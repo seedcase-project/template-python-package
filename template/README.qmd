@@ -40,9 +40,9 @@ Seedcase template :tada:
 - `.copier-answers.yml`: Contains the answers you gave when copying the
   project from the template.
   **You should not modify this file directly.**
-- `.cz.toml`:
-  [Commitizen](https://commitizen-tools.github.io/commitizen/)
-  configuration file for managing versions and changelogs.
+- `.config/cog.toml`:
+  [Cocogitto](https://docs.cocogitto.io) configuration file for managing
+  versions and changelogs.
 - `.pre-commit-config.yaml`: [Pre-commit](https://pre-commit.com/)
   configuration file for managing and running checks before each commit.
 - `.typos.toml`: [typos](https://github.com/crate-ci/typos) spell
