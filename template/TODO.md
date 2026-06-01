@@ -27,20 +27,16 @@
     repository.
   - Create an `UPDATE_VERSION_APP_ID` and `ADD_TO_BOARD_APP_ID` variable
     of the GitHub Apps' IDs if you haven't already and connect them to
-    the repository.
-    {%- else -%}
+    the repository. {%- else -%}
 - Install the [gh CLI](https://cli.github.com/) to create the GitHub
   repository from the command line by using
-  `gh repo create {{ github_repo_spec }} --source=. --public`.
-  {%- endif %}
-  {% if hosting_provider == "netlify" %}
+  `gh repo create {{ github_repo_spec }} --source=. --public`. {%- endif
+  %} {% if hosting_provider == "netlify" %}
 - Connect the repository to Netlify and turn off the builds on Netlify,
   since you will be using GitHub Actions to build and deploy the
-  website.
-  {%- elif hosting_provider == "gh-pages" -%}
+  website. {%- elif hosting_provider == "gh-pages" -%}
 - Run `quarto publish gh-pages` to setup and start publishing the
-  website to GitHub Pages.
-  {%- endif %}
+  website to GitHub Pages. {%- endif %}
 - If relevant, connect [GoatCounter](https://www.goatcounter.com/).
 - If relevant, connect [pre-commit.ci](https://pre-commit.ci/) to the
   repository and enable the pre-commit hooks.
