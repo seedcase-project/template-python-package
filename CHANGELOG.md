@@ -22,6 +22,15 @@ within each release.
 Commits from bots, like `dependabot` or `pre-commit-ci`, are not
 included in the changelog.
 
+## [0.23.5](https://github.com/seedcase-project/template-python-package/compare/0.23.4..0.23.5) - 2026-06-01
+
+### ♻️ Refactor
+
+- Replace reusable workflows with normal workflow steps
+  [#284](https://github.com/seedcase-project/template-python-package/pull/284)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([4659456](https://github.com/seedcase-project/template-python-package/commit/4659456fced498c8baf7babe05b9e7ddc9dbd180))
+
 ## [0.23.4](https://github.com/seedcase-project/template-python-package/compare/0.23.3..0.23.4) - 2026-06-01
 
 ### ♻️ Refactor
