@@ -1,5 +1,4 @@
 
-
 # Template Python Package: An opinionated setup for making Python packages
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17018496.svg)](https://doi.org/10.5281/zenodo.17018496)
@@ -70,7 +69,7 @@ If you use this project in your work, please cite it as follows:
 Johnston L.W., Brødbæk S.K., Beicher K., Vago M. (2025). Template Python
 Package: An opinionated setup for making Python packages DOI:
 10.5281/zenodo.17018496 URL:
-https://template-python-package.seedcase-project.org
+<https://template-python-package.seedcase-project.org>
 
 Or as a BibTeX entry:
 
