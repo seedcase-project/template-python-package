@@ -63,6 +63,16 @@ format-python:
   uvx ruff check --fix . --config .config/ruff.toml
   uvx ruff format . --config .config/ruff.toml
 
+# Reformat Python dostrings
+format-docstrings:
+  uvx format-docstring \
+    --docstring-style google \
+    --include-arg-types false \
+    --include-arg-defaults false \
+    --include-return-and-yield-types false \
+    --fix-rst-backticks false \
+    src/
+
 # Format Markdown files
 format-md:
   uvx rumdl fmt --silent
