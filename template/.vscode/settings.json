@@ -34,7 +34,6 @@
   "files.insertFinalNewline": true,
   "python.testing.pytestEnabled": true,
   "python.testing.pytestPath": "${workspaceFolder}/.venv/bin/pytest",
-  "ruff.configuration": ".config/ruff.toml",
   "conventionalCommits.emojiFormat": "emoji",
   "conventionalCommits.promptScopes": false
 }
