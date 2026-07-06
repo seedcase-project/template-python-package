@@ -1,26 +1,25 @@
 # Changelog
 
-Since we follow
-[Conventional Commits](https://decisions.seedcase-project.org/why-conventional-commits/)
-when writing commit messages, we're able to automatically create formal
-"releases" of the template based on the commit messages. Releases in the
-context of template are when changes occur to the `template/` files or
-to the `copier.yaml` files. The releases are also published to Zenodo
-for easier discovery, archival, and citation purposes. We use
+Since we follow [Conventional
+Commits](https://decisions.seedcase-project.org/why-conventional-commits/) when
+writing commit messages, we're able to automatically create formal "releases" of
+the template based on the commit messages. Releases in the context of template
+are when changes occur to the `template/` files or to the `copier.yaml` files.
+The releases are also published to Zenodo for easier discovery, archival, and
+citation purposes. We use
 [Cocogitto](https://decisions.seedcase-project.org/why-semantic-release-with-cocogitto/)
 to be able to automatically create these releases, which uses
-[SemVar](https://semverdoc.org) as the version numbering scheme, and
-[Git Cliff](https://decisions.seedcase-project.org/why-changelog-with-git-cliff/)
-to generate the changelog based on the commit messages.
+[SemVar](https://semverdoc.org) as the version numbering scheme, and [Git
+Cliff](https://decisions.seedcase-project.org/why-changelog-with-git-cliff/) to
+generate the changelog based on the commit messages.
 
-Because releases are created based on commit messages, a new release is
-created quite often---sometimes several times in a day. This also means
-that any individual release will not have many changes within it. Below
-is a list of the releases we've made so far, along with what was changed
-within each release.
+Because releases are created based on commit messages, a new release is created
+quite often---sometimes several times in a day. This also means that any
+individual release will not have many changes within it. Below is a list of the
+releases we've made so far, along with what was changed within each release.
 
-Commits from bots, like `dependabot` or `pre-commit-ci`, are not
-included in the changelog.
+Commits from bots, like `dependabot` or `pre-commit-ci`, are not included in the
+changelog.
 
 ## [0.24.0](https://github.com/seedcase-project/template-python-package/compare/0.23.5..0.24.0) - 2026-07-06
 
@@ -37,8 +36,7 @@ included in the changelog.
 
 ### ♻️ Refactor
 
-- Set path to `.config/ruff.toml` in `pyproject.toml`, not via
-  `--config`
+- Set path to `.config/ruff.toml` in `pyproject.toml`, not via `--config`
   [#312](https://github.com/seedcase-project/template-python-package/pull/312)
   by [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([3812113](https://github.com/seedcase-project/template-python-package/commit/3812113f4901cbf46fe6409a3074f7269562f7f3))
@@ -256,8 +254,8 @@ included in the changelog.
 
 ### ❤️ New contributors
 
-- [`@joelostblom`](https://github.com/joelostblom) made their first
-  contribution in
+- [`@joelostblom`](https://github.com/joelostblom) made their first contribution
+  in
   [#243](https://github.com/seedcase-project/template-python-package/pull/243)
 
 ## [0.17.12](https://github.com/seedcase-project/template-python-package/compare/0.17.11..0.17.12) - 2026-01-15
@@ -615,16 +613,16 @@ included in the changelog.
 ### ✨ Features
 
 - Add recipe `add-function`
-  [#2](https://github.com/seedcase-project/template-python-package/pull/2)
-  by [`@signekb`](https://github.com/signekb)
+  [#2](https://github.com/seedcase-project/template-python-package/pull/2) by
+  [`@signekb`](https://github.com/signekb)
   ([7d5b04a](https://github.com/seedcase-project/template-python-package/commit/7d5b04ac9156a175b891aa24e62f3af416c6b8c7))
 - Add examples section to docstring template
-  [#39](https://github.com/seedcase-project/template-python-package/pull/39)
-  by [`@signekb`](https://github.com/signekb)
+  [#39](https://github.com/seedcase-project/template-python-package/pull/39) by
+  [`@signekb`](https://github.com/signekb)
   ([c4bfdd3](https://github.com/seedcase-project/template-python-package/commit/c4bfdd3562a652c6705c10c07e4e007ef5b0b21e))
 - Add mypy to VS Code settings and extensions
-  [#93](https://github.com/seedcase-project/template-python-package/pull/93)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#93](https://github.com/seedcase-project/template-python-package/pull/93) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([ab8e235](https://github.com/seedcase-project/template-python-package/commit/ab8e2358a8ba048a9ac88f211986a754fd074daf))
 - Gitleaks pre-commit to check for credentials
   [#100](https://github.com/seedcase-project/template-python-package/pull/100)
@@ -658,42 +656,42 @@ included in the changelog.
 ### 🐛 Fixes
 
 - Update test snippet to given, when, then
-  [#29](https://github.com/seedcase-project/template-python-package/pull/29)
-  by [`@signekb`](https://github.com/signekb)
+  [#29](https://github.com/seedcase-project/template-python-package/pull/29) by
+  [`@signekb`](https://github.com/signekb)
   ([b2f8daa](https://github.com/seedcase-project/template-python-package/commit/b2f8daa439a024a8fefa1ebe4b163a6e331917a2))
 - Add `test-python` to `run-all`
-  [#38](https://github.com/seedcase-project/template-python-package/pull/38)
-  by [`@signekb`](https://github.com/signekb)
+  [#38](https://github.com/seedcase-project/template-python-package/pull/38) by
+  [`@signekb`](https://github.com/signekb)
   ([ae625a5](https://github.com/seedcase-project/template-python-package/commit/ae625a58152f988b118bdbe811cfb93f36330774))
 - Remove django debugger
-  [#44](https://github.com/seedcase-project/template-python-package/pull/44)
-  by [`@signekb`](https://github.com/signekb)
+  [#44](https://github.com/seedcase-project/template-python-package/pull/44) by
+  [`@signekb`](https://github.com/signekb)
   ([08423a3](https://github.com/seedcase-project/template-python-package/commit/08423a3560643c399a45f445652c5bee55c01a14))
 - Remove auto-built reference docs before/after building by
   [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([218e9fc](https://github.com/seedcase-project/template-python-package/commit/218e9fc5de6cfbaf3509e9adffbabca4917bd84d))
 - Remove auto-built reference docs before/after building
-  [#47](https://github.com/seedcase-project/template-python-package/pull/47)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#47](https://github.com/seedcase-project/template-python-package/pull/47) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([07732d2](https://github.com/seedcase-project/template-python-package/commit/07732d278932778a1979e9b4fee260c27c8e57d8))
 - The `check-commits` recipe wasn't correctly checking them by
   [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([b30223d](https://github.com/seedcase-project/template-python-package/commit/b30223ddfad9d29b008b185f780f22884ba208ce))
 - The `check-commits` recipe wasn't correctly checking them
-  [#48](https://github.com/seedcase-project/template-python-package/pull/48)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#48](https://github.com/seedcase-project/template-python-package/pull/48) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([2da8db9](https://github.com/seedcase-project/template-python-package/commit/2da8db9dad511594e1bae31f11c93d7193413f19))
 - Install uv in publish step and only for tags
-  [#96](https://github.com/seedcase-project/template-python-package/pull/96)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#96](https://github.com/seedcase-project/template-python-package/pull/96) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([2833cdf](https://github.com/seedcase-project/template-python-package/commit/2833cdfec1c7fda6d82a39089bcbc28abaf1fada))
 - Use the `has_released` output to run or not
-  [#97](https://github.com/seedcase-project/template-python-package/pull/97)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#97](https://github.com/seedcase-project/template-python-package/pull/97) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([f77769c](https://github.com/seedcase-project/template-python-package/commit/f77769cf014bff85d92d4a48a33d0ddd29a6539c))
 - Only run when previous and current versions are different
-  [#98](https://github.com/seedcase-project/template-python-package/pull/98)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#98](https://github.com/seedcase-project/template-python-package/pull/98) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([b1632fb](https://github.com/seedcase-project/template-python-package/commit/b1632fb7007f303472c4974ce7ba0377a6cf16a5))
 - Forgot to checkout before building and publishing
   [#106](https://github.com/seedcase-project/template-python-package/pull/106)
@@ -711,8 +709,8 @@ included in the changelog.
 ### ♻️ Refactor
 
 - Make mypy more strict in settings
-  [#94](https://github.com/seedcase-project/template-python-package/pull/94)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#94](https://github.com/seedcase-project/template-python-package/pull/94) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([5274b35](https://github.com/seedcase-project/template-python-package/commit/5274b354e88340d27b08c789c41958b9718d0e20))
 - Move `uv build` step into publish job
   [#101](https://github.com/seedcase-project/template-python-package/pull/101)
@@ -746,8 +744,8 @@ included in the changelog.
 ### 📝 Documentation
 
 - Remove reviewer focus section
-  [#10](https://github.com/seedcase-project/template-python-package/pull/10)
-  by [`@signekb`](https://github.com/signekb)
+  [#10](https://github.com/seedcase-project/template-python-package/pull/10) by
+  [`@signekb`](https://github.com/signekb)
   ([ff2bf1e](https://github.com/seedcase-project/template-python-package/commit/ff2bf1ea2e78b471be54de885c5dffcb48abf6b4))
 - Refer to spaid for setting things up by
   [`@lwjohnst86`](https://github.com/lwjohnst86)
@@ -758,8 +756,7 @@ included in the changelog.
 - Use a generic package name, not Sprout, for index by
   [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([704e6fc](https://github.com/seedcase-project/template-python-package/commit/704e6fcbb581bb2474ab4b6ea8c3f600533adf96))
-- Update license year to 2025 by
-  [`@lwjohnst86`](https://github.com/lwjohnst86)
+- Update license year to 2025 by [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([3c104c3](https://github.com/seedcase-project/template-python-package/commit/3c104c3bb0896851401e1c7b7afa182a93692c98))
 - Update README to mostly the latest changes by
   [`@lwjohnst86`](https://github.com/lwjohnst86)
@@ -769,8 +766,8 @@ included in the changelog.
 - To be consistent by [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([9627bc7](https://github.com/seedcase-project/template-python-package/commit/9627bc71b08b749cbecf67e1e4ca8f31855e77b0))
 - Instructions on installing deps after project creation
-  [#62](https://github.com/seedcase-project/template-python-package/pull/62)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#62](https://github.com/seedcase-project/template-python-package/pull/62) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([a7fea84](https://github.com/seedcase-project/template-python-package/commit/a7fea8424ac04fcf34fb875683cd14c3fb7734b5))
 - Add website files
   [#115](https://github.com/seedcase-project/template-python-package/pull/115)
@@ -796,8 +793,8 @@ included in the changelog.
 ### 💄 Styling
 
 - Ran pre-commit hooks, apply fixes
-  [#19](https://github.com/seedcase-project/template-python-package/pull/19)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#19](https://github.com/seedcase-project/template-python-package/pull/19) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([eff086c](https://github.com/seedcase-project/template-python-package/commit/eff086c010b64c7372bb8269421611c9cbabcaa3))
 
 ### 👷 CI/CD
@@ -806,24 +803,23 @@ included in the changelog.
   [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([db5b658](https://github.com/seedcase-project/template-python-package/commit/db5b65827732e45d347cd3f51fb52cb623798f19))
 - Add workflow to generate SVG from puml files
-  [#5](https://github.com/seedcase-project/template-python-package/pull/5)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#5](https://github.com/seedcase-project/template-python-package/pull/5) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([da81016](https://github.com/seedcase-project/template-python-package/commit/da81016b9e1c66a1d69a01d26c45e28133679ff7))
-- Deploy to Fly isn't working well, plus move out env deletion to own
-  file
-  [#7](https://github.com/seedcase-project/template-python-package/pull/7)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+- Deploy to Fly isn't working well, plus move out env deletion to own file
+  [#7](https://github.com/seedcase-project/template-python-package/pull/7) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([dc8876b](https://github.com/seedcase-project/template-python-package/commit/dc8876b16d87d314a02e5a5615cf6db1d03dfa7b))
 - Use the new workflow for building docs with Python code
-  [#11](https://github.com/seedcase-project/template-python-package/pull/11)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#11](https://github.com/seedcase-project/template-python-package/pull/11) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([6762972](https://github.com/seedcase-project/template-python-package/commit/6762972f58ce63eadba1b1065feeb05456d02183))
 - Add pre-commit config file to be synched by
   [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([726a2ba](https://github.com/seedcase-project/template-python-package/commit/726a2ba8430a4d6e886c05eb24897fa9a090da84))
 - Needs to push to main, not from PRs
-  [#23](https://github.com/seedcase-project/template-python-package/pull/23)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#23](https://github.com/seedcase-project/template-python-package/pull/23) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([5e87d20](https://github.com/seedcase-project/template-python-package/commit/5e87d20b3a8bb59da24983d6c1cf1d872684aed7))
 - Remove commented out Django workflow by
   [`@lwjohnst86`](https://github.com/lwjohnst86)
@@ -834,8 +830,7 @@ included in the changelog.
 - Always run on main, but only in PRs with specific files by
   [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([8fbc7f0](https://github.com/seedcase-project/template-python-package/commit/8fbc7f06f6189fe5931301436e186edb497440a7))
-- Update text of some fields by
-  [`@lwjohnst86`](https://github.com/lwjohnst86)
+- Update text of some fields by [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([0fb318b](https://github.com/seedcase-project/template-python-package/commit/0fb318bd6776e15b6372edff1019ea15493c943f))
 - No longer need this file, not pushing to Fly by
   [`@lwjohnst86`](https://github.com/lwjohnst86)
@@ -844,12 +839,12 @@ included in the changelog.
   [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([66acef9](https://github.com/seedcase-project/template-python-package/commit/66acef9f1a48323c026c92121bc864c7f9501444))
 - Minor updates to make things clearer
-  [#24](https://github.com/seedcase-project/template-python-package/pull/24)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#24](https://github.com/seedcase-project/template-python-package/pull/24) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([f2eec93](https://github.com/seedcase-project/template-python-package/commit/f2eec93f349123fd63b442fa5044eb6a17e29947))
 - Forgot to remove this if condition
-  [#25](https://github.com/seedcase-project/template-python-package/pull/25)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#25](https://github.com/seedcase-project/template-python-package/pull/25) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([8b896b4](https://github.com/seedcase-project/template-python-package/commit/8b896b45d7a16c55f484dd3c20703e4178662e46))
 - Increase interval for dependabot to monthly by
   [`@lwjohnst86`](https://github.com/lwjohnst86)
@@ -857,83 +852,82 @@ included in the changelog.
 - Remove these unused workflows by
   [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([596c400](https://github.com/seedcase-project/template-python-package/commit/596c400e60a38b132dbbe3d78988118b90f2d1cd))
-- Sync only specific workflows by
-  [`@lwjohnst86`](https://github.com/lwjohnst86)
+- Sync only specific workflows by [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([a3e929a](https://github.com/seedcase-project/template-python-package/commit/a3e929a24f37f065260a8f37e2b7ddbe2ef83966))
 - General clean up and fixes to workflows
-  [#36](https://github.com/seedcase-project/template-python-package/pull/36)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#36](https://github.com/seedcase-project/template-python-package/pull/36) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([1fdc730](https://github.com/seedcase-project/template-python-package/commit/1fdc73017f9980dc24a13218d19f6671488322f7))
 - Switch to use the reusable "add to board"
-  [#52](https://github.com/seedcase-project/template-python-package/pull/52)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#52](https://github.com/seedcase-project/template-python-package/pull/52) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([c9b491c](https://github.com/seedcase-project/template-python-package/commit/c9b491c2b87096dbacf2851612765ee680f63896))
 - Lint is now part of build workflow
-  [#57](https://github.com/seedcase-project/template-python-package/pull/57)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#57](https://github.com/seedcase-project/template-python-package/pull/57) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([7ec888c](https://github.com/seedcase-project/template-python-package/commit/7ec888cb16bab47d958a2827544bde3f7106dd8b))
 - Updated from Sprout, need permissions for workflow by
   [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([e7b7c40](https://github.com/seedcase-project/template-python-package/commit/e7b7c40c3f707c1dcced4dfcf7e62895dafb32ff))
 - Use GitHub App for short-lived token creation
-  [#63](https://github.com/seedcase-project/template-python-package/pull/63)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#63](https://github.com/seedcase-project/template-python-package/pull/63) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([555efb1](https://github.com/seedcase-project/template-python-package/commit/555efb13cdd95992552d640dd0137dc5b84a6b44))
 - Update to use GitHub App for adding to board
-  [#67](https://github.com/seedcase-project/template-python-package/pull/67)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#67](https://github.com/seedcase-project/template-python-package/pull/67) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([69aa89d](https://github.com/seedcase-project/template-python-package/commit/69aa89d5aaec3b206a1738b6c397e656392f459f))
 - Use a shorter name for workflow
-  [#68](https://github.com/seedcase-project/template-python-package/pull/68)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#68](https://github.com/seedcase-project/template-python-package/pull/68) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([95b31a4](https://github.com/seedcase-project/template-python-package/commit/95b31a4bde4e2becf7745d4c5d9a7964c38ceeec))
 - Use GitHub App token for syncing files
-  [#69](https://github.com/seedcase-project/template-python-package/pull/69)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#69](https://github.com/seedcase-project/template-python-package/pull/69) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([b62d4b7](https://github.com/seedcase-project/template-python-package/commit/b62d4b78d5f9f8e6dce5154a8c0d63348e7e4f5b))
 - Needs to be `GH_INSTALLATION_TOKEN` for GitHub Apps
-  [#70](https://github.com/seedcase-project/template-python-package/pull/70)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#70](https://github.com/seedcase-project/template-python-package/pull/70) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([fdb0a8f](https://github.com/seedcase-project/template-python-package/commit/fdb0a8fb314a8736a24a3e40293f900e59b910c0))
 - Syncing workflow needs extra settings
-  [#71](https://github.com/seedcase-project/template-python-package/pull/71)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#71](https://github.com/seedcase-project/template-python-package/pull/71) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([6ce29b2](https://github.com/seedcase-project/template-python-package/commit/6ce29b25eb2bb220246d3266cf32801d55e53920))
 - Error with team maybe? and set branch to this repo
-  [#72](https://github.com/seedcase-project/template-python-package/pull/72)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#72](https://github.com/seedcase-project/template-python-package/pull/72) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([c863489](https://github.com/seedcase-project/template-python-package/commit/c863489708502d31001871f1ab671977ea0c8b76))
 - Add permissions for setting release of a tag
-  [#78](https://github.com/seedcase-project/template-python-package/pull/78)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#78](https://github.com/seedcase-project/template-python-package/pull/78) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([f71889c](https://github.com/seedcase-project/template-python-package/commit/f71889ca6bfcdb8e27d1b5c974f5bb11cb343bbc))
 - Switch to using reusable workflow
-  [#83](https://github.com/seedcase-project/template-python-package/pull/83)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#83](https://github.com/seedcase-project/template-python-package/pull/83) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([6dcb171](https://github.com/seedcase-project/template-python-package/commit/6dcb171836abe0a02c8e2b7ffbf7d141a470a692))
 - Explicitly set permissions, move to job-level
-  [#84](https://github.com/seedcase-project/template-python-package/pull/84)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#84](https://github.com/seedcase-project/template-python-package/pull/84) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([defe712](https://github.com/seedcase-project/template-python-package/commit/defe71278ea42b91e49f4850f9a912457eb078bb))
 - Run build package and website workflows on all pushes
-  [#86](https://github.com/seedcase-project/template-python-package/pull/86)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#86](https://github.com/seedcase-project/template-python-package/pull/86) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([4793c79](https://github.com/seedcase-project/template-python-package/commit/4793c793924ffa91cf8c957e2cd5f9761349f505))
 - Add security scanning workflows
-  [#85](https://github.com/seedcase-project/template-python-package/pull/85)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#85](https://github.com/seedcase-project/template-python-package/pull/85) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([9f6d92d](https://github.com/seedcase-project/template-python-package/commit/9f6d92d2666da0dfb11009bc1224f8d1e1fc1a8a))
 - Use `GH_TOKEN` to use `gh` cli
-  [#90](https://github.com/seedcase-project/template-python-package/pull/90)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#90](https://github.com/seedcase-project/template-python-package/pull/90) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([a272738](https://github.com/seedcase-project/template-python-package/commit/a27273883e92a39d6c287706a056fb5329e06d83))
 - Publishing and building need to be split
-  [#91](https://github.com/seedcase-project/template-python-package/pull/91)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#91](https://github.com/seedcase-project/template-python-package/pull/91) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([c8126ad](https://github.com/seedcase-project/template-python-package/commit/c8126ad7a015a0b39a46a5d0a05c5c615f064df5))
 - Move `GITHUB_TOKEN` into `github-token` secrets
-  [#92](https://github.com/seedcase-project/template-python-package/pull/92)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#92](https://github.com/seedcase-project/template-python-package/pull/92) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([90043fa](https://github.com/seedcase-project/template-python-package/commit/90043fa4b8d70582a29feb9ae61e6f0eccf5756a))
 - Add test workflow
   [#146](https://github.com/seedcase-project/template-python-package/pull/146)
@@ -942,19 +936,18 @@ included in the changelog.
 
 ### 👩‍💻 Miscellaneous
 
-- Started a template repo by
-  [`@lwjohnst86`](https://github.com/lwjohnst86)
+- Started a template repo by [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([2b3b8b1](https://github.com/seedcase-project/template-python-package/commit/2b3b8b1ecb365e36816a9e48d83ba5e2786e312d))
 - Remove `tabSize` from VS Code settings file
-  [#1](https://github.com/seedcase-project/template-python-package/pull/1)
-  by [`@signekb`](https://github.com/signekb)
+  [#1](https://github.com/seedcase-project/template-python-package/pull/1) by
+  [`@signekb`](https://github.com/signekb)
   ([6f161a2](https://github.com/seedcase-project/template-python-package/commit/6f161a2bd5c7cf4112411aaa1cddcf8f06354eac))
 - We don't use RStudio, so don't need these by
   [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([778064f](https://github.com/seedcase-project/template-python-package/commit/778064f13e33fa054f2b04440bfc5ebc1a992738))
 - Modify justfile to run Python doc in Quarto docs
-  [#12](https://github.com/seedcase-project/template-python-package/pull/12)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#12](https://github.com/seedcase-project/template-python-package/pull/12) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([f4b588d](https://github.com/seedcase-project/template-python-package/commit/f4b588da086fd2a02cf3d7af982d009779eff5d4))
 - Ignore some auto-generated files by
   [`@lwjohnst86`](https://github.com/lwjohnst86)
@@ -963,8 +956,8 @@ included in the changelog.
   [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([ee03abf](https://github.com/seedcase-project/template-python-package/commit/ee03abfeba176f3303986dff7d4f043799b61af5))
 - Config changes based on Quarto and Python website build
-  [#13](https://github.com/seedcase-project/template-python-package/pull/13)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#13](https://github.com/seedcase-project/template-python-package/pull/13) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([4d97e7c](https://github.com/seedcase-project/template-python-package/commit/4d97e7c547926ea70804f28f1c4de1b77af12d26))
 - Add pre-commit hooks, including for commit linting by
   [`@lwjohnst86`](https://github.com/lwjohnst86)
@@ -973,36 +966,36 @@ included in the changelog.
   [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([b9d287c](https://github.com/seedcase-project/template-python-package/commit/b9d287c38f65b14fc2f5561bceeac0208446b347))
 - Add commit linting via pre-commit
-  [#16](https://github.com/seedcase-project/template-python-package/pull/16)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#16](https://github.com/seedcase-project/template-python-package/pull/16) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([55903f3](https://github.com/seedcase-project/template-python-package/commit/55903f32be2d59628010f4546a7386aafeb060eb))
 - Update config and build settings for quartodoc
-  [#18](https://github.com/seedcase-project/template-python-package/pull/18)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#18](https://github.com/seedcase-project/template-python-package/pull/18) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([f3b9667](https://github.com/seedcase-project/template-python-package/commit/f3b9667e4d821187bb14d720f8e03bd7f3c0bfc6))
 - Add jupyter extension to recommended list
-  [#21](https://github.com/seedcase-project/template-python-package/pull/21)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#21](https://github.com/seedcase-project/template-python-package/pull/21) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([c619115](https://github.com/seedcase-project/template-python-package/commit/c61911516c26955d685efaa1780793c4039a82b7))
 - Remove Django-specific configs
-  [#22](https://github.com/seedcase-project/template-python-package/pull/22)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#22](https://github.com/seedcase-project/template-python-package/pull/22) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([39cb33f](https://github.com/seedcase-project/template-python-package/commit/39cb33fb31a18d3920b636f48e938f4036a25e27))
 - Use justfile as checklist in template
-  [#26](https://github.com/seedcase-project/template-python-package/pull/26)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#26](https://github.com/seedcase-project/template-python-package/pull/26) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([b45679b](https://github.com/seedcase-project/template-python-package/commit/b45679b7b735a3080c91478155340d75c883f0e5))
 - Small revisions to synching files
-  [#27](https://github.com/seedcase-project/template-python-package/pull/27)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#27](https://github.com/seedcase-project/template-python-package/pull/27) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([d735574](https://github.com/seedcase-project/template-python-package/commit/d7355746e320c1c3929b2c184c5804971b82c81c))
 - Update changelog on bump
-  [#28](https://github.com/seedcase-project/template-python-package/pull/28)
-  by [`@signekb`](https://github.com/signekb)
+  [#28](https://github.com/seedcase-project/template-python-package/pull/28) by
+  [`@signekb`](https://github.com/signekb)
   ([6bdaf60](https://github.com/seedcase-project/template-python-package/commit/6bdaf60f570c1dd2f3c792c3feb4a166d0cf0ea9))
 - Removed the `reset-local` recipe
-  [#32](https://github.com/seedcase-project/template-python-package/pull/32)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#32](https://github.com/seedcase-project/template-python-package/pull/32) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([bdd5073](https://github.com/seedcase-project/template-python-package/commit/bdd507392858a2a060b6acaa6fe819b472742747))
 - Use latest commitizen version by
   [`@lwjohnst86`](https://github.com/lwjohnst86)
@@ -1016,91 +1009,90 @@ included in the changelog.
 - Set template as a `src/` layout by
   [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([dbc0d1f](https://github.com/seedcase-project/template-python-package/commit/dbc0d1f20045aea46542c469e3397bd58daa7bd3))
-- Set Python to 3.12 for Ruff by
-  [`@lwjohnst86`](https://github.com/lwjohnst86)
+- Set Python to 3.12 for Ruff by [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([6f7fe31](https://github.com/seedcase-project/template-python-package/commit/6f7fe31b1916768af67af3d79e90c35e19de26c0))
 - `cSpell` option was renamed, this matches their new option by
   [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([e341cc2](https://github.com/seedcase-project/template-python-package/commit/e341cc2586a7818df8cdafa3eabcc62f99a03c3c))
 - General updates to template
-  [#45](https://github.com/seedcase-project/template-python-package/pull/45)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#45](https://github.com/seedcase-project/template-python-package/pull/45) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([26d8165](https://github.com/seedcase-project/template-python-package/commit/26d816598b67d797b18f0234c3813060d7a1a091))
 - `rm` needs `-f` so it doesn't error when there is no file
-  [#49](https://github.com/seedcase-project/template-python-package/pull/49)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#49](https://github.com/seedcase-project/template-python-package/pull/49) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([2af4d50](https://github.com/seedcase-project/template-python-package/commit/2af4d5070df8a376865ef89233a9401eba82365a))
 - Remove leftover commented out includes
-  [#53](https://github.com/seedcase-project/template-python-package/pull/53)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#53](https://github.com/seedcase-project/template-python-package/pull/53) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([16477ef](https://github.com/seedcase-project/template-python-package/commit/16477ef2086952c77753033945acc797e5239cca))
 - Ran pre-commit hooks so repo can be tracked by the CI
-  [#54](https://github.com/seedcase-project/template-python-package/pull/54)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#54](https://github.com/seedcase-project/template-python-package/pull/54) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([4097498](https://github.com/seedcase-project/template-python-package/commit/40974987c7ec0b3bbfb3d5c07b77140b17f2df55))
 - Switch to using uv
-  [#51](https://github.com/seedcase-project/template-python-package/pull/51)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#51](https://github.com/seedcase-project/template-python-package/pull/51) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([f0c7a06](https://github.com/seedcase-project/template-python-package/commit/f0c7a068d0e0712e475e64123d31c6a077c8c264))
 - Build coverage report and badge
-  [#56](https://github.com/seedcase-project/template-python-package/pull/56)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#56](https://github.com/seedcase-project/template-python-package/pull/56) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([eb5ecb0](https://github.com/seedcase-project/template-python-package/commit/eb5ecb006e16e571f370d1b388c75ecbb30d4108))
 - Add bandit security checks to justfile
-  [#58](https://github.com/seedcase-project/template-python-package/pull/58)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#58](https://github.com/seedcase-project/template-python-package/pull/58) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([6c5a446](https://github.com/seedcase-project/template-python-package/commit/6c5a44698d4ed1321715cda92f3a4d2e17c65ac0))
 - Move pytest options into `pytest.ini` so VS Code detects them
-  [#59](https://github.com/seedcase-project/template-python-package/pull/59)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#59](https://github.com/seedcase-project/template-python-package/pull/59) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([1a461d8](https://github.com/seedcase-project/template-python-package/commit/1a461d8b36238527d535610bc9c87298249bdad1))
 - Remove leftover extensions, replace spell checker
-  [#61](https://github.com/seedcase-project/template-python-package/pull/61)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#61](https://github.com/seedcase-project/template-python-package/pull/61) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([c36296b](https://github.com/seedcase-project/template-python-package/commit/c36296b226b4720c91b19f4744cb5e28294c7017))
 - Add spell checker to justfile
-  [#60](https://github.com/seedcase-project/template-python-package/pull/60)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#60](https://github.com/seedcase-project/template-python-package/pull/60) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([154cd85](https://github.com/seedcase-project/template-python-package/commit/154cd859bfe7918d96cf81abdf0e8e59a2f91635))
 - Add some recommended extensions
-  [#66](https://github.com/seedcase-project/template-python-package/pull/66)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#66](https://github.com/seedcase-project/template-python-package/pull/66) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([393b47a](https://github.com/seedcase-project/template-python-package/commit/393b47a181d54378d773a0aca443bdbf2da3b50b))
 - Update justfile with recipes from Sprout
-  [#75](https://github.com/seedcase-project/template-python-package/pull/75)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#75](https://github.com/seedcase-project/template-python-package/pull/75) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([8f28ed3](https://github.com/seedcase-project/template-python-package/commit/8f28ed31c4c63da3043eb9138b621a33d1c92b8d))
 - Add allowlist to vulture recipe
-  [#79](https://github.com/seedcase-project/template-python-package/pull/79)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#79](https://github.com/seedcase-project/template-python-package/pull/79) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([600ffcc](https://github.com/seedcase-project/template-python-package/commit/600ffcc68e277e7a39d269ab6b5cf33014252d91))
 - Simplify the PR template
-  [#80](https://github.com/seedcase-project/template-python-package/pull/80)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#80](https://github.com/seedcase-project/template-python-package/pull/80) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([3e09f3e](https://github.com/seedcase-project/template-python-package/commit/3e09f3eb2460b37a91bdfc0875a330502cd09d0f))
 - Add a "install pre-commit" justfile recipe
-  [#77](https://github.com/seedcase-project/template-python-package/pull/77)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#77](https://github.com/seedcase-project/template-python-package/pull/77) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([67cc817](https://github.com/seedcase-project/template-python-package/commit/67cc817d1d999123edd0cf2e12064277ebe78652))
 - Add typos as a pre-commit hook
-  [#76](https://github.com/seedcase-project/template-python-package/pull/76)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#76](https://github.com/seedcase-project/template-python-package/pull/76) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([439eb55](https://github.com/seedcase-project/template-python-package/commit/439eb556ce071ab7073668bad8fbc77d1fa2a342))
 - Don't regenerate all of CHANGELOG each time
-  [#82](https://github.com/seedcase-project/template-python-package/pull/82)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#82](https://github.com/seedcase-project/template-python-package/pull/82) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([4a5e3d9](https://github.com/seedcase-project/template-python-package/commit/4a5e3d9adfa8c747385752b8d7e52dba2a80bfb3))
 - Add mypy config
-  [#89](https://github.com/seedcase-project/template-python-package/pull/89)
-  by [`@martonvago`](https://github.com/martonvago)
+  [#89](https://github.com/seedcase-project/template-python-package/pull/89) by
+  [`@martonvago`](https://github.com/martonvago)
   ([3b56108](https://github.com/seedcase-project/template-python-package/commit/3b5610898bc38b60934e5f5165ad7092f725adbd))
 - Fix spacing for snippet, use 4 spaces, not 1
-  [#95](https://github.com/seedcase-project/template-python-package/pull/95)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#95](https://github.com/seedcase-project/template-python-package/pull/95) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([0fd4e66](https://github.com/seedcase-project/template-python-package/commit/0fd4e66c02338663ff684af27118d7913846baf9))
 - Recommend better reviewed mypy extension
-  [#99](https://github.com/seedcase-project/template-python-package/pull/99)
-  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  [#99](https://github.com/seedcase-project/template-python-package/pull/99) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([76240d5](https://github.com/seedcase-project/template-python-package/commit/76240d5a6557bf453fe1e48c69de4616fb47748a))
 - Update config for non-template package
   [#116](https://github.com/seedcase-project/template-python-package/pull/116)
@@ -1134,14 +1126,13 @@ included in the changelog.
 ### ❤️ New contributors
 
 - `@github-actions[bot]` started making automated contributions
-- [`@martonvago`](https://github.com/martonvago) made their first
-  contribution in
+- [`@martonvago`](https://github.com/martonvago) made their first contribution
+  in
   [#134](https://github.com/seedcase-project/template-python-package/pull/134)
 - `@pre-commit-ci[bot]` started making automated contributions
 - `@dependabot[bot]` started making automated contributions
-- [`@lwjohnst86`](https://github.com/lwjohnst86) made their first
-  contribution in
-  [#150](https://github.com/seedcase-project/template-python-package/pull/150)
-- [`@signekb`](https://github.com/signekb) made their first contribution
+- [`@lwjohnst86`](https://github.com/lwjohnst86) made their first contribution
   in
+  [#150](https://github.com/seedcase-project/template-python-package/pull/150)
+- [`@signekb`](https://github.com/signekb) made their first contribution in
   [#44](https://github.com/seedcase-project/template-python-package/pull/44)
