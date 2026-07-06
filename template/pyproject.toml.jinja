@@ -20,7 +20,7 @@ dependencies = []
 classifiers = [
   "License :: OSI Approved :: MIT License",
 
-  # Strict typing, checked via mypy
+  # Strict typing, checked via Pyrefly
   "Typing :: Typed",
 
   # How mature is this project? Common values are
@@ -56,3 +56,9 @@ build-backend = "hatchling.build"
 # - Create the coverage report in XML (for badge), terminal, and HTML
 # - Trigger failure if below 90% code coverage
 addopts = "--tb=short --import-mode=importlib --cov=src --no-cov-on-fail --cov-report=term --cov-report=xml --cov-report=html --cov-fail-under=90"
+
+[tool.pyrefly]
+project-includes = ["src/"]
+min-severity = "warn"
+python-version = "3.12.0"
+preset = "strict"

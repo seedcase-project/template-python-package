@@ -56,7 +56,7 @@ check-python:
   # Check formatting
   uvx ruff check . --config .config/ruff.toml
   # Check types
-  uv run mypy --pretty . --config-file .config/mypy.ini
+  uvx pyrefly check
 
 # Reformat Python code to match coding style and general structure
 format-python:

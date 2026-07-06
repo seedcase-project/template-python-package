@@ -4,11 +4,11 @@
   after copying the project.
 - Run `git init -b main` to create the project as a Git repository.
 - Install these packages
-  `uv add --dev pytest genbadge jupyter pytest-cov quartodoc quarto types-tabulate mypy`
+  `uv add --dev pytest genbadge jupyter pytest-cov quartodoc quarto types-tabulate`
 - Run `just list-todos` and complete all the TODO items.
 - Run `just install-precommit` to install the pre-commit hooks.
 - Run `just build-readme` to build the Markdown version of the README.
-  {%- if for_seedcase -%}
+  {% if for_seedcase -%}
 - Run `just update-quarto-theme` to add the Seedcase Quarto extension.
 - Install the [`spaid`](https://github.com/seedcase-project/spaid) CLI
   tool and run these setup steps:
