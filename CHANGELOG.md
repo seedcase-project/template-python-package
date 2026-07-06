@@ -22,6 +22,27 @@ within each release.
 Commits from bots, like `dependabot` or `pre-commit-ci`, are not
 included in the changelog.
 
+## [0.24.0](https://github.com/seedcase-project/template-python-package/compare/0.23.5..0.24.0) - 2026-07-06
+
+### ✨ Features
+
+- Add recipe to reformat Python docstrings
+  [#310](https://github.com/seedcase-project/template-python-package/pull/310)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([6d5da8f](https://github.com/seedcase-project/template-python-package/commit/6d5da8fb22d4d8fbf4731ae641b37d94a74b7e7d))
+- Add Ruff to pre-commit hooks
+  [#311](https://github.com/seedcase-project/template-python-package/pull/311)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([7530007](https://github.com/seedcase-project/template-python-package/commit/75300073de3210a14766d7f543a555036dbad316))
+
+### ♻️ Refactor
+
+- Set path to `.config/ruff.toml` in `pyproject.toml`, not via
+  `--config`
+  [#312](https://github.com/seedcase-project/template-python-package/pull/312)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([3812113](https://github.com/seedcase-project/template-python-package/commit/3812113f4901cbf46fe6409a3074f7269562f7f3))
+
 ## [0.23.5](https://github.com/seedcase-project/template-python-package/compare/0.23.4..0.23.5) - 2026-06-01
 
 ### ♻️ Refactor
