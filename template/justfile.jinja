@@ -75,7 +75,9 @@ format-docstrings:
 
 # Format Markdown files
 format-md:
+  # Use both rumdl and panache, for different purposes
   uvx rumdl fmt --silent
+  uvx --from panache-cli panache format . --quiet
 
 # Build the Python docstrings as a section in the website using quartodoc
 build-quartodoc:
