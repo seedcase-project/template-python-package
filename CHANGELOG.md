@@ -1,17 +1,17 @@
 # Changelog
 
-Since we follow
-[Conventional Commits](https://decisions.seedcase-project.org/why-conventional-commits/)
-when writing commit messages, we're able to automatically create formal
-"releases" of the template based on the commit messages. Releases in the context
-of template are when changes occur to the `template/` files or to the
-`copier.yaml` files. The releases are also published to Zenodo for easier
-discovery, archival, and citation purposes. We use
+Since we follow [Conventional
+Commits](https://decisions.seedcase-project.org/why-conventional-commits/) when
+writing commit messages, we're able to automatically create formal "releases" of
+the template based on the commit messages. Releases in the context of template
+are when changes occur to the `template/` files or to the `copier.yaml` files.
+The releases are also published to Zenodo for easier discovery, archival, and
+citation purposes. We use
 [Cocogitto](https://decisions.seedcase-project.org/why-semantic-release-with-cocogitto/)
 to be able to automatically create these releases, which uses
-[SemVar](https://semverdoc.org) as the version numbering scheme, and
-[Git Cliff](https://decisions.seedcase-project.org/why-changelog-with-git-cliff/)
-to generate the changelog based on the commit messages.
+[SemVar](https://semverdoc.org) as the version numbering scheme, and [Git
+Cliff](https://decisions.seedcase-project.org/why-changelog-with-git-cliff/) to
+generate the changelog based on the commit messages.
 
 Because releases are created based on commit messages, a new release is created
 quite often---sometimes several times in a day. This also means that any
@@ -20,6 +20,15 @@ releases we've made so far, along with what was changed within each release.
 
 Commits from bots, like `dependabot` or `pre-commit-ci`, are not included in the
 changelog.
+
+## [0.24.1](https://github.com/seedcase-project/template-python-package/compare/0.24.0..0.24.1) - 2026-07-07
+
+### ♻️ Refactor
+
+- Minor updates from t-squared, mostly formatting changes
+  [#316](https://github.com/seedcase-project/template-python-package/pull/316)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([2d3e7bd](https://github.com/seedcase-project/template-python-package/commit/2d3e7bdc820612a88dbc561b335496429a5ef839))
 
 ## [0.24.0](https://github.com/seedcase-project/template-python-package/compare/0.23.5..0.24.0) - 2026-07-06
 
@@ -1126,13 +1135,18 @@ changelog.
 ### ❤️ New contributors
 
 - `@github-actions[bot]` started making automated contributions
+
 - [`@martonvago`](https://github.com/martonvago) made their first contribution
   in
   [#134](https://github.com/seedcase-project/template-python-package/pull/134)
+
 - `@pre-commit-ci[bot]` started making automated contributions
+
 - `@dependabot[bot]` started making automated contributions
+
 - [`@lwjohnst86`](https://github.com/lwjohnst86) made their first contribution
   in
   [#150](https://github.com/seedcase-project/template-python-package/pull/150)
+
 - [`@signekb`](https://github.com/signekb) made their first contribution in
   [#44](https://github.com/seedcase-project/template-python-package/pull/44)
