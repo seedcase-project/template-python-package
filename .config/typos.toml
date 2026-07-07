@@ -1,14 +1,10 @@
 [files]
 extend-exclude = [
   "*.html",
-  "*.json",
   "*.css",
   ".quarto/*",
   "_site/*",
-  "_extensions/*",
-  ".coverage-report/*",
-  "site_libs/",
   "*.svg",
-  # Since it has hashes
+  # Has commit hashes that trigger false positives
   "CHANGELOG.md",
 ]
