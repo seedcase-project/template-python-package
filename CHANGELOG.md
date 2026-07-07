@@ -21,6 +21,15 @@ releases we've made so far, along with what was changed within each release.
 Commits from bots, like `dependabot` or `pre-commit-ci`, are not included in the
 changelog.
 
+## [0.25.1](https://github.com/seedcase-project/template-python-package/compare/0.25.0..0.25.1) - 2026-07-07
+
+### ♻️ Refactor
+
+- Use Pyrefly rather than mypy for type checking
+  [#313](https://github.com/seedcase-project/template-python-package/pull/313)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([02436f3](https://github.com/seedcase-project/template-python-package/commit/02436f36c6f56bb32e2f79ba7aa1ebc12a8f546c))
+
 ## [0.25.0](https://github.com/seedcase-project/template-python-package/compare/0.24.2..0.25.0) - 2026-07-07
 
 ### ✨ Features
