@@ -28,7 +28,7 @@ It's easiest to install uv and justfile using
 install uv and justfile by running:
 
 ``` bash
-pipx install uv rust-just
+pipx install uv rust-just pyrefly
 ```
 
 We keep all our development workflows in the `justfile`, so you can
@@ -79,19 +79,15 @@ commit.
   such as:
     - `quartodoc.py`: Custom
       [`quartodoc`](https://machow.github.io/quartodoc/) renderer.
-    - `mypy.ini`: [`mypy`](https://mypy.readthedocs.io/en/stable/)
-      configuration file for type checking Python code.
     - `ruff.toml`: [Ruff](https://docs.astral.sh/ruff/) configuration file
       for linting and formatting Python code.
     - `rumdl.toml` and `panache.toml`: [rumdl](https://rumdl.dev) and
       [Panache](https://panache.bz) configuration file for formatting Markdown
       files in the project.
-    {% if for_seedcase -%}
     - `cog.toml`: [Cocogitto](https://docs.cocogitto.io) configuration file
       for managing versions.
     - `cliff.toml`: [git-cliff](https://git-cliff.org) configuration file for
       creating the changelog.
-    {%- endif %}
 - `.copier-answers.yml`: Contains the answers you gave when copying the
   package from the template.
   **You should not modify this file directly.**

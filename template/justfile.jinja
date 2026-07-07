@@ -72,7 +72,7 @@ check-python:
   # Check formatting
   uvx ruff check .
   # Check types
-  uv run mypy --pretty . --config-file .config/mypy.ini
+  uvx pyrefly check
 
 # Run basic security checks on the package
 check-security:
