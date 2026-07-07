@@ -58,9 +58,7 @@ echo "Testing copy for new projects when: 'for_seedcase'='$for_seedcase', 'hosti
     uvx copier recopy \
       -r HEAD \
       --defaults \
-      --overwrite \
-      --skip-tasks \
-      --trust &&
+      --overwrite &&
     # Check that copying onto an existing project works -----
     echo "Testing copy in existing projects when: 'for_seedcase'='$for_seedcase', 'hosting_provider'='$hosting_provider' -----------" &&
     rm .gitignore .copier-answers.yml &&

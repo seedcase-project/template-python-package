@@ -10,6 +10,11 @@ repos:
     hooks:
       - id: gitleaks
 
+  - repo: https://github.com/jolars/panache-pre-commit
+    rev: v2.51.0
+    hooks:
+      - id: panache-format
+
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
     hooks:
@@ -24,11 +29,7 @@ repos:
   # sub-packages, which confuses pre-commit when it tries to find the latest
   # version
   - repo: https://github.com/adhtruong/mirrors-typos
-    rev: v1.47.2
+    rev: v1.48.0
     hooks:
       - id: typos
-
-  - repo: https://github.com/rvben/rumdl-pre-commit
-    rev: v0.2.26
-    hooks:
-      - id: rumdl-fmt # Auto-format
+        args: [--config, .config/typos.toml, --force-exclude]

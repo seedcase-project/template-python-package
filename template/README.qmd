@@ -12,26 +12,24 @@ metadata-files:
 
 <!-- TODO: Add description of package -->
 
-Check out our [website]({{< meta links.site >}}) for more information,
-such as the features it provides and a
-[guide]({{< meta links.site >}}/docs/guide) to using the package. For a
-list of changes, see our [changelog](CHANGELOG.md).
+Check out our [website]({{< meta links.site >}}) for more information, such as
+the features it provides and a [guide]({{< meta links.site >}}/docs/guide) to
+using the package. For a list of changes, see our [changelog](CHANGELOG.md).
 
 ::: callout-tip
-This Python package was generated from the
-[Template Python Package](https://github.com/seedcase-project/template-python-package)
-Seedcase template :tada:
+This Python package was generated from the [Template Python
+Package](https://github.com/seedcase-project/template-python-package) Seedcase
+template :tada:
 :::
 
 ## Contributing
 
-Check out our [contributing document](CONTRIBUTING.md) for information
-on how to contribute to the project, including how to set up your
-development environment.
+Check out our [contributing document](CONTRIBUTING.md) for information on how to
+contribute to the project, including how to set up your development environment.
 
-Please note that this project is released with a
-[Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in
-this project you agree to abide by its terms.
+Please note that this project is released with a [Contributor Code of
+Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to
+abide by its terms.
 
 ::: content-hidden
 ### Contributors
@@ -53,6 +51,7 @@ If you use this package in your work, please cite it as follows:
 
 ```{python}
 #| output: asis
+
 !uvx --quiet cffconvert --format apalike
 ```
 

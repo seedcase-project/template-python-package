@@ -1,13 +1,6 @@
 {
-  "files.autoSave": "onFocusChange",
-  "editor.wordWrap": "off",
   "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": "always"
-  },
-  "git.autofetch": false,
   "autoDocstring.customTemplatePath": ".vscode/google-notypes.mustache",
-  "editor.tabCompletion": "on",
   "editor.snippetSuggestions": "inline",
   "conventional-branch.type": [
     "build",
@@ -19,12 +12,13 @@
     "style",
     "test",
     "chore",
-    "perf",
-    "revert"
+    "revert",
+    "perf"
   ],
   "conventional-branch.format": "{Type}/{Branch}",
-  "[quarto][qmd]": {
-    "editor.formatOnSave": false
+  "[quarto][qmd][md]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "jolars.panache"
   },
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff"
@@ -35,5 +29,6 @@
   "python.testing.pytestEnabled": true,
   "python.testing.pytestPath": "${workspaceFolder}/.venv/bin/pytest",
   "conventionalCommits.emojiFormat": "emoji",
-  "conventionalCommits.promptScopes": false
+  "conventionalCommits.promptScopes": false,
+  "typos.config": ".config/typos.toml",
 }
