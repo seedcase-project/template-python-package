@@ -1,13 +1,6 @@
 {
-  "files.autoSave": "onFocusChange",
-  "editor.wordWrap": "off",
   "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": "always"
-  },
-  "git.autofetch": false,
   "autoDocstring.customTemplatePath": ".vscode/google-notypes.mustache",
-  "editor.tabCompletion": "on",
   "editor.snippetSuggestions": "inline",
   "conventional-branch.type": [
     "build",
@@ -19,8 +12,8 @@
     "style",
     "test",
     "chore",
-    "perf",
-    "revert"
+    "revert",
+    "perf"
   ],
   "conventional-branch.format": "{Type}/{Branch}",
   "[quarto][qmd]": {
