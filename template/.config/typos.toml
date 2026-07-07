@@ -7,4 +7,6 @@ extend-exclude = [
   "*.svg",
   "*.json",
   ".coverage-report/*",
+  # Has commit hashes that trigger false positives
+  "CHANGELOG.md",
 ]
