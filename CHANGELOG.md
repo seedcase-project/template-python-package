@@ -21,6 +21,22 @@ releases we've made so far, along with what was changed within each release.
 Commits from bots, like `dependabot` or `pre-commit-ci`, are not included in the
 changelog.
 
+## [0.24.2](https://github.com/seedcase-project/template-python-package/compare/0.24.1..0.24.2) - 2026-07-07
+
+### 🐛 Fixes
+
+- Use single quotes in filename, Windows doesn't like double quotes
+  [#318](https://github.com/seedcase-project/template-python-package/pull/318)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([56b56c3](https://github.com/seedcase-project/template-python-package/commit/56b56c357c04bb479584c587b54534de3f934f95))
+
+### ♻️ Refactor
+
+- Move `typos.toml` into `.config/`
+  [#317](https://github.com/seedcase-project/template-python-package/pull/317)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([4424d03](https://github.com/seedcase-project/template-python-package/commit/4424d03766caeb99845e0e8f5a31d829c8e70f84))
+
 ## [0.24.1](https://github.com/seedcase-project/template-python-package/compare/0.24.0..0.24.1) - 2026-07-07
 
 ### ♻️ Refactor
