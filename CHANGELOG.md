@@ -21,6 +21,15 @@ releases we've made so far, along with what was changed within each release.
 Commits from bots, like `dependabot` or `pre-commit-ci`, are not included in the
 changelog.
 
+## [0.25.0](https://github.com/seedcase-project/template-python-package/compare/0.24.2..0.25.0) - 2026-07-07
+
+### ✨ Features
+
+- Add Panache Markdown formatter
+  [#315](https://github.com/seedcase-project/template-python-package/pull/315)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([642797c](https://github.com/seedcase-project/template-python-package/commit/642797cfa31c17e3393a6a1ef5e52015c82c3c10))
+
 ## [0.24.2](https://github.com/seedcase-project/template-python-package/compare/0.24.1..0.24.2) - 2026-07-07
 
 ### 🐛 Fixes
@@ -1150,20 +1159,7 @@ changelog.
 
 ### ❤️ New contributors
 
-- `@github-actions[bot]` started making automated contributions <<<<<<< HEAD
-
-- [`@martonvago`](https://github.com/martonvago) made their first contribution
-  in
-  [#134](https://github.com/seedcase-project/template-python-package/pull/134)
-
-- `@pre-commit-ci[bot]` started making automated contributions
-
-- `@dependabot[bot]` started making automated contributions
-
-- [`@lwjohnst86`](https://github.com/lwjohnst86) made their first contribution
-  in
-  [#150](https://github.com/seedcase-project/template-python-package/pull/150)
-  =======
+- `@github-actions[bot]` started making automated contributions
 
 - [`@martonvago`](https://github.com/martonvago) made their first contribution
   in
@@ -1177,7 +1173,5 @@ changelog.
   in
   [#150](https://github.com/seedcase-project/template-python-package/pull/150)
 
-> > > > > > > 0166ab76bf12a6825d31bc8c33b9b6a23b177d52 -
-> > > > > > > [`@signekb`](https://github.com/signekb) made their first
-> > > > > > > contribution in
-> > > > > > > [#44](https://github.com/seedcase-project/template-python-package/pull/44)
+- [`@signekb`](https://github.com/signekb) made their first contribution in
+  [#44](https://github.com/seedcase-project/template-python-package/pull/44)
