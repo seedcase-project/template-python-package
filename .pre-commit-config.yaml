@@ -32,3 +32,4 @@ repos:
     rev: v1.48.0
     hooks:
       - id: typos
+        args: [--config, .config/typos.toml, --force-exclude]

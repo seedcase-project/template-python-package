@@ -31,5 +31,6 @@
   "mypy.runUsingActiveInterpreter": true,
   "mypy.configFile": ".config/mypy.ini",
   "conventionalCommits.emojiFormat": "emoji",
-  "conventionalCommits.promptScopes": false
+  "conventionalCommits.promptScopes": false,
+  "typos.config": ".config/typos.toml",
 }
