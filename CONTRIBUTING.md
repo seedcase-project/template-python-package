@@ -54,9 +54,9 @@ Git messages. Using this convention allows us to be able to automatically create
 a release based on the commit message by using
 [Cocogitto](https://decisions.seedcase-project.org/why-semantic-release-with-cocogitto/).
 If you don't use Conventional Commits when making a commit, we will revise the
-pull request title to follow that format, as we use squash merges when merging
-pull requests, so all other commits in the pull request will be squashed into
-one commit.
+pull request title to follow that format. That's because we use squash merges
+when merging pull requests, so all other commits in the pull request will be
+squashed into one commit.
 
 ## :file_folder: Explanation of files and folders
 
@@ -65,38 +65,39 @@ as explains a bit more about them and what they are used for.
 
 - `.copier-answers.yml`: Contains the answers you gave when copying the project
   from the template. **You should not modify this file directly.**
-- `.github/`: Contains GitHub-specific files, such as the workflow to build the
-  website from the Markdown files.
-- `_quarto.yml`: Quarto configuration file for the website, including settings
-  for the website, such as the theme, navigation, and other options.
-- `.gitignore`: This ignore file tells Git which files to not track. Unless you
-  know what you are doing, it's best to not touch this file.
-- `.pre-commit-config.yaml`: [Pre-commit](https://pre-commit.com/) configuration
-  file for managing and running checks before each commit.
-- `.typos.toml`: [typos](https://github.com/crate-ci/typos) spell checker
-  configuration file.
-- `CITATION.cff`: Structured citation metadata for your project when archived on
-  [Zenodo](https://zenodo.org/) and used by GitHub to display the citation
-  information on the repository page. This is used to add the metadata to Zenodo
-  when a GitHub release has been uploaded to Zenodo.
-- `justfile`: [`just`](https://just.systems/man/en/) configuration file for
-  scripting project tasks.
-- `.editorconfig`: Editor configuration file for
-  [EditorConfig](https://editorconfig.org/) to maintain consistent coding styles
-  across different editors and IDEs.
-- `CHANGELOG.md`: Changelog file for tracking changes in the project.
-- `CONTRIBUTING.md`: Guidelines for contributing to the project.
 - `.github/`: Contains GitHub-specific files, such as issue and pull request
   templates, workflows,
   [dependabot](https://docs.github.com/en/code-security/tutorials/secure-your-dependencies/dependabot-quickstart-guide)
   configuration, pull request templates, and a
   [CODEOWNERS](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)
   file.
+- `_quarto.yml`: Quarto configuration file for the website, including settings
+  for the website, such as the theme, navigation, and other options.
 - `_metadata.yml`: Quarto metadata file for the website, including information
   about the project, such as the titles and GitHub names.
-- `.rumdl.toml`: [rumdl](https://rumdl.dev) configuration file for formatting
-  Markdown files in the project.
-- `cog.toml`: [Cocogitto](https://docs.cocogitto.io) configuration file for
-  managing versions.
-- `.config/cliff.toml`: [git-cliff](https://git-cliff.org) configuration file
-  for creating the changelog.
+- `.gitignore`: This ignore file tells Git which files to not track. Unless you
+  know what you are doing, it's best to not touch this file.
+- `.pre-commit-config.yaml`: [Pre-commit](https://pre-commit.com/) configuration
+  file for managing and running checks before each commit.
+- `.config/`: Contains configuration files for various tools used in the
+  project, such as:
+  - `typos.toml`: [typos](https://github.com/crate-ci/typos) spell checker
+    configuration file.
+  - `rumdl.toml` and `panache.toml`: [rumdl](https://rumdl.dev) and
+    [Panache](https://panache.bz) configuration file for formatting Markdown
+    files in the project.
+  - `cog.toml`: [Cocogitto](https://docs.cocogitto.io) configuration file for
+    managing versions.
+  - `cliff.toml`: [git-cliff](https://git-cliff.org) configuration file for
+    creating the changelog.
+- `.editorconfig`: Editor configuration file for
+  [EditorConfig](https://editorconfig.org/) to maintain consistent coding styles
+  across different editors and IDEs.
+- `CITATION.cff`: Structured citation metadata for your project when archived on
+  [Zenodo](https://zenodo.org/) and used by GitHub to display the citation
+  information on the repository page. This is used to add the metadata to Zenodo
+  when a GitHub release has been uploaded to Zenodo.
+- `justfile`: [`just`](https://just.systems/man/en/) configuration file for
+  scripting project tasks.
+- `CHANGELOG.md`: Changelog file for tracking changes in the project.
+- `CONTRIBUTING.md`: Guidelines for contributing to the project.

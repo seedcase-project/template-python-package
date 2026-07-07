@@ -4,6 +4,15 @@
 # Run all build-related recipes in the justfile
 run-all: update-quarto-theme sync-template-files check-all format-md test-all build-all
 
+# Run all check-related recipes
+check-all: check-spelling check-urls
+
+# Run all test-related recipes
+test-all: (test "true" "netlify") (test "false" "netlify") (test "true" "gh-pages") (test "false" "gh-pages")
+
+# Run all build-related recipes
+build-all: build-contributors build-website build-readme
+
 # List all TODO items in the repository
 list-todos:
   grep -R -n \
@@ -27,8 +36,8 @@ update-quarto-theme:
 
 # Update files in the template from the Copier parent folder
 sync-template-files:
-  cp CODE_OF_CONDUCT.md .pre-commit-config.yaml .typos.toml .editorconfig template/
-  cp .config/rumdl.toml template/.config/
+  cp CODE_OF_CONDUCT.md .config/typos.toml .editorconfig template/
+  cp .config/rumdl.toml .config/panache.toml template/.config/
   mkdir -p template/tools
   cp tools/get-contributors.sh template/tools/
   cp .github/pull_request_template.md template/.github/
@@ -42,10 +51,8 @@ check-urls:
   lychee . \
     --verbose \
     --extensions md,qmd,jinja \
+    --exclude "github\.com" \
     --exclude-path "_badges.qmd"
-
-# Run all check-related recipes
-check-all: check-spelling check-urls
 
 # Format Markdown files
 format-md:
@@ -65,9 +72,6 @@ test-manual:
   rm -rf _temp/manual/test-template
   uvx copier copy -r HEAD . _temp/manual/test-template
 
-# Run all test-related recipes
-test-all: (test "true" "netlify") (test "false" "netlify") (test "true" "gh-pages") (test "false" "gh-pages")
-
 # Clean up any leftover and temporary build files
 cleanup:
   rm -rf _temp
@@ -86,10 +90,7 @@ build-website:
 
 # Preview the website with automatic reload on changes
 preview-website:
-  quarto preview
-
-# Run all build-related recipes
-build-all: build-contributors build-website build-readme
+  uvx --from quarto quarto preview
 
 # Check for and apply updates from the template
 update-from-template:
