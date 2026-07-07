@@ -6,46 +6,45 @@ description: |
 order: 2
 ---
 
-This guide walks through how to use this template to create a new Python
-package or apply it to an existing Python package.
+This guide walks through how to use this template to create a new Python package
+or apply it to an existing Python package.
 
 ## Creating a new Python package
 
-You can use this template to create a new Python package with a standard
-set of files and folders, as well as all the features and configurations
-to make it easier to build your Python package smoothly and effectively.
-First, open a terminal and run the following command:
+You can use this template to create a new Python package with a standard set of
+files and folders, as well as all the features and configurations to make it
+easier to build your Python package smoothly and effectively. First, open a
+terminal and run the following command:
 
-```{.bash filename="Terminal"}
+```bash {filename="Terminal"}
 uvx copier copy gh:seedcase-project/template-python-package path/to/package/package-name
 ```
 
 The `copy` command uses the template on GitHub (`gh:`) at the
-`seedcase-project/template-python-package` location. The `path/to/` is
-the location where you'd like the new Python package to be created and
-`package-name` is the name you want to give for the new package's
-directory and (ideally) the GitHub repository for the package. The name
-should be something short and meaningful, ideally lowercase, with `-`
-instead of spaces, and no special characters.
+`seedcase-project/template-python-package` location. The `path/to/` is the
+location where you'd like the new Python package to be created and
+`package-name` is the name you want to give for the new package's directory and
+(ideally) the GitHub repository for the package. The name should be something
+short and meaningful, ideally lowercase, with `-` instead of spaces, and no
+special characters.
 
 ## Applying to an existing Python package
 
-If you want to use this template on an existing Python package, you can
-use the `copy` command of `copier` just like above to apply the template
-to the existing package. This will add all the template's files and
-configurations to the existing package.
+If you want to use this template on an existing Python package, you can use the
+`copy` command of `copier` just like above to apply the template to the existing
+package. This will add all the template's files and configurations to the
+existing package.
 
-```{.bash filename="Terminal"}
+```bash {filename="Terminal"}
 uvx copier copy gh:seedcase-project/template-python-package path/to/existing-package
 ```
 
-See the comment above in the "Creating a new Python package" section
-about the naming of the existing package directory. It will go through a
-series of prompts, as in the case of creating a new Python package,
-including asking if you want to overwrite existing files.
+See the comment above in the "Creating a new Python package" section about the
+naming of the existing package directory. It will go through a series of
+prompts, as in the case of creating a new Python package, including asking if
+you want to overwrite existing files.
 
 ::: callout-note
-To use the `copy` command, the existing package needs to be tracked by
-Git and in a clean state (no changes have been made in the working
-directory).
+To use the `copy` command, the existing package needs to be tracked by Git and
+in a clean state (no changes have been made in the working directory).
 :::

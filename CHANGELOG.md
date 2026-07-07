@@ -1150,7 +1150,20 @@ changelog.
 
 ### ❤️ New contributors
 
-- `@github-actions[bot]` started making automated contributions
+- `@github-actions[bot]` started making automated contributions <<<<<<< HEAD
+
+- [`@martonvago`](https://github.com/martonvago) made their first contribution
+  in
+  [#134](https://github.com/seedcase-project/template-python-package/pull/134)
+
+- `@pre-commit-ci[bot]` started making automated contributions
+
+- `@dependabot[bot]` started making automated contributions
+
+- [`@lwjohnst86`](https://github.com/lwjohnst86) made their first contribution
+  in
+  [#150](https://github.com/seedcase-project/template-python-package/pull/150)
+  =======
 
 - [`@martonvago`](https://github.com/martonvago) made their first contribution
   in
@@ -1164,5 +1177,7 @@ changelog.
   in
   [#150](https://github.com/seedcase-project/template-python-package/pull/150)
 
-- [`@signekb`](https://github.com/signekb) made their first contribution in
-  [#44](https://github.com/seedcase-project/template-python-package/pull/44)
+> > > > > > > 0166ab76bf12a6825d31bc8c33b9b6a23b177d52 -
+> > > > > > > [`@signekb`](https://github.com/signekb) made their first
+> > > > > > > contribution in
+> > > > > > > [#44](https://github.com/seedcase-project/template-python-package/pull/44)

@@ -16,8 +16,9 @@
     "perf"
   ],
   "conventional-branch.format": "{Type}/{Branch}",
-  "[quarto][qmd]": {
-    "editor.formatOnSave": false
+  "[quarto][qmd][md]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "jolars.panache"
   },
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff"
