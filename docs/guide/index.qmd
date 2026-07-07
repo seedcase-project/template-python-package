@@ -1,13 +1,13 @@
 ---
 title: "Guide"
 listing:
-    contents: .
-    type: grid
-    grid-columns: 1
-    sort: "order"
-    fields:
-        - title
-        - description
+  contents: .
+  type: grid
+  grid-columns: 1
+  sort: "order"
+  fields:
+    - title
+    - description
 ---
 
 This guide gives an overview of how to use this template for creating a
