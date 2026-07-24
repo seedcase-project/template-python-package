@@ -58,6 +58,8 @@ jobs:
 
       - name: Spell check repo
         uses: crate-ci/typos@aca895bf05aec0cb7dffa6f94495e923224d9f17 # v1.46.2
+        with:
+          config: .config/typos.toml
 
       - name: Build function reference docs
         run: uv run quartodoc build
