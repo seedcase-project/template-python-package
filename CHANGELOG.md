@@ -21,6 +21,15 @@ releases we've made so far, along with what was changed within each release.
 Commits from bots, like `dependabot` or `pre-commit-ci`, are not included in the
 changelog.
 
+## [0.25.2](https://github.com/seedcase-project/template-python-package/compare/0.25.1..0.25.2) - 2026-07-24
+
+### 🐛 Fixes
+
+- Remove extra quartodoc build step
+  [#322](https://github.com/seedcase-project/template-python-package/pull/322)
+  by [`@martonvago`](https://github.com/martonvago)
+  ([6bfcacb](https://github.com/seedcase-project/template-python-package/commit/6bfcacbd1aa645a806f6f0b9e807343694e9449f))
+
 ## [0.25.1](https://github.com/seedcase-project/template-python-package/compare/0.25.0..0.25.1) - 2026-07-07
 
 ### ♻️ Refactor
