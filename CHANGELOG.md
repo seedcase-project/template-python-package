@@ -21,6 +21,22 @@ releases we've made so far, along with what was changed within each release.
 Commits from bots, like `dependabot` or `pre-commit-ci`, are not included in the
 changelog.
 
+## [0.25.3](https://github.com/seedcase-project/template-python-package/compare/0.25.2..0.25.3) - 2026-07-29
+
+### 🐛 Fixes
+
+- Remove spell check from build website workflow
+  [#323](https://github.com/seedcase-project/template-python-package/pull/323)
+  by [`@signekb`](https://github.com/signekb)
+  ([988bb13](https://github.com/seedcase-project/template-python-package/commit/988bb13d294f3720b8dde1c8f34da835b50aa8c4))
+
+### 👩‍💻 Miscellaneous
+
+- Upgrade Quarto theme; remove `glossary.json`
+  [#324](https://github.com/seedcase-project/template-python-package/pull/324)
+  by [`@signekb`](https://github.com/signekb)
+  ([c1335e7](https://github.com/seedcase-project/template-python-package/commit/c1335e7399a802197ef412776e45c028d2bbcae6))
+
 ## [0.25.2](https://github.com/seedcase-project/template-python-package/compare/0.25.1..0.25.2) - 2026-07-24
 
 ### 🐛 Fixes
