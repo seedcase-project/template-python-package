@@ -10,7 +10,7 @@ exclude = [
   # `_badges.qmd` gets mangled by rumdl
   "**/_badges.qmd",
   # Links gets mangled
-  "**/CONTRIBUTING.md.jinja",
+  "**/CONTRIBUTING.md",
 
 ]
 
