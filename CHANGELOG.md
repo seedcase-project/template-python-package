@@ -21,6 +21,15 @@ releases we've made so far, along with what was changed within each release.
 Commits from bots, like `dependabot` or `pre-commit-ci`, are not included in the
 changelog.
 
+## [0.26.0](https://github.com/seedcase-project/template-python-package/compare/0.25.3..0.26.0) - 2026-07-31
+
+### ✨ Features
+
+- Use Seedcase badge in template Quarto config
+  [#327](https://github.com/seedcase-project/template-python-package/pull/327)
+  by [`@signekb`](https://github.com/signekb)
+  ([dc8e442](https://github.com/seedcase-project/template-python-package/commit/dc8e442951d166c353ec839b5990b1dabe4a80a4))
+
 ## [0.25.3](https://github.com/seedcase-project/template-python-package/compare/0.25.2..0.25.3) - 2026-07-29
 
 ### 🐛 Fixes
