@@ -1,4 +1,5 @@
 
+
 # Template Python Package: An opinionated setup for making Python packages
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17018496.svg)](https://doi.org/10.5281/zenodo.17018496)
@@ -7,7 +8,7 @@
 License](https://img.shields.io/github/license/seedcase-project/template-python-package.svg)](https://github.com/seedcase-project/template-python-package/blob/main/LICENSE.md)
 [![GitHub
 Release](https://img.shields.io/github/v/release/seedcase-project/template-python-package.svg)](https://github.com/seedcase-project/template-python-package/releases/latest)
-[![Test](https://github.com/seedcase-project/template-python-package/actions/workflows/test.yml/badge.svg)](https://github.com/seedcase-project/template-python-package/actions/workflows/test.yml)
+[![Checks](https://github.com/seedcase-project/template-python-package/actions/workflows/checks.yml/badge.svg)](https://github.com/seedcase-project/template-python-package/actions/workflows/checks.yml)
 [![Build
 website](https://github.com/seedcase-project/template-python-package/actions/workflows/build-website.yml/badge.svg)](https://github.com/seedcase-project/template-python-package/actions/workflows/build-website.yml)
 [![CodeQL](https://github.com/seedcase-project/template-python-package/actions/workflows/github-code-scanning/codeql/badge.svg?branch=main)](https://github.com/seedcase-project/template-python-package/actions/workflows/github-code-scanning/codeql)
@@ -69,7 +70,7 @@ If you use this project in your work, please cite it as follows:
 Johnston L.W., Brødbæk S.K., Beicher K., Vago M. (2025). Template Python
 Package: An opinionated setup for making Python packages DOI:
 10.5281/zenodo.17018496 URL:
-<https://template-python-package.seedcase-project.org>
+https://template-python-package.seedcase-project.org
 
 Or as a BibTeX entry:
 

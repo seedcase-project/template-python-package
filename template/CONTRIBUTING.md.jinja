@@ -19,17 +19,21 @@ various states of completion.
 To contribute to `{{ github_repo }}`, you first need to install
 [uv](https://docs.astral.sh/uv/) and
 [justfile](https://just.systems/man/en/packages.html). We use uv and justfile to
-manage our package, such as to run checks and test the template. Both the uv and
+manage our package, such as to run checks and test the package. Both the uv and
 justfile websites have a more detailed guide on using uv, but below are some
 simple instructions to get you started.
 
-It's easiest to install uv and justfile using
-[pipx](https://pipx.pypa.io/stable/), so install that first. Then, install uv
-and justfile by running:
+It's easiest to first
+[install uv](https://docs.astral.sh/uv/getting-started/installation/) and then
+install justfile and the other tools with uv. Once you've installed uv, install
+the other tools by running:
 
-``` bash
-pipx install uv rust-just pyrefly
+```bash
+uv tool install rust-just pyrefly ruff
 ```
+
+We install Ruff and Pyrefly to make these tools available to other tools and VS
+Code.
 
 We keep all our development workflows in the `justfile`, so you can explore it
 to see what commands are available. To see a list of commands available, run:

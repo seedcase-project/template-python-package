@@ -21,6 +21,84 @@ releases we've made so far, along with what was changed within each release.
 Commits from bots, like `dependabot` or `pre-commit-ci`, are not included in the
 changelog.
 
+## [0.27.0](https://github.com/seedcase-project/template-python-package/compare/0.26.1..0.27.0) - 2026-08-07
+
+### ✨ Features
+
+- Allow use of `Optional[]` in Ruff checks
+  [#341](https://github.com/seedcase-project/template-python-package/pull/341)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([3b396d4](https://github.com/seedcase-project/template-python-package/commit/3b396d467f036afa8a097132b9225602c053e9f1))
+
+### 🐛 Fixes
+
+- Remove leftover workflow tags from conversion
+  [#338](https://github.com/seedcase-project/template-python-package/pull/338)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([0fcb787](https://github.com/seedcase-project/template-python-package/commit/0fcb787915e8a9dbf0d110301e28916d9487f7a8))
+- Correct Pyrefly settings to actually run in our projects
+  [#337](https://github.com/seedcase-project/template-python-package/pull/337)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([56a5d86](https://github.com/seedcase-project/template-python-package/commit/56a5d86c4a14cbe1798ec9aea43cd7c8b1e1c3dd))
+- Bring back Python import organising in VS Code
+  [#339](https://github.com/seedcase-project/template-python-package/pull/339)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([25965e4](https://github.com/seedcase-project/template-python-package/commit/25965e4d38d3157224ffed45ceda5e036df9c8b9))
+- Remove Pyrefly from pre-commit, as `pre-commit.ci` fails with it
+  [#333](https://github.com/seedcase-project/template-python-package/pull/333)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([8422401](https://github.com/seedcase-project/template-python-package/commit/84224010d8e4a7f2d3542c31be858a37983b446c))
+
+### ♻️ Refactor
+
+- Use uv not pipx in CONTRIBUTING
+  [#336](https://github.com/seedcase-project/template-python-package/pull/336)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([bd5e601](https://github.com/seedcase-project/template-python-package/commit/bd5e6016e0e3fdad17ace49b129e2368d7544c0f))
+
+### 📝 Documentation
+
+- Rebuild README
+  [#342](https://github.com/seedcase-project/template-python-package/pull/342)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([a5a3df2](https://github.com/seedcase-project/template-python-package/commit/a5a3df29bb8ab3f543702008919902e598314389))
+
+### 💄 Styling
+
+- Reformat some Jinja files
+  [#335](https://github.com/seedcase-project/template-python-package/pull/335)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([7a3c538](https://github.com/seedcase-project/template-python-package/commit/7a3c5382ccce60bb5f9492828ac14cbfbbcdd8c5))
+
+### 👩‍💻 Miscellaneous
+
+- Do not run rumdl on Jinja files, it mangles them
+  [#334](https://github.com/seedcase-project/template-python-package/pull/334)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([c1d0e30](https://github.com/seedcase-project/template-python-package/commit/c1d0e306cc24ee5f121a8d73a81359fc0cfd8751))
+- Don't copy `typos.toml` to root of template
+  [#340](https://github.com/seedcase-project/template-python-package/pull/340)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([2215bdf](https://github.com/seedcase-project/template-python-package/commit/2215bdf1b9f8e1534f0e48396989a8622c1d90cb))
+
+## [0.26.1](https://github.com/seedcase-project/template-python-package/compare/0.26.0..0.26.1) - 2026-08-07
+
+### 🐛 Fixes
+
+- Move quartodoc renderer into root folder
+  [#332](https://github.com/seedcase-project/template-python-package/pull/332)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([0c990c0](https://github.com/seedcase-project/template-python-package/commit/0c990c023ad7aefd06694911d39402ab8c6526cc))
+
+## [0.26.0](https://github.com/seedcase-project/template-python-package/compare/0.25.3..0.26.0) - 2026-07-31
+
+### ✨ Features
+
+- Use Seedcase badge in template Quarto config
+  [#327](https://github.com/seedcase-project/template-python-package/pull/327)
+  by [`@signekb`](https://github.com/signekb)
+  ([dc8e442](https://github.com/seedcase-project/template-python-package/commit/dc8e442951d166c353ec839b5990b1dabe4a80a4))
+
 ## [0.25.3](https://github.com/seedcase-project/template-python-package/compare/0.25.2..0.25.3) - 2026-07-29
 
 ### 🐛 Fixes
