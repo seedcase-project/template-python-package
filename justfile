@@ -36,7 +36,7 @@ update-quarto-theme:
 
 # Update files in the template from the Copier parent folder
 sync-template-files:
-  cp CODE_OF_CONDUCT.md .config/typos.toml .editorconfig template/
+  cp CODE_OF_CONDUCT.md .editorconfig template/
   cp .config/rumdl.toml .config/panache.toml template/.config/
   mkdir -p template/tools
   cp tools/get-contributors.sh template/tools/
