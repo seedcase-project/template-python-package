@@ -21,6 +21,15 @@ releases we've made so far, along with what was changed within each release.
 Commits from bots, like `dependabot` or `pre-commit-ci`, are not included in the
 changelog.
 
+## [0.27.1](https://github.com/seedcase-project/template-python-package/compare/0.27.0..0.27.1) - 2026-08-07
+
+### 🐛 Fixes
+
+- Format `md` files, but rumdl should ignore CONTRIBUTING
+  [#325](https://github.com/seedcase-project/template-python-package/pull/325)
+  by [`@signekb`](https://github.com/signekb)
+  ([8cb46be](https://github.com/seedcase-project/template-python-package/commit/8cb46be9ec21e67707e87cbde10a19bd477d327f))
+
 ## [0.27.0](https://github.com/seedcase-project/template-python-package/compare/0.26.1..0.27.0) - 2026-08-07
 
 ### ✨ Features
