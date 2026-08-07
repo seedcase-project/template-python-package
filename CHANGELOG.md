@@ -21,6 +21,15 @@ releases we've made so far, along with what was changed within each release.
 Commits from bots, like `dependabot` or `pre-commit-ci`, are not included in the
 changelog.
 
+## [0.26.1](https://github.com/seedcase-project/template-python-package/compare/0.26.0..0.26.1) - 2026-08-07
+
+### 🐛 Fixes
+
+- Move quartodoc renderer into root folder
+  [#332](https://github.com/seedcase-project/template-python-package/pull/332)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([0c990c0](https://github.com/seedcase-project/template-python-package/commit/0c990c023ad7aefd06694911d39402ab8c6526cc))
+
 ## [0.26.0](https://github.com/seedcase-project/template-python-package/compare/0.25.3..0.26.0) - 2026-07-31
 
 ### ✨ Features
