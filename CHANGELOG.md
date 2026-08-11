@@ -21,6 +21,15 @@ releases we've made so far, along with what was changed within each release.
 Commits from bots, like `dependabot` or `pre-commit-ci`, are not included in the
 changelog.
 
+## [0.28.0](https://github.com/seedcase-project/template-python-package/compare/0.27.1..0.28.0) - 2026-08-11
+
+### ✨ Features
+
+- Allow `Optional[]` and `Union[]` typing in Ruff
+  [#344](https://github.com/seedcase-project/template-python-package/pull/344)
+  by [`@signekb`](https://github.com/signekb)
+  ([f1b76fa](https://github.com/seedcase-project/template-python-package/commit/f1b76fa5ad80b15fc28301287b228a68b117efcc))
+
 ## [0.27.1](https://github.com/seedcase-project/template-python-package/compare/0.27.0..0.27.1) - 2026-08-07
 
 ### 🐛 Fixes
