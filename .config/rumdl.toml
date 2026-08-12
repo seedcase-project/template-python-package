@@ -11,8 +11,9 @@ exclude = [
   "**/_badges.qmd",
   # Links gets mangled
   "**/CONTRIBUTING.md.jinja",
-
 ]
+
+include = ["*.qmd", "*.md", "*.md.jinja", "*.qmd.jinja"]
 
 # List style: `-`
 [MD004]
