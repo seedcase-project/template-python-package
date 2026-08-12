@@ -21,6 +21,33 @@ releases we've made so far, along with what was changed within each release.
 Commits from bots, like `dependabot` or `pre-commit-ci`, are not included in the
 changelog.
 
+## [0.28.1](https://github.com/seedcase-project/template-python-package/compare/0.28.0..0.28.1) - 2026-08-12
+
+### 🐛 Fixes
+
+- Place `--config` before command with `cog`
+  [#345](https://github.com/seedcase-project/template-python-package/pull/345)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([1694c78](https://github.com/seedcase-project/template-python-package/commit/1694c78841790bd9c7e59c3efa538a0b5b299c2b))
+
+### ♻️ Refactor
+
+- Find TODO items in all files
+  [#347](https://github.com/seedcase-project/template-python-package/pull/347)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([7357815](https://github.com/seedcase-project/template-python-package/commit/7357815b7ffb31779910fc752bbc2841c854372d))
+- Format even Jinja Markdown files
+  [#348](https://github.com/seedcase-project/template-python-package/pull/348)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([24a66e6](https://github.com/seedcase-project/template-python-package/commit/24a66e657689c80fe78cc54601c4199ed369a51a))
+
+### 💄 Styling
+
+- Add the "A Part Of" logo to navbar
+  [#346](https://github.com/seedcase-project/template-python-package/pull/346)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([97a590b](https://github.com/seedcase-project/template-python-package/commit/97a590b6d4d0e33855f9a8852a169bb4789597fb))
+
 ## [0.28.0](https://github.com/seedcase-project/template-python-package/compare/0.27.1..0.28.0) - 2026-08-11
 
 ### ✨ Features
