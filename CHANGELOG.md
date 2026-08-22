@@ -21,6 +21,15 @@ releases we've made so far, along with what was changed within each release.
 Commits from bots, like `dependabot` or `pre-commit-ci`, are not included in the
 changelog.
 
+## [0.28.2](https://github.com/seedcase-project/template-python-package/compare/0.28.1..0.28.2) - 2026-08-22
+
+### 🐛 Fixes
+
+- Fix so check workflow is only on pull requests
+  [#351](https://github.com/seedcase-project/template-python-package/pull/351)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([0bb4b54](https://github.com/seedcase-project/template-python-package/commit/0bb4b54b73b54f770a07325b3bc009d714802550))
+
 ## [0.28.1](https://github.com/seedcase-project/template-python-package/compare/0.28.0..0.28.1) - 2026-08-12
 
 ### 🐛 Fixes
