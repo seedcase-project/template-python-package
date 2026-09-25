@@ -34,7 +34,7 @@ jobs:
           python-version-file: "pyproject.toml"
 
       - name: Install the project and it's dependencies
-        run: just install-deps
+        run: uv sync --locked --all-extras --dev
 
       - name: Check Python style
         run: just check-python
@@ -109,7 +109,7 @@ jobs:
 
       - name: Install the project and it's dependencies
         run: |
-          uv sync --all-extras --dev
+          run: uv sync --locked --all-extras --dev
           echo "$PWD/.venv/bin" >> "$GITHUB_PATH"
 
       - name: Set up Quarto
