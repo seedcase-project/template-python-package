@@ -21,6 +21,15 @@ releases we've made so far, along with what was changed within each release.
 Commits from bots, like `dependabot` or `pre-commit-ci`, are not included in the
 changelog.
 
+## [0.28.3](https://github.com/seedcase-project/template-python-package/compare/0.28.2..0.28.3) - 2026-09-25
+
+### 🐛 Fixes
+
+- Install package dependencies using locked version
+  [#361](https://github.com/seedcase-project/template-python-package/pull/361)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([a48d63e](https://github.com/seedcase-project/template-python-package/commit/a48d63e757df28b5556a03ce876c8eca36ca93b9))
+
 ## [0.28.2](https://github.com/seedcase-project/template-python-package/compare/0.28.1..0.28.2) - 2026-08-22
 
 ### 🐛 Fixes
