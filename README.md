@@ -54,9 +54,9 @@ to abide by its terms.
 The following people have contributed to this project by submitting pull
 requests :tada:
 
+[@fruvago](https://github.com/fruvago),
 [@joelostblom](https://github.com/joelostblom),
 [@lwjohnst86](https://github.com/lwjohnst86),
-[@martonvago](https://github.com/martonvago),
 [@signekb](https://github.com/signekb)
 
 ## Licensing
@@ -67,15 +67,15 @@ This project is licensed under the [MIT License](LICENSE.md).
 
 If you use this project in your work, please cite it as follows:
 
-Johnston L.W., Brødbæk S.K., Beicher K., Vago M. (2025). Template Python
-Package: An opinionated setup for making Python packages DOI:
-10.5281/zenodo.17018496 URL:
+Johnston L.W., Brødbæk S.K., Beicher K., Ostblom J., Vago F. (2025).
+Template Python Package: An opinionated setup for making Python packages
+DOI: 10.5281/zenodo.17018496 URL:
 https://template-python-package.seedcase-project.org
 
 Or as a BibTeX entry:
 
     @misc{YourReferenceHere,
-    author = {Johnston, Luke William and Brødbæk, Signe Kirk and Beicher, Kristiane and Vago, Marton},
+    author = {Johnston, Luke William and Brødbæk, Signe Kirk and Beicher, Kristiane and Ostblom, Joel and Vago, Fruzsina},
     doi = {10.5281/zenodo.17018496},
     month = {9},
     title = {Template Python Package: An opinionated setup for making Python packages},
