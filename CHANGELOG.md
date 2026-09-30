@@ -21,6 +21,37 @@ releases we've made so far, along with what was changed within each release.
 Commits from bots, like `dependabot` or `pre-commit-ci`, are not included in the
 changelog.
 
+## [0.28.4](https://github.com/seedcase-project/template-python-package/compare/0.28.3..0.28.4) - 2026-09-30
+
+### 🐛 Fixes
+
+- Remove `[]` bracket from first release in CHANGELOG
+  [#366](https://github.com/seedcase-project/template-python-package/pull/366)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([b39b7a4](https://github.com/seedcase-project/template-python-package/commit/b39b7a4b5088fbe9679ff252475f7612a1121110))
+
+### 📝 Documentation
+
+- Switch to Fru's name
+  [#365](https://github.com/seedcase-project/template-python-package/pull/365)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([d64ef7b](https://github.com/seedcase-project/template-python-package/commit/d64ef7b44944eaee5bd8118517a919b96dee1dce))
+
+### 💄 Styling
+
+- Reformat Markdown
+  [#363](https://github.com/seedcase-project/template-python-package/pull/363)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([fea0c68](https://github.com/seedcase-project/template-python-package/commit/fea0c68590623574517b67ad605a95082da0faf7))
+- Update Seedcase Quarto theme
+  [#362](https://github.com/seedcase-project/template-python-package/pull/362)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([20697b8](https://github.com/seedcase-project/template-python-package/commit/20697b806ecbf3ef9dc9f0a9ef59ae91626d1d45))
+- Update Quarto theme
+  [#367](https://github.com/seedcase-project/template-python-package/pull/367)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([f8800e3](https://github.com/seedcase-project/template-python-package/commit/f8800e3101b586bfebb6ef1c79604eaba9bb3753))
+
 ## [0.28.3](https://github.com/seedcase-project/template-python-package/compare/0.28.2..0.28.3) - 2026-09-25
 
 ### 🐛 Fixes
@@ -184,7 +215,7 @@ changelog.
 
 - Remove extra quartodoc build step
   [#322](https://github.com/seedcase-project/template-python-package/pull/322)
-  by [`@martonvago`](https://github.com/martonvago)
+  by [`@fruvago`](https://github.com/fruvago)
   ([6bfcacb](https://github.com/seedcase-project/template-python-package/commit/6bfcacbd1aa645a806f6f0b9e807343694e9449f))
 
 ## [0.25.1](https://github.com/seedcase-project/template-python-package/compare/0.25.0..0.25.1) - 2026-07-07
@@ -715,7 +746,7 @@ changelog.
 
 - Delete whole references folder pre and post render
   [#142](https://github.com/seedcase-project/template-python-package/pull/142)
-  by [`@martonvago`](https://github.com/martonvago)
+  by [`@fruvago`](https://github.com/fruvago)
   ([c0e9161](https://github.com/seedcase-project/template-python-package/commit/c0e9161a9fc916118c11f6c9f8f1e29d9326372e))
 
 ## [0.16.5](https://github.com/seedcase-project/template-python-package/compare/0.16.4..0.16.5) - 2025-09-01
@@ -817,7 +848,7 @@ changelog.
   by [`@lwjohnst86`](https://github.com/lwjohnst86)
   ([80663cd](https://github.com/seedcase-project/template-python-package/commit/80663cd0036d73a3a90a6998c1f95aa4ab2308e7))
 
-## [0.16.0] - 2025-08-26
+## 0.16.0 - 2025-08-26
 
 ### ✨ Features
 
@@ -839,27 +870,27 @@ changelog.
   ([08687cd](https://github.com/seedcase-project/template-python-package/commit/08687cd162523a381c7232bf6b718b1352869b56))
 - Copy over static files to template folder
   [#117](https://github.com/seedcase-project/template-python-package/pull/117)
-  by [`@martonvago`](https://github.com/martonvago)
+  by [`@fruvago`](https://github.com/fruvago)
   ([bc6bf79](https://github.com/seedcase-project/template-python-package/commit/bc6bf7995e0436f635243c44abcc36ecced6c01c))
 - Add files with copier variables
   [#127](https://github.com/seedcase-project/template-python-package/pull/127)
-  by [`@martonvago`](https://github.com/martonvago)
+  by [`@fruvago`](https://github.com/fruvago)
   ([ec38631](https://github.com/seedcase-project/template-python-package/commit/ec386314559582681c5d39cfa48e2e987f90b679))
 - Add 404 page to template
   [#141](https://github.com/seedcase-project/template-python-package/pull/141)
-  by [`@martonvago`](https://github.com/martonvago)
+  by [`@fruvago`](https://github.com/fruvago)
   ([4a33f1e](https://github.com/seedcase-project/template-python-package/commit/4a33f1ed8c97f8f3f66bd0621eb6d30cafbb9b66))
 - Add Conduct, Contributing, and filled out README
   [#131](https://github.com/seedcase-project/template-python-package/pull/131)
-  by [`@martonvago`](https://github.com/martonvago)
+  by [`@fruvago`](https://github.com/fruvago)
   ([e46fc0a](https://github.com/seedcase-project/template-python-package/commit/e46fc0a4329e4a962892695469a38cd4d98700c5))
 - Add hosting provider variable
   [#153](https://github.com/seedcase-project/template-python-package/pull/153)
-  by [`@martonvago`](https://github.com/martonvago)
+  by [`@fruvago`](https://github.com/fruvago)
   ([498fbc4](https://github.com/seedcase-project/template-python-package/commit/498fbc47cc2f11253dacf285bd19158c2069ea21))
 - Add `update-from-template` workflow
   [#134](https://github.com/seedcase-project/template-python-package/pull/134)
-  by [`@martonvago`](https://github.com/martonvago)
+  by [`@fruvago`](https://github.com/fruvago)
   ([17cdef1](https://github.com/seedcase-project/template-python-package/commit/17cdef17260f5a10c98268b5fbb657430de92a91))
 
 ### 🐛 Fixes
@@ -927,7 +958,7 @@ changelog.
   ([9783238](https://github.com/seedcase-project/template-python-package/commit/9783238506dcea4ff5dcf4480aa96c38a4ec8de4))
 - Include `github-actions` in dependabot config
   [#136](https://github.com/seedcase-project/template-python-package/pull/136)
-  by [`@martonvago`](https://github.com/martonvago)
+  by [`@fruvago`](https://github.com/fruvago)
   ([7c44c98](https://github.com/seedcase-project/template-python-package/commit/7c44c9842e29955daf881abd08da70913dcd2f2a))
 - Use `bash` for `check-commits` justfile recipe
   [#150](https://github.com/seedcase-project/template-python-package/pull/150)
@@ -935,19 +966,19 @@ changelog.
   ([5a05048](https://github.com/seedcase-project/template-python-package/commit/5a05048fba2e957847fcb610b294f45e596ebaab))
 - Match copier vars in `template-website`
   [#152](https://github.com/seedcase-project/template-python-package/pull/152)
-  by [`@martonvago`](https://github.com/martonvago)
+  by [`@fruvago`](https://github.com/fruvago)
   ([2fb9f27](https://github.com/seedcase-project/template-python-package/commit/2fb9f275649a40b09386c65b4a7f92d3bc35d44b))
 - Update post-copy message
   [#154](https://github.com/seedcase-project/template-python-package/pull/154)
-  by [`@martonvago`](https://github.com/martonvago)
+  by [`@fruvago`](https://github.com/fruvago)
   ([146ee10](https://github.com/seedcase-project/template-python-package/commit/146ee105e9f4eb0b34a33b46fc947aa5c5cbc5b6))
 - Move copier test to own file
   [#156](https://github.com/seedcase-project/template-python-package/pull/156)
-  by [`@martonvago`](https://github.com/martonvago)
+  by [`@fruvago`](https://github.com/fruvago)
   ([09b3b73](https://github.com/seedcase-project/template-python-package/commit/09b3b731e12cd6b025cbe0518832d43dfad4e458))
 - Specify svg for all badges
   [#157](https://github.com/seedcase-project/template-python-package/pull/157)
-  by [`@martonvago`](https://github.com/martonvago)
+  by [`@fruvago`](https://github.com/fruvago)
   ([f5cfa42](https://github.com/seedcase-project/template-python-package/commit/f5cfa42452107e652814b16a0c271dd1f6576443))
 
 ### 📝 Documentation
@@ -980,23 +1011,23 @@ changelog.
   ([a7fea84](https://github.com/seedcase-project/template-python-package/commit/a7fea8424ac04fcf34fb875683cd14c3fb7734b5))
 - Add website files
   [#115](https://github.com/seedcase-project/template-python-package/pull/115)
-  by [`@martonvago`](https://github.com/martonvago)
+  by [`@fruvago`](https://github.com/fruvago)
   ([13b1ad0](https://github.com/seedcase-project/template-python-package/commit/13b1ad0e3ab534053126fb6325c0d36436a17823))
 - Update README
   [#129](https://github.com/seedcase-project/template-python-package/pull/129)
-  by [`@martonvago`](https://github.com/martonvago)
+  by [`@fruvago`](https://github.com/fruvago)
   ([31e9b8a](https://github.com/seedcase-project/template-python-package/commit/31e9b8a90747e06a4bfcf98c188b36d221f96438))
 - Format README
   [#132](https://github.com/seedcase-project/template-python-package/pull/132)
-  by [`@martonvago`](https://github.com/martonvago)
+  by [`@fruvago`](https://github.com/fruvago)
   ([cb60560](https://github.com/seedcase-project/template-python-package/commit/cb605606747e07b2fd6c84821cbb9b14c6f318ce))
 - Use Markdown version of license
   [#133](https://github.com/seedcase-project/template-python-package/pull/133)
-  by [`@martonvago`](https://github.com/martonvago)
+  by [`@fruvago`](https://github.com/fruvago)
   ([410c9bc](https://github.com/seedcase-project/template-python-package/commit/410c9bc8edafc64312053246388394dbe6e46e79))
 - Update guide
   [#155](https://github.com/seedcase-project/template-python-package/pull/155)
-  by [`@martonvago`](https://github.com/martonvago)
+  by [`@fruvago`](https://github.com/fruvago)
   ([44a5aeb](https://github.com/seedcase-project/template-python-package/commit/44a5aebf8ddf5b0eb7b5687b63540ad482f7a31b))
 
 ### 💄 Styling
@@ -1293,7 +1324,7 @@ changelog.
   ([4a5e3d9](https://github.com/seedcase-project/template-python-package/commit/4a5e3d9adfa8c747385752b8d7e52dba2a80bfb3))
 - Add mypy config
   [#89](https://github.com/seedcase-project/template-python-package/pull/89) by
-  [`@martonvago`](https://github.com/martonvago)
+  [`@fruvago`](https://github.com/fruvago)
   ([3b56108](https://github.com/seedcase-project/template-python-package/commit/3b5610898bc38b60934e5f5165ad7092f725adbd))
 - Fix spacing for snippet, use 4 spaces, not 1
   [#95](https://github.com/seedcase-project/template-python-package/pull/95) by
@@ -1305,27 +1336,27 @@ changelog.
   ([76240d5](https://github.com/seedcase-project/template-python-package/commit/76240d5a6557bf453fe1e48c69de4616fb47748a))
 - Update config for non-template package
   [#116](https://github.com/seedcase-project/template-python-package/pull/116)
-  by [`@martonvago`](https://github.com/martonvago)
+  by [`@fruvago`](https://github.com/fruvago)
   ([096781a](https://github.com/seedcase-project/template-python-package/commit/096781a4c0e2a8db1c204bc9dd31e55192a804e6))
 - Remove files not needed in non-template code
   [#114](https://github.com/seedcase-project/template-python-package/pull/114)
-  by [`@martonvago`](https://github.com/martonvago)
+  by [`@fruvago`](https://github.com/fruvago)
   ([9411f99](https://github.com/seedcase-project/template-python-package/commit/9411f9998a8c56a7bdc890679a12d02065e0f9c6))
 - Get latest `seedcase-theme`
   [#126](https://github.com/seedcase-project/template-python-package/pull/126)
-  by [`@martonvago`](https://github.com/martonvago)
+  by [`@fruvago`](https://github.com/fruvago)
   ([fc90ddc](https://github.com/seedcase-project/template-python-package/commit/fc90ddc5f4ac60e25b095bb93082e8ef8a01a3a0))
 - Use correct `.cz.toml`
   [#130](https://github.com/seedcase-project/template-python-package/pull/130)
-  by [`@martonvago`](https://github.com/martonvago)
+  by [`@fruvago`](https://github.com/fruvago)
   ([265bcaa](https://github.com/seedcase-project/template-python-package/commit/265bcaa6ab36e38cca5a353bd161172b250c8ade))
 - Update contributors and theme
   [#135](https://github.com/seedcase-project/template-python-package/pull/135)
-  by [`@martonvago`](https://github.com/martonvago)
+  by [`@fruvago`](https://github.com/fruvago)
   ([818f054](https://github.com/seedcase-project/template-python-package/commit/818f054b175763a7f6fb97bf953f76e4dacd1b09))
 - Match release workflow to other templates
   [#137](https://github.com/seedcase-project/template-python-package/pull/137)
-  by [`@martonvago`](https://github.com/martonvago)
+  by [`@fruvago`](https://github.com/fruvago)
   ([ba52dba](https://github.com/seedcase-project/template-python-package/commit/ba52dba18e68710beb78d4cbcfc5ec0a085161a0))
 - Use `bash` in justfile so CI doesn't need zsh
   [#149](https://github.com/seedcase-project/template-python-package/pull/149)
@@ -1336,8 +1367,7 @@ changelog.
 
 - `@github-actions[bot]` started making automated contributions
 
-- [`@martonvago`](https://github.com/martonvago) made their first contribution
-  in
+- [`@fruvago`](https://github.com/fruvago) made their first contribution in
   [#134](https://github.com/seedcase-project/template-python-package/pull/134)
 
 - `@pre-commit-ci[bot]` started making automated contributions
