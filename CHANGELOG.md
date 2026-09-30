@@ -21,6 +21,15 @@ releases we've made so far, along with what was changed within each release.
 Commits from bots, like `dependabot` or `pre-commit-ci`, are not included in the
 changelog.
 
+## [0.28.5](https://github.com/seedcase-project/template-python-package/compare/0.28.4..0.28.5) - 2026-09-30
+
+### 🐛 Fixes
+
+- Revise install instructions to uv install one tool at a time
+  [#368](https://github.com/seedcase-project/template-python-package/pull/368)
+  by [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([aa978f8](https://github.com/seedcase-project/template-python-package/commit/aa978f8a919c4d539f69eb19290242983eb1e54c))
+
 ## [0.28.4](https://github.com/seedcase-project/template-python-package/compare/0.28.3..0.28.4) - 2026-09-30
 
 ### 🐛 Fixes
